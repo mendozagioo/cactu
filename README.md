@@ -1,6 +1,9 @@
 # Cactu
 
-TODO: Write a gem description
+### A CSS library to help us to create webs easily
+
+Cactu is a CSS library created to help any developer to create web pages
+very quickly and an easy way
 
 ## Installation
 
@@ -18,7 +21,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Rename you `application.css`file to `application.css.scss`:
+
+    mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
+
+Delete the sprocket directive in `application.css.scss`:
+
+    *= require_tree .
+
+Import Cactu to `application.css.scss` file:
+
+    @import 'cactu';
 
 ## Contributing
 
