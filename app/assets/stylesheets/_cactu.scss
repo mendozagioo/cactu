@@ -1,2 +1,13 @@
-$color-blue: blue;
-$color-red: red;
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'scafolding';
+
+/* ---- Desktop Grid ---- */
+@import 'responsive_large';
+
+/* ---- Tablet Grid ---- */
+@import 'responsive_medium';
+
+/* ---- Mobile Grid ---- */
+//@import 'responsive_short';

@@ -1,0 +1,37 @@
+//
+// SCAFOLDING
+// --------------------------------------------------
+
+//HTML & BODY --------------
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$fg-column: 60px;             // Column Width
+$fg-gutter: 25px;             // Gutter Width
+$fg-max-columns: 12;          // Total Columns For Main Container
+
+.hey {
+  width: flex-grid(4);
+}
+html, body {
+  background: $color-blue;
+  width: 100%;
+  height: 100%;
+  line-height: 1.250em;
+}
+
+.container, .row {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;	
+}
+
+[class *="centered"] {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}

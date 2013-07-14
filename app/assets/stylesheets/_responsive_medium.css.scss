@@ -1,0 +1,11 @@
+//
+// RESPONSIVE MEDIUM
+// --------------------------------------------------
+
+@media (min-width: 768px) and (max-width: $gl-size - 1) {
+  @include grid_generator($gm-column, $gm-gutter);
+
+  @include grid_offset($gm-column, $gm-gutter);
+
+  @include grid_centered($gm-column, $gm-gutter);
+}

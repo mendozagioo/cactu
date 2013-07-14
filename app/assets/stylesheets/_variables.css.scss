@@ -1,0 +1,18 @@
+//
+// VARIABLES
+// --------------------------------------------------
+
+// Colors
+$green: #6bb130;
+$yellow: #e9b70b;
+
+// Grids
+$grid-max-columns: 12;
+
+$gl-column: 70px;
+$gl-gutter: 30px;
+$gl-size: grid_size($gl-column, $gl-gutter);
+
+$gm-column: 60px;
+$gm-gutter: 20px;
+$gm-size: grid_size($gm-column, $gm-gutter);
