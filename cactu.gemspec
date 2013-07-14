@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mendozagioo@gmail.com"]
   spec.summary       = "Cactu is a CSS library to help us to create webs easily"
   spec.description   = "Cactu is a CSS library created to help any developer to create web pages very quickly and an easy way"
-  spec.homepage      = "http://cactu.herokuapp.com"
+  spec.homepage      = "https://github.com/mendozagioo/cactu"
   spec.license       = "MIT"
 
   spec.rubyforge_project = "cactu"
