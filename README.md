@@ -21,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-Rename you `application.css`file to `application.css.scss`:
+Rename you `application.css` file to `application.css.scss`:
 
     mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss
 
