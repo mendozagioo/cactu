@@ -1,13 +1,12 @@
-@import 'functions';
-@import 'variables';
-@import 'mixins';
-@import 'scafolding';
+@import 'functions/grid';
 
-/* ---- Desktop Grid ---- */
-@import 'responsive_large';
+@import 'config/variables';
 
-/* ---- Tablet Grid ---- */
-@import 'responsive_medium';
+@import 'mixins/grid';
+@import 'mixin/fonts
 
-/* ---- Mobile Grid ---- */
-//@import 'responsive_short';
+@import 'ui/base';
+
+@import 'config/responsive_large';
+@import 'config/responsive_medium';
+@import 'config/responsive_short';

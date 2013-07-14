@@ -1,0 +1,29 @@
+//
+// BASE
+// --------------------------------------------------
+
+//HTML & BODY --------------
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.250em;
+}
+
+.container, .row {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;	
+}
+
+[class *="centered"] {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}

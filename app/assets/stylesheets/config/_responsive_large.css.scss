@@ -1,0 +1,15 @@
+//
+// RESPONSIVE LARGE
+// ----------------------------------
+
+@media (min-width: $gl-size) {
+  .row {
+    width: grid_size($gl-column, $gl-gutter);
+  }
+
+  @include grid_generator($gl-column, $gl-gutter);
+
+  @include grid_offset($gl-column, $gl-gutter);
+
+  @include grid_centered($gl-column, $gl-gutter);
+}
