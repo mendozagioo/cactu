@@ -1,23 +1,27 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$:.push File.expand_path("../lib", __FILE__)
 require 'cactu/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "cactu"
   spec.version       = Cactu::VERSION
+  spec.platform      = Gem::Platform::RUBY
   spec.authors       = ["Giovanni Mendoza"]
   spec.email         = ["mendozagioo@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.summary       = "Cactu is a CSS library to help us to create webs easily"
+  spec.description   = "Cactu is a CSS library created to help any developer to create web pages very quickly and an easy way"
+  spec.homepage      = "http://cactu.herokuapp.com"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.rubyforge_project = "cactu"
+
+  spec.files         = `git ls-files`.split("\n")
+  spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_dependency('sass', '>= 3.2.0')
+  spec.add_dependency('thor')
+
   spec.add_development_dependency "rake"
 end
