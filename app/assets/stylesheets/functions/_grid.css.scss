@@ -12,7 +12,7 @@
 }
 
 @function gutter_columns($column, $gutter) {
-  @return percentage(($gutter / 2) / grid_size($column, $gutter));
+  @return percentage(($gutter / 2) / grid_size($column, $gutter, $max_cols));
 }
 
 @function numbers($number) {
