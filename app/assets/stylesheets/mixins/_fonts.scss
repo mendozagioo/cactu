@@ -1,0 +1,13 @@
+//
+// MIXINS/FONTS
+// --------------------------------------------------
+
+
+@mixin font_face($font, $url) {
+  @font-face {
+    font-family: $font;
+    src: url("../#{$url}.otf"),
+         url("../#{$url}.eot"),
+         url("../#{$url}.ttf");
+  }
+}
