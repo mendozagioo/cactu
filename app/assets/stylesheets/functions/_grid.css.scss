@@ -1,7 +1,11 @@
 //
-// GRID
+// FUNCTIONS/GRID
 // --------------------------------------------------
 
+
+@function width_column($num, $size, $gutter) {
+  @return ($num * $size) + (($num - 1) * $gutter);
+}
 
 @function grid_size($column, $gutter) {
   @return ($column * $grid-max-columns) + ($gutter * $grid-max-columns);
