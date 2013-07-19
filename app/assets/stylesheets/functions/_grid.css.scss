@@ -7,8 +7,8 @@
   @return ($num * $size) + (($num - 1) * $gutter);
 }
 
-@function grid_size($column, $gutter) {
-  @return ($column * $grid-max-columns) + ($gutter * $grid-max-columns);
+@function grid_size($column, $gutter, $max_cols) {
+  @return ($column * $max_cols) + ($gutter * $max_cols);
 }
 
 @function gutter_columns($column, $gutter) {
