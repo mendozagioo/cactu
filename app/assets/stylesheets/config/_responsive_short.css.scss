@@ -1,9 +1,0 @@
-//
-// RESPONSIVE SHORT
-// --------------------------------------------------
-
-@media (max-width: 767px) {
-  @include grid_generator;
-
-  @include grid_centered;
-}
