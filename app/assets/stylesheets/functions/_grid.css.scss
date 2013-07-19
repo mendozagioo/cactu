@@ -11,7 +11,7 @@
   @return ($column * $max_cols) + ($gutter * $max_cols);
 }
 
-@function gutter_columns($column, $gutter) {
+@function gutter_columns($column, $gutter, $max_cols) {
   @return percentage(($gutter / 2) / grid_size($column, $gutter, $max_cols));
 }
 
