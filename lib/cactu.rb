@@ -13,7 +13,6 @@ module Cactu
     class Engine < ::Rails::Engine
       require 'cactu/engine'
     end
-
   else
     Sass.load_paths << File.expand_path("../../app/assets/stylesheets", __FILE__)
   end
