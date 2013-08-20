@@ -1,0 +1,69 @@
+//
+// UI/BASE
+// --------------------------------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.250em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+article,
+aside,
+details,
+div,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+}
+
+.container, .row {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;	
+}
+
+[class *="centered"] {
+  text-align: center;
+}
+
+// Fonts
+.hide-text {
+  background-color: transparent;
+  border: 0;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+}
+
+// Anchors
+a {
+  text-decoration: none;
+}
