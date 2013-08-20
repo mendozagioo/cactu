@@ -2,7 +2,7 @@
 dir = File.dirname(__FILE__)
 $LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
 
-require "cactu/generator"
+require 'cactu/generator'
 
 unless defined?(Sass)
   require 'sass'
@@ -13,7 +13,6 @@ module Cactu
     class Engine < ::Rails::Engine
       require 'cactu/engine'
     end
-
   else
     Sass.load_paths << File.expand_path("../../app/assets/stylesheets", __FILE__)
   end
