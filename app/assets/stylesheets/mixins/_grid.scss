@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-@mixin grid_generator($size_col: 0, $gutter: 0, $max_cols: 0) {
+@mixin grid_generator($size_col: 0, $gutter: 0, $max_cols: 12) {
   @if $size_col == 0 and $gutter == 0 {
     .row {
       margin: 0 5%;
