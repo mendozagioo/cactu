@@ -37,6 +37,10 @@
   }
 
   @else {
+    .row {
+      width: grid_size($size_col, $gutter, $max_cols);
+    }
+
     [class *= "-column"] {
       overflow: hidden;
       float: left;
