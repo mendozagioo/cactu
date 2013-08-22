@@ -28,7 +28,8 @@
     [class *= "-column"] {
       overflow: hidden;
       float: left;
-      margin: 0 $gm_margin;
+      margin-left: $gm_margin;
+      margin-right: $gm_margin;
     }
 
     @for $i from 1 through $max_cols {
@@ -48,7 +49,8 @@
     [class *= "-column"] {
       overflow: hidden;
       float: left;
-      margin: 0 $gl_margin;
+      margin-left: $gl_margin;
+      margin-right: $gl_margin;
     }
 
     @for $i from 1 through $max_cols {
@@ -78,7 +80,8 @@
     $marger: ($sizer - $col_width) / 2;
     .centered-#{numbers($i)} {
       $margin_cent: percentage($marger / $sizer);
-      margin: 0 $margin_cent;
+      margin-left: $margin_cent;
+      margin-right: $margin_cent;
     }
   }
 }
