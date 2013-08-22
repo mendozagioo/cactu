@@ -28,8 +28,7 @@
     [class *= "-column"] {
       overflow: hidden;
       float: left;
-      //margin-left: gutter_columns($size_col, $gutter, $max_cols);
-      //margin-right: gutter_columns($size_col, $gutter, $max_cols);
+      margin: 0 gutter_columns($size_col, $gutter, $max_cols);
     }
 
     @for $i from 1 through $max_cols {
@@ -47,8 +46,7 @@
     [class *= "-column"] {
       overflow: hidden;
       float: left;
-      margin-left: 0.0125%;
-      margin-right: 0.0125%;
+      margin: 0 gutter_columns($size_col, $gutter, $max_cols);
     }
 
     @for $i from 1 through $max_cols {
@@ -71,15 +69,13 @@
   }
 }
 
-@mixin grid_centered($size_col: 0, $gutter: 0, $max_cols: 12) {
+@mixin grid_centered($size_col, $gutter, $max_cols: 12) {
   @for $i from 1 through $max_cols - 1 {
     $col_width: width_column($i, $size_col, $gutter);
     $sizer: grid_size($size_col, $gutter, $max_cols);
     $marger: ($sizer - $col_width) / 2;
     .centered-#{numbers($i)} {
-      $margin_cent: percentage($marger / $sizer);
-      margin-left: $margin_cent;
-      margin-right: $margin_cent;
+      margin: 0 percentage($marger / $sizer);
     }
   }
 }
