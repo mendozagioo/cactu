@@ -47,8 +47,8 @@
     [class *= "-column"] {
       overflow: hidden;
       float: left;
-      margin-left: gutter_columns($size_col, $gutter, $max_cols);
-      margin-right: gutter_columns($size_col, $gutter, $max_cols);
+      margin-left: 0.0125%;
+      margin-right: 0.0125%;
     }
 
     @for $i from 1 through $max_cols {
