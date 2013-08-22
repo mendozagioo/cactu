@@ -61,7 +61,7 @@
 
 @mixin grid_offset($size_col, $gutter, $max_cols: 12) {
   @for $i from 1 through $max_cols - 1 {
-    $offset: ($i * $size) + ($i * $gutter) + ($gutter / 2);
+    $offset: ($i * $size_col) + ($i * $gutter) + ($gutter / 2);
     $sizer: grid_size($size_col, $gutter, $max_cols);
     .offset-#{numbers($i)} { margin-left: percentage($offset / $sizer); }
   }
