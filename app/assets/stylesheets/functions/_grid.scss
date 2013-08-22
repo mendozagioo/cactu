@@ -11,7 +11,7 @@
   @return ($column * $max_cols) + ($gutter * $max_cols);
 }
 
-@function fluid_width_column($num, $size, $gutter, $max_cols: 12) {
+@function fluid_width_column($num, $size, $gutter, $max_cols: $max-cols) {
   $col_width: width_column($num, $size, $gutter);
   $sizer: grid_size($size, $gutter, $max_cols);
 
@@ -19,10 +19,7 @@
 }
 
 @function gutter_columns($column, $gutter, $max_cols) {
-  $gt: $gutter / 2;
-  $gs: 1200px;
-
-  @return percentage($gt / $gs);
+  @return percentage(($gutter / 2) / grid_size($size, $gutter, $max_cols));
 }
 
 @function numbers($number) {
