@@ -78,7 +78,7 @@
     $marger: ($sizer - $col_width) / 2;
     .centered-#{numbers($i)} {
       $margin_cent: percentage($marger / $sizer);
-      margin: 0 $margin_cent);
+      margin: 0 $margin_cent;
     }
   }
 }
