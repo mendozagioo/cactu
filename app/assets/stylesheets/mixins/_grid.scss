@@ -20,7 +20,7 @@
 
   @else if ($size_col + $gutter) < 61 {
     .row {
-      width: grid_size($size_col, $gutter, $max_cols);
+      width: 100%;
     }
 
     [class *= "-column"] {
