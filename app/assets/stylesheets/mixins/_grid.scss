@@ -4,6 +4,8 @@
 
 
 @mixin grid_generator($size_col: 0, $gutter: 0, $max_cols: 12) {
+  $gd_margin: gutter_columns($size_col, $gutter, $max_cols);
+
   @if $size_col == 0 and $gutter == 0 {
     .row {
       margin: 0 5%;
@@ -40,8 +42,6 @@
   }
 
   @else {
-    $gl_margin: gutter_columns($size_col, $gutter, $max_cols);
-
     .row {
       width: grid_size($size_col, $gutter, $max_cols);
     }
@@ -49,8 +49,8 @@
     [class *= "-column"] {
       overflow: hidden;
       float: left;
-      margin-left: $gl_margin;
-      margin-right: $gl_margin;
+      margin-left: $gd_margin;
+      margin-right: $gd_margin;
     }
 
     @for $i from 1 through $max_cols {

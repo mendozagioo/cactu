@@ -20,7 +20,7 @@
 
 @function gutter_columns($column, $gutter, $max_cols) {
   $gt: $gutter / 2;
-  $gs: grid_size($column, $gutter, $max_cols);
+  $gs: 1200px;
 
   @return percentage($gt / $gs);
 }
