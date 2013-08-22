@@ -19,6 +19,8 @@
   }
 
   @else if ($size_col + $gutter) < 61 {
+    $gm_margin: gutter_columns($size_col, $gutter, $max_cols);
+
     .row {
       width: 100%;
     }
@@ -26,7 +28,7 @@
     [class *= "-column"] {
       overflow: hidden;
       float: left;
-      margin: 0 gutter_columns($size_col, $gutter, $max_cols);
+      margin: 0 $gm_margin;
     }
 
     @for $i from 1 through $max_cols {
@@ -37,6 +39,8 @@
   }
 
   @else {
+    $gl_margin: gutter_columns($size_col, $gutter, $max_cols);
+
     .row {
       width: grid_size($size_col, $gutter, $max_cols);
     }
@@ -44,7 +48,7 @@
     [class *= "-column"] {
       overflow: hidden;
       float: left;
-      margin: 0 gutter_columns($size_col, $gutter, $max_cols);
+      margin: 0 $gl_margin;
     }
 
     @for $i from 1 through $max_cols {
@@ -73,8 +77,8 @@
     $sizer: grid_size($size_col, $gutter, $max_cols);
     $marger: ($sizer - $col_width) / 2;
     .centered-#{numbers($i)} {
-      //margin_lr: percentage($marger / $sizer);
-      margin: 0 percentage($marger / $sizer);
+      $margin_cent: percentage($marger / $sizer);
+      margin: 0 $margin_cent);
     }
   }
 }
