@@ -1,0 +1,23 @@
+@mixin extended_centered_menu($bkg: $bkg-menu) {
+  width: $menu-w;
+  height: $menu-h;
+  background: $bkg;
+
+  a {
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@mixin extended_menu() {
+  //
+}
+
+@mixin menu() {
+  //
+}
