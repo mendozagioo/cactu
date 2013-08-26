@@ -1,4 +1,12 @@
-// Anchors
+//
+// UI/ANCHORS
+// --------------------------------------------------
+
 a {
   text-decoration: none;
+  color: $anchor-color;
+
+  &:hover {
+    color: $anchor-hover;
+  }
 }

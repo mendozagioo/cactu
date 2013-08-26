@@ -1,9 +1,13 @@
-@mixin extended_centered_menu($bkg: $bkg-menu) {
+@mixin extended_centered_menu($bkg: $bkg-menu, $color: $color-menu) {
   width: $menu-w;
   height: $menu-h;
   background: $bkg;
 
   a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: $color;
+
     &:first-child {
       padding-left: 0;
     }
@@ -11,13 +15,26 @@
     &:last-child {
       padding-right: 0;
     }
+
+    &:hover {
+      color: $color + 50;
+    }
   }
 }
 
-@mixin extended_menu() {
-  //
+@mixin extended_menu {
+  width: $menu-w;
+  height: $menu-h;
+  background: $bkg;
 }
 
-@mixin menu() {
-  //
+@mixin menu {
+  width: 1200px;
+  height: $menu-h;
+  background: $bkg;
+
+  a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
 }
