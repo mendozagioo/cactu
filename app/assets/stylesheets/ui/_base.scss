@@ -14,8 +14,8 @@ html, body {
   height: 100%;
   line-height: 1.250em;
   font: 16px/20px Helvetica, Arial, sans-serif;
-  color: #333333;
-  background-color: #ffffff;
+  color: $text-color;
+  background-color: $white;
 }
 
 article,

@@ -10,6 +10,13 @@
 
     &:first-child {
       padding-left: 0;
+      color: $black;
+      font-weight: bold;
+      margin-right: 1.5em;
+
+      &:hover {
+        color: $black;
+      }
     }
 
     &:last-child {
