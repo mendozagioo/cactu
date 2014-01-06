@@ -6,5 +6,15 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
+    %nav.nav
+      .row
+        %a{href: "/"}
+          Cactu
+        %a{href: "/usage/started"}
+          Started
+        %a{href: "/usage/base"}
+          Base
+        %a{href: "/usage/components"}
+          Components
 
     = yield
