@@ -2,30 +2,70 @@
 // UI/TEXT
 // --------------------------------------------------
 
-.hide-text {
-  background-color: transparent;
-  border: 0;
-  color: transparent;
-  text-shadow: none;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  line-height: 1;
+  font-weight: 500
+  line-height: 1.1
   padding: 0.3em 0;
 }
 
-h1 { font-size: 4.2em; }
-h2 { font-size: 3.6em; }
-h3 { font-size: 3.1em; }
-h4 { font-size: 2.6em; }
-h5 { font-size: 2em; }
-h6 { font-size: 1.5em; }
+h1 { font-size: 2.4em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.8em; }
 
 p {
   padding: 0.5em 0;
+}
+
+a {
+  text-decoration: none;
+  color: $anchor-color;
+
+  &:hover {
+    color: $anchor-hover;
+    text-decoration: underline;
+  }
+}
+
+ul, ol {
+  padding-left: 20px;
+  margin: 7px 0;
+}
+
+small { font-size: 85%; }
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid $bkg-text;
+}
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  white-space: nowrap;
+  background-color: $bkg-text;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+       -o-border-radius: 4px;
+          border-radius: 4px;
+}
+
+input, textarea {
+  border: 1px solid $borders;
+  padding: 5px 10px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 5px $input-focus;
+    border: 1px solid $input-focus;
+  }
 }
