@@ -1,7 +1,0 @@
-@media screen and (min-width: 1200px) {
-  @include grid_generator($gl-columns, $gl-gutter);
-
-  @include grid_offset($gl-columns, $gl-gutter);
-
-  @include grid_centered($gl-columns, $gl-gutter);
-}
