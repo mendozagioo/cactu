@@ -1,13 +1,13 @@
 # Cactu
 
-### A CSS library to help us to create webs easily
+### A SASS library to create webs easily
 
-Cactu is a CSS library created to help any developer to create web pages
+Cactu is a SASS library created to help any developer to create web pages
 very quickly and an easy way
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this into Gemfile:
 
     gem 'cactu'
 
@@ -19,7 +19,7 @@ Or install it yourself as:
 
     $ gem install cactu
 
-## Usage
+## Usage in Rails
 
 Rename you `application.css` file to `application.css.scss`:
 
@@ -30,6 +30,15 @@ Delete the sprocket directive in `application.css.scss`:
     *= require_tree .
 
 Import Cactu to `application.css.scss` file:
+
+    @import 'cactu';
+
+## Usage in Sinatra
+
+You can use [sinatra-asset-pipeline](http://github.com/kalasjocke/sinatra-asset-pipeline)
+to precompile on fly the assets
+
+Import cactu in your main SASS file:
 
     @import 'cactu';
 
