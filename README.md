@@ -38,6 +38,14 @@ Import Cactu to `application.css.scss` file:
 You can use [sinatra-asset-pipeline](http://github.com/kalasjocke/sinatra-asset-pipeline)
 to precompile on fly the assets
 
+Add this into Gemfile:
+
+    gem 'cactu'
+
+And then execute:
+
+    $ bundle
+
 Import cactu in your main SASS file:
 
     @import 'cactu';
