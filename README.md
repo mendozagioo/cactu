@@ -1,4 +1,4 @@
-# Cactus
+# Cactu
 
 ### A SASS library to create webs easily
 
