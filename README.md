@@ -1,5 +1,7 @@
 # Cactu
 
+[![Gem Version](https://badge.fury.io/rb/cactu@2x.png)](http://badge.fury.io/rb/cactu)
+
 ### A SASS library to create webs easily
 
 Cactu is a SASS library created to help any developer to create web pages
