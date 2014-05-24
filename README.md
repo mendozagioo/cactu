@@ -1,4 +1,4 @@
-# Cactu modificado
+# Cactu
 
 [![Gem Version](https://badge.fury.io/rb/cactu.png)](http://badge.fury.io/rb/cactu)
 
