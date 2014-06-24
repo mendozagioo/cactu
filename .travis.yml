@@ -1,5 +1,6 @@
 before_script:
   - "bundle exec cactu install"
   - "bundle exec cactu update"
+  - "bundle exec cactu --version"
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
