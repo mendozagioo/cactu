@@ -13,3 +13,4 @@ pkg
 rdoc
 spec/reports
 demo/
+tmp/
