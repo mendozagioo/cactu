@@ -6,7 +6,7 @@ Given /^I install cactu to "([^"]*)"$/ do |path|
 end
 
 Then /^the sass directories(?: with "([^"]+)" prefix)? should have been generated$/ do |prefix|
-  sass_directories = ["addons", "css3", "functions"]
+  sass_directories = ["config", "functions", "mixins"]
   sass_directories.map!{ |directory| cactu_path(prefix, directory) }
   check_directory_presence(sass_directories, true)
 end
@@ -20,5 +20,5 @@ Then /^cactu should not have been generated$/ do
 end
 
 Then /^the output should contain the current version of Cactu$/ do
-  step %(the output should contain exactly "Cactu #{Bourbon::VERSION}\n")
+  step %(the output should contain exactly "Cactu #{Cactu::VERSION}\n")
 end
