@@ -1,0 +1,93 @@
+//
+// Breakpoints mixins
+// --------------------------------------------------
+
+
+// Media of at least the minimum breakpoint width
+// Valid only if $min-size > 0
+@mixin breakpoint-min($min-size: 0) {
+  @if $min-size > 0 {
+    @media screen and (min-width: $min-size) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width.
+// Valid only if $max-size > 0
+@mixin breakpoint-max($max-size: 0) {
+  @if $max-size > 0 {
+    @media screen and (max-width: $max-size) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media that spans multiple breakpoint widths.
+// Valid only with 2 values and just if $max-size > $min-size
+@mixin breakpoint-between($min-size: 0, $max-size: 0) {
+  @if $min-size < $max-size and $max-size > $min-size {
+    @media (min-width: $min-size) and (max-width: $max-size) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Specific media queriues for this framework.
+// If you need a different breakpoints, use:
+// breakpoint-min, breakpoint-max or breakpoint-between
+//
+// max 575px
+@mixin breakpoint-cellphone {
+  @include breakpoint-max($cellphone-size - 1) {
+    @content;
+  }
+}
+
+// 576px - 767px
+@mixin breakpoint-cellphone-tablet {
+  @include breakpoint-between($cellphone-size, $tablet-size - 1) {
+    @content;
+  }
+}
+
+// 768px - 959px
+@mixin breakpoint-tablet {
+  @include breakpoint-between($tablet-size, $small-desktop-size - 1) {
+    @content;
+  }
+}
+
+// 960px - 1199px
+@mixin breakpoint-small-desktop {
+  @include breakpoint-between($small-desktop-size, $medium-desktop-size - 1) {
+    @content;
+  }
+}
+
+// 1200px - 1343px
+@mixin breakpoint-medium-desktop {
+  @include breakpoint-between($medium-desktop-size, $large-desktop-size - 1) {
+    @content;
+  }
+}
+
+// min 1344px
+@mixin breakpoint-large-desktop {
+  @include breakpoint-min($large-desktop-size) {
+    @content;
+  }
+}
+
+// Specia: 576px - 1199px
+@mixin breakpoint-cellphone-medium-desktop {
+  @include breakpoint-between($cellphone-size, $medium-desktop-size - 1) {
+    @content;
+  }
+}

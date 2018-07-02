@@ -1,0 +1,14 @@
+//
+// Image
+// --------------------------------------------------
+
+
+img {
+  height: auto;
+  vertical-align: middle;
+  border-style: none; // Remove the border on images inside links in IE 10-.
+}
+
+svg:not(:root) {
+  overflow: hidden; // Hide the overflow in IE
+}

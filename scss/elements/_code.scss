@@ -1,0 +1,20 @@
+//
+// Code
+// --------------------------------------------------
+
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-family-monospace;
+  font-size: 1em;
+}
+
+pre {
+  margin-bottom: 1rem;
+  overflow: auto;
+  // We have @viewport set which causes scrollbars to overlap content in IE11 and Edge, so
+  // we force a non-overlapping, non-auto-hiding scrollbar to counteract.
+  -ms-overflow-style: scrollbar;
+}

@@ -1,0 +1,15 @@
+//
+// Sidebars
+// --------------------------------------------------
+
+
+.sidebar {
+  height: calc(100vh - 3.5rem);
+  position: sticky;
+  border-right: 1px solid $border-color;
+
+  @include breakpoint-cellphone {
+    height: auto;
+    border-right: 0;
+  }
+}

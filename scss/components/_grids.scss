@@ -1,0 +1,106 @@
+//
+// Grid
+// --------------------------------------------------
+
+
+// Variables
+$column-gap: 15px !default;
+$column-tablet-gap: 10px !default;
+
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  
+  @include breakpoint-small-desktop {
+    width: $small-desktop-size;
+  }
+
+  @include breakpoint-medium-desktop {
+    width: $medium-desktop-size;
+  }
+
+  @include breakpoint-large-desktop {
+    width: $large-desktop-size;
+  }
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.column {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  &[class*="column-of-"] {
+    flex-basis: inherit;
+  }
+}
+
+// For nested columns
+//
+.column,
+[class*="column-of-"] {
+  padding: 0 $column-gap;
+  min-height: 1px;
+
+  &.columns {
+    .column,
+    [class*="column-of-"] {
+      padding: 0;
+
+      &:not(:last-child) {
+        padding-right: $column-gap * 2;
+
+        @include breakpoint-cellphone-medium-desktop {
+          padding-right: $column-tablet-gap * 2;
+        }
+
+        @include breakpoint-cellphone {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+// Fix the global gap for column clases
+@include breakpoint-cellphone-medium-desktop {
+  .column,
+  [class*="column-of-"] {
+    padding: 0 $column-tablet-gap;
+  }
+}
+
+// Columns generator
+// for different breakpoints
+//
+@include make-specific-columns;
+
+// tablet-column-of-[x]
+@include breakpoint-tablet {
+  @include make-specific-columns('tablet')
+}
+
+// cellphone-column-of-[x]
+@include breakpoint-cellphone-tablet {
+  @include make-specific-columns('cellphone');
+}
+
+@include breakpoint-cellphone {
+  .column,
+  [class*="column-of-"] {
+    width: 100%;
+    flex-basis: inherit;
+  }
+  // Example:
+  // if you want to set a columns name:
+  // small-column-of-[x] for this breakpoint,
+  // you need to add a specific columns mixin with 'small' name
+  // and the number of columns you need
+  // @include make-specific-columns('small', 5);
+}

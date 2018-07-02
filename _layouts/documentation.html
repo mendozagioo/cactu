@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header-navbar.html %}
+
+    <div class="container-expanded">
+      <div class="columns">
+        <div class="column-of-2 tablet-column-of-3 cellphone-column-of-4 sidebar">
+          {% include sidebar-principal.html %}
+        </div>
+        <div class="column-of-8 tablet-column-of-9">
+          <h1>{{ page.title }}</h1>
+          <p>{{ page.description }}</p>
+          {{ content }}
+        </div>
+        <div class="column-of-2">
+          {% include sidebar-secondary.html %}
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>

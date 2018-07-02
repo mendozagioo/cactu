@@ -1,0 +1,44 @@
+//
+// Navbars
+// --------------------------------------------------
+
+
+// Variables
+//
+$navbar-padding-y: .6rem;
+$navbar-padding-x: 1rem;
+$navbar-background: #f5f5f5;
+$link-padding-y: .5rem;
+$brand-gap: .5rem;
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  align-items: center;
+  padding: $navbar-padding-y $navbar-padding-x;
+  background-color: $navbar-background;
+
+  a {
+    text-decoration: none;
+  }
+
+  nav {
+    a {
+      padding: $link-padding-y;
+    }
+  }
+
+  // Because flex properties aren't inherited, we need to redeclare these first
+  // few properities so that content nested within behave properly.
+  > .container,
+  > .container-expanded {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.navbar-brand {
+  margin-right: $brand-gap;
+}
