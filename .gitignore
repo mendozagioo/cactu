@@ -1,3 +1,4 @@
+*.DS_Store
 *.gem
 *.rbc
 .bundle
@@ -14,3 +15,8 @@ rdoc
 spec/reports
 demo/
 tmp/
+
+node_modules/
+package-lock.json
+.sass_cache/
+_site/
