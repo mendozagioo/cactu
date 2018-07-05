@@ -8,7 +8,6 @@ redirect_from:
   - /documentation/getting-started/
 ---
 
-<h2>Quick start</h2>
-<p>
-  Way to beggin to use Cactu
-</p>
+## Quick start
+
+Way to beggin to use Cactu
