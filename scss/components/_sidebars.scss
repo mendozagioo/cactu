@@ -4,9 +4,9 @@
 
 
 .sidebar {
-  height: calc(100vh - 3.5rem);
+  height: calc(100vh - 3.375rem);
   position: sticky;
-  top: 56px;
+  top: 3.375rem;
   border-right: 1px solid $border-color;
   z-index: $zindex-top;
 

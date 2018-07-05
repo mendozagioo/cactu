@@ -5,11 +5,11 @@
 
 // Variables
 //
-$navbar-padding-y: .6rem;
-$navbar-padding-x: 1rem;
-$navbar-background: #f5f5f5;
-$link-padding-y: .5rem;
-$brand-gap: .5rem;
+$navbar-padding-y:    0;
+$navbar-padding-x:    1rem;
+$navbar-background:   #f5f5f5;
+$link-padding-y:      .9375rem;
+$brand-gap:           .625rem;
 
 .navbar {
   position: relative;
@@ -24,6 +24,8 @@ $brand-gap: .5rem;
   }
 
   nav {
+    display: flex;
+
     a {
       padding: $link-padding-y;
     }
@@ -46,4 +48,5 @@ $brand-gap: .5rem;
 .sticky-navbar {
   position: sticky;
   top: 0;
+  z-index: $zindex-top;
 }
