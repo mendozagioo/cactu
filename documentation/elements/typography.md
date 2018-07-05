@@ -22,6 +22,11 @@ redirect_from:
 | `$h4-font-size` | <small>font-size</small> | `1.5rem`    |
 | `$h5-font-size` | <small>font-size</small> | `1.25rem`   |
 | `$h6-font-size` | <small>font-size</small> | `1rem`      |
+| `$link-color`            | <small>color</small>      | <span class="small-box" style="background:#007bff"></span> `$blue` |
+| `$link-decoration`       | <small>unitless</small>   | `none` |
+| `$link-hover-color`      | <small>color</small>      | <span class="small-box" style="background:#0062cc"></span> `darken($link-color, 10%)` |
+| `$link-hover-decoration` | <small>unitless</small>   | `underline` |
+| `$link-transition`       | <small>transition</small> | `$transition-all` |
 
 
 ## Inline text elements
@@ -39,6 +44,14 @@ Styling for common inline HTML5 elements.
 <p><em>This line rendered as italicized text.</em></p>
 <p>H<sub>2</sub>O</p>
 <p>e = mc<sup>2</sup></p>
+{% endcapture %}
+{% include example.html content=example %}
+
+
+## Anchor
+
+{% capture example %}
+<a href="#">Anchor</a>
 {% endcapture %}
 {% include example.html content=example %}
 
