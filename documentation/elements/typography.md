@@ -47,7 +47,8 @@ Styling for common inline HTML5 elements.
 
 {% capture example %}
 <address>
-  Unknow street,<br>
+  <strong>Cactu</strong><br>
+  Unknow street, #000<br>
   Colima, Colima<br>
   28010, México
 </address>
@@ -59,6 +60,17 @@ Styling for common inline HTML5 elements.
 
 {% capture example %}
 <abbr title="Cascading Style Sheets">CSS</abbr>
+{% endcapture %}
+{% include example.html content=example %}
+
+
+## Summary
+
+{% capture example %}
+<details>
+  <summary>Read more</summary>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.</p>
+</details>
 {% endcapture %}
 {% include example.html content=example %}
 
