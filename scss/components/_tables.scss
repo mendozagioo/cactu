@@ -1,3 +1,18 @@
 //
 // Tables
 // --------------------------------------------------
+
+
+// Variables
+//
+$cell-padding: .5rem !default;
+$cell-border: $border-width solid $border-color;
+
+td, th {
+  padding: $cell-padding;
+  border: $cell-border;
+}
+
+th {
+  font-weight: bold;
+}

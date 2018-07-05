@@ -42,3 +42,8 @@ $brand-gap: .5rem;
 .navbar-brand {
   margin-right: $brand-gap;
 }
+
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+}

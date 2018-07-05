@@ -6,7 +6,9 @@
 .sidebar {
   height: calc(100vh - 3.5rem);
   position: sticky;
+  top: 56px;
   border-right: 1px solid $border-color;
+  z-index: $zindex-top;
 
   @include breakpoint-cellphone {
     height: auto;

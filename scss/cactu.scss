@@ -7,7 +7,6 @@
  */
 
 @import "base/global-variables";
-@import "base/reset";
 @import "base/reboot";
 
 @import "mixins/breakpoints";
@@ -20,18 +19,19 @@
 @import "elements/code";
 @import "elements/image";
 @import "elements/link";
-@import "elements/type";
+@import "elements/typography";
 
-@import "components/blockquotes";
 @import "components/buttons";
 @import "components/figures";
 @import "components/forms";
 @import "components/grids";
+@import "components/lists";
 @import "components/navbars";
 @import "components/navs";
 @import "components/tables";
 
 @import "utilities/classes";
+@import "utilities/syntax";
 
 
 // Different elements

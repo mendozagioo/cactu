@@ -24,7 +24,7 @@ $border-color:  $gray-300 !default;
 
 // Typography
 //
-$font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans", "Helvetica Neue", sans-serif !default;
+$font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family:             $font-family-sans-serif !default;
 $font-size:               16px !default;
@@ -54,6 +54,7 @@ $radius-large:      6px !default;
 $radius-rounded:    290486px !default;
 $border-width:      1px !default;
 $speed:             .2s !default;
-$line-height:       1.3 !default;
+$line-height:       1.5 !default;
 $transition-all:    all .2s ease-in-out !default;
-$outline-width:     .2rem;
+$outline-width:     .2rem !default;
+$zindex-top:        1000 !default;

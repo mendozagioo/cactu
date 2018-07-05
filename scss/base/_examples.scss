@@ -10,3 +10,12 @@
   font-size: 13px;
   background-color: $gray-200;
 }
+
+.small-box {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: .7rem;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.1);
+}
