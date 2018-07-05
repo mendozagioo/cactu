@@ -4,14 +4,18 @@
 
 
 // Variables
-$code-color: #ff3860 !default;
-$code-font-size: .85rem !default;
-$code-padding: .2rem .3rem !default;
-$background-code: #f5f5f5 !default;
-$background-pre: $background-code;
-$pre-color: $gray-900 !default;
-$pre-padding: 1rem !default;
-$pre-margin: 1rem !default;
+//
+$code-color:          #ff3860 !default;
+$code-background:     #f5f5f5 !default;
+$code-font-size:      .85rem !default;
+$code-padding:        .2rem .3rem !default;
+$code-radius:         3px !default;
+$pre-color:           $gray-900 !default;
+$pre-background:      $code-background !default;
+$pre-padding:         1rem !default;
+$pre-margin:          1rem !default;
+$kbd-color:           $white !default;
+$kbd-background:      $gray-800 !default;
 
 
 pre,
@@ -27,9 +31,7 @@ samp {
 code {
   color: $code-color;
   word-break: break-word;
-  font-size: $code-font-size;
-  padding: $code-padding;
-  background-color: $background-code;
+  background-color: $code-background;
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
@@ -49,7 +51,7 @@ pre {
   // We have @viewport set which causes scrollbars to overlap content in IE11 and Edge, so
   // we force a non-overlapping, non-auto-hiding scrollbar to counteract.
   -ms-overflow-style: scrollbar;
-  background-color: $background-pre;
+  background-color: $pre-background;
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -58,4 +60,16 @@ pre {
     color: inherit;
     word-break: normal;
   }
+}
+
+code,
+kbd {
+  border-radius: $code-radius;
+  font-size: $code-font-size;
+  padding: $code-padding;
+}
+
+kbd {
+  color: $kbd-color;
+  background-color: $kbd-background;
 }
