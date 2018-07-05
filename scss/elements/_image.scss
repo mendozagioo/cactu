@@ -3,7 +3,14 @@
 // --------------------------------------------------
 
 
+$image-padding:     .25rem;
+$image-radius:      $radius;
+$image-border:      1px solid $border-color;
+$image-background:  $white;
+
+
 img {
+  max-width: 100%;
   height: auto;
   vertical-align: middle;
   border-style: none; // Remove the border on images inside links in IE 10-.
@@ -11,4 +18,11 @@ img {
 
 svg:not(:root) {
   overflow: hidden; // Hide the overflow in IE
+}
+
+.image-edge {
+  padding: .25rem;
+  border-radius: $radius;
+  border: 1px solid $border-color;
+  background-color: $white;
 }
