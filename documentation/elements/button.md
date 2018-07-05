@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Button
-description: Desciption
+description: Documentation and examples for basic style on button element.
 group: elements
 ---
 
