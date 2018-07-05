@@ -17,7 +17,7 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 
 ## Reset
 
-Some reset styles was taken of <a href="https://meyerweb.com/eric/tools/css/reset/">Reset</a>, where the author says: "The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings, and so on".
+Some reset styles was taken of <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset</a>, where the author says: "The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings, and so on".
 
 ## Page defaults
 
@@ -32,7 +32,7 @@ This ensures that the declared width of element is never exceeded due to padding
 
 ## Native font stack
 
-For optimum text rendering on every device and OS. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+For optimum text rendering on every device and OS. Read more about <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/" target="_blank">native font stacks in this <em>Smashing Magazine</em> article</a>.
 
 {% highlight sass %}
 $font-family-sans-serif:
