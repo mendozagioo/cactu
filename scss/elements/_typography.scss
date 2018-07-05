@@ -9,12 +9,12 @@ $headings-font-family:    $font-family !default;
 $headings-font-weight:    $font-weight-bold !default;
 $headings-color:          $text-color !default;
 $headings-margins:        1rem 0 .5rem !default;
-$h1-font-size:            $font-size * 2.6 !default;
-$h2-font-size:            $font-size * 2.1 !default;
-$h3-font-size:            $font-size * 1.8 !default;
-$h4-font-size:            $font-size * 1.5 !default;
-$h5-font-size:            $font-size * 1.2 !default;
-$h6-font-size:            $font-size !default;
+$h1-font-size:            2.8125rem !default;
+$h2-font-size:            2.125rem !default;
+$h3-font-size:            1.75rem !default;
+$h4-font-size:            1.5rem !default;
+$h5-font-size:            1.25rem !default;
+$h6-font-size:            1rem !default;
 
 
 abbr[title],
@@ -33,6 +33,17 @@ address {
 
 blockquote {
   margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+cite {
+  display: block;
+  font-size: 80%;
+  color: $text-color + 50;
+
+  &:before {
+    content: "\2014 \00A0";
+  }
 }
 
 b,
@@ -78,3 +89,9 @@ h3 { font-size: $h3-font-size; }
 h4 { font-size: $h4-font-size; }
 h5 { font-size: $h5-font-size; }
 h6 { font-size: $h6-font-size; }
+
+// Alignment
+//
+.text-left { text-align: left; }
+.text-centered { text-align: center; }
+.text-right { text-align: right; }
