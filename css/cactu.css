@@ -286,6 +286,7 @@ button:focus, button.focus,
 .button.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem #aeb9c4;
+  background-color: #cbd3da;
 }
 
 button.disabled, button:disabled,

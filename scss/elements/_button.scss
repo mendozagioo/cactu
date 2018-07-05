@@ -57,6 +57,7 @@ button,
   &.focus {
     outline: 0;
     box-shadow: $button-focus-box-shadow;
+    background-color: $button-hover-background;
   }
 
   // Disabled comes first so active can properly restyle
