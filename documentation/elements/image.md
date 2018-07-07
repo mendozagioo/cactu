@@ -32,11 +32,11 @@ group: elements
 Expand the image adding the class `image-expanded`.
 
 <div class="highlight-example">
-  <img data-src="holder.js/100px250" class="image-expanded" alt="Basic image">
+  <img data-src="holder.js/100px250" class="image-expanded" alt="Expanded image">
 </div>
 
 {% highlight html %}
-<img src="..." class="image-expanded" alt="Basic image">
+<img src="..." class="image-expanded" alt="Expanded image">
 {% endhighlight %}
 
 
@@ -53,4 +53,4 @@ Use the class `image-edge` to set edge the image.
 {% endhighlight %}
 
 
-<script src="../../assets/js/holder.min.js"></script>
+<script src="/assets/js/holder.min.js"></script>
