@@ -8,6 +8,7 @@ $example-code-color: #f5f5f5;
 // Class with -expanded to the end
 [class$="-expanded"] {
   width: 100%;
+  max-width: 100%;
 }
 
 .highlight-example {
