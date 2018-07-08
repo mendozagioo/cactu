@@ -5,8 +5,9 @@
 
 // Variables
 //
-$cell-padding: .625rem 1rem !default;
-$cell-border: $border-width solid $border-color;
+$cell-padding:            .625rem 1rem !default;
+$cell-border:             $border-width solid $border-color !default;
+$cell-interleaved-color:  $white-smoke !default;
 
 
 th, td {
@@ -36,7 +37,7 @@ th {
 .table-flush-interleaved {
   tr {
     &:nth-child(2n) {
-      background-color: $white-smoke;
+      background-color: $cell-interleaved-color;
     }
   }
 }

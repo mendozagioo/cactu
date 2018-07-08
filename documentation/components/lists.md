@@ -10,9 +10,7 @@ group: components
 
 | Name  | Type  | Value |
 | ----- | ----- | ----- |
-| `$white`    | <small>color</small> | <span class="small-box" style="background:#fff"></span> `#fff`    |
-| `$gray-100` | <small>color</small> | <span class="small-box" style="background:#f8f9fa"></span> `#f8f9fa` |
-| `$list-padding-left` | <small>padding</small> | `1.75rem !default` |
+| `$list-padding-left` | <small>padding</small> | `1.75rem` |
 | `$list-item-padding` | <small>padding</small> | `.75rem 1.25rem` |
 | `$list-item-border` | <small>border</small> | <span class="small-box" style="background:#dee2e6"></span> `1px solid $border-color` |
 | `$list-item-background` | <small>color</small> | `transparent` |
