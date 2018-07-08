@@ -26,6 +26,7 @@ Cactu has just one file used for global variables, those varibales are used for 
 | `$blue`     | <small>color</small> | <span class="small-box" style="background:#007bff"></span> `#007bff` |
 | `$text-color`   | <small>color</small> | <span class="small-box" style="background:#343a40"></span> `$gray-800` |
 | `$border-color` | <small>color</small> | <span class="small-box" style="background:#dee2e6"></span> `$gray-300` |
+| `$white-smoke`  | <small>color</small> | <span class="small-box" style="background:#f5f5f5"></span> `#f5f5f5` |
 | `$font-family-sans-serif`| <small>font-family</small> | `-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"` |
 | `$font-family-monospace` | <small>font-family</small> | `Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` |
 | `$font-family`           | <small>font-family</small> | `$font-family-sans-serif` |
