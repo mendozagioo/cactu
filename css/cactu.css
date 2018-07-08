@@ -765,7 +765,7 @@ ul, ol {
 .list-group-interleaved * {
   display: block;
   width: 100%;
-  padding: 0.75rem 1.25rem;
+  padding: 0.625rem 1rem;
   margin-bottom: -1px;
   text-align: left;
   border: 1px solid #dee2e6;
@@ -860,13 +860,36 @@ ul, ol {
   padding-left: .8rem;
 }
 
-td, th {
-  padding: 0.5rem;
+th, td {
+  padding: 0.625rem 1rem;
   border: 1px solid #dee2e6;
 }
 
 th {
   font-weight: bold;
+  border-bottom-width: 2px;
+}
+
+.table-flush th, .table-flush td,
+.table-flush-interleaved th,
+.table-flush-interleaved td {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.table-flush tr:last-child td,
+.table-flush-interleaved tr:last-child td {
+  border-bottom: 0;
+}
+
+.table-interleaved tr:nth-child(2n),
+.table-flush-interleaved tr:nth-child(2n) {
+  background-color: #f5f5f5;
+}
+
+.table-borderless th, .table-borderless td {
+  border: 0;
 }
 
 [class$="-expanded"] {
