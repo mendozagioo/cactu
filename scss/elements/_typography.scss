@@ -5,9 +5,7 @@
 
 // Variables
 //
-$headings-font-family:    $font-family !default;
 $headings-font-weight:    $font-weight-bold !default;
-$headings-color:          $text-color !default;
 $headings-margins:        1rem 0 .5rem !default;
 $h1-font-size:            2.8125rem !default;
 $h2-font-size:            2.125rem !default;
@@ -114,9 +112,7 @@ p { margin-bottom: .7rem; }
 //
 h1, h2, h3, h4, h5, h6 {
   margin: $headings-margins;
-  font-family: $headings-font-family;
   font-weight: $headings-font-weight;
-  color: $headings-color;
 }
 
 h1 { font-size: $h1-font-size; }

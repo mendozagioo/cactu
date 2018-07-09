@@ -12,9 +12,7 @@ redirect_from:
 
 | Name  | Type  | Value |
 | ----- | ----- | ----- |
-| `$headings-font-family` | <small>font-family</small> | `$font-family`      |
 | `$headings-font-weight` | <small>font-weight</small> | `$font-weight-bold` |
-| `$headings-color`   | <small>color</small>  | <span class="small-box" style="background:#343a40"></span> `$text-color`  |
 | `$headings-margins` | <small>margin</small> | `1rem 0 .5rem` |
 | `$h1-font-size` | <small>font-size</small> | `2.8125rem` |
 | `$h2-font-size` | <small>font-size</small> | `2.125rem`  |
