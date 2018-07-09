@@ -377,6 +377,11 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+figcaption {
+  margin-top: .5rem;
+  font-size: 90%;
+}
+
 .image-edge {
   padding: .25rem;
   border-radius: 4px;

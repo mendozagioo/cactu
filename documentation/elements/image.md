@@ -54,3 +54,22 @@ Use the class `image-edge` to set edge the image.
 
 
 <script src="/assets/js/holder.min.js"></script>
+
+## Figure
+
+<div class="highlight-example">
+  <figure class="figure">
+    <img src="holder.js/400x300" alt="A figure example">
+    <figcaption>A figure example</figcaption>
+  </figure>
+</div>
+
+{% highlight html %}
+<figure class="figure">
+  <img src="..." alt="A figure example">
+  <figcaption>A figure example</figcaption>
+</figure>
+{% endhighlight %}
+
+
+<script src="/assets/js/holder.min.js"></script>
