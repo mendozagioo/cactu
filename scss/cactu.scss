@@ -9,6 +9,9 @@
 @import "base/global-variables";
 @import "base/reboot";
 
+@import "functions/colors";
+
+@import "mixins/alerts";
 @import "mixins/breakpoints";
 @import "mixins/buttons";
 @import "mixins/grid";
@@ -20,6 +23,7 @@
 @import "elements/image";
 @import "elements/typography";
 
+@import "components/alerts";
 @import "components/buttons";
 @import "components/figures";
 @import "components/forms";

@@ -526,11 +526,51 @@ h6 {
   text-align: right;
 }
 
-.alert {
+.alert,
+.alert-dismissible {
+  position: relative;
   padding: 1rem;
   border-radius: 4px;
-  border: 1px solid #f0f0f0;
-  background-color: #f5f5f5;
+  color: #737678;
+  border: 1px solid #f6f7f8;
+  background-color: #f8f9fa;
+}
+
+.alert hr,
+.alert-dismissible hr {
+  background-color: #e8eaed;
+}
+
+.alert .alert-link,
+.alert-dismissible .alert-link {
+  color: black;
+}
+
+.alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6,
+.alert-dismissible h1,
+.alert-dismissible h2,
+.alert-dismissible h3,
+.alert-dismissible h4,
+.alert-dismissible h5,
+.alert-dismissible h6 {
+  margin-top: 0;
+}
+
+.alert-dismissible {
+  padding-right: 2.625rem;
+}
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.625rem;
+  color: inherit;
+  background-color: transparent;
+}
+
+.alert-dismissible .close:hover, .alert-dismissible .close:focus {
+  color: #262d35;
 }
 
 .container {
@@ -911,6 +951,10 @@ th {
   border: 3px solid #f5f5f5;
   padding: 1.5rem 1rem;
   margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .hll {

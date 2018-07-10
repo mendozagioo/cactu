@@ -1,0 +1,46 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Variables
+//
+$alert-padding:              1rem !default;
+$alert-radius:               $radius !default;
+$alert-background-level:     -10 !default;
+$alert-border-level:         -9 !default;
+$alert-color-level:          6 !default;
+$alert-color-base:           $gray-300 !default;
+$alert-background:           theme-color-level($alert-color-base, $alert-background-level) !default;
+$alert-border:               theme-color-level($alert-color-base, $alert-border-level) !default;
+$alert-color:                theme-color-level($alert-color-base, $alert-color-level) !default;
+
+
+.alert,
+.alert-dismissible {
+  position: relative;
+  padding: $alert-padding;
+  border-radius: $alert-radius;
+  @include alert-variant($alert-background, $alert-border, $alert-color);
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+}
+
+.alert-dismissible {
+  padding-right: 2.625rem;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.625rem;
+    color: inherit;
+    background-color: transparent;
+
+    @include hover-focus {
+      color: darken($alert-background, 80%);
+    }
+  }
+}
