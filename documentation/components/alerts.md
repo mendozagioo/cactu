@@ -8,6 +8,19 @@ redirect_from:
 ---
 
 
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+`$alert-padding` | <small>padding</small> | `1rem` |
+`$alert-radius` | <small>radius</small> | `$radius` |
+`$alert-background-level` | <small>unitless</small> | `-10` |
+`$alert-border-level` | <small>unitless</small> | `-9` |
+`$alert-color-level` | <small>unitless</small> | `6` |
+`$alert-color-base` | <small>color</small> | <span class="small-box" style="background:#dee2e6"></span> `$gray-300` |
+`$alert-background` | <small>color</small> | <span class="small-box" style="background:#f8f9fa"></span> `theme-color-level($alert-color-base, $alert-background-level)` |
+`$alert-border` | <small>color</small> | <span class="small-box" style="background:#f6f7f8"></span> `theme-color-level($alert-color-base, $alert-border-level)` |
+`$alert-color` | <small>color</small> | <span class="small-box" style="background:#737678"></span> `theme-color-level($alert-color-base, $alert-color-level)` |
+
+
 ## Simple alert
 
 {% capture example %}
