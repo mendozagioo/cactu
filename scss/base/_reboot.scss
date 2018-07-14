@@ -1,5 +1,6 @@
 //
 // Reboot
+// Mostly taken of Bootstrap reboot
 // --------------------------------------------------
 
 
@@ -76,6 +77,13 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba($black, 0);
+}
+
+// IE10+ doesn't honor `<meta name="viewport">` in some cases.
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
 }
 
 body {
