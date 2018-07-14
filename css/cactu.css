@@ -799,6 +799,10 @@ textarea.invalid:focus {
   margin: 0;
 }
 
+.columns .columns {
+  padding: 0;
+}
+
 .column {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -817,38 +821,6 @@ textarea.invalid:focus {
 [class*="column-of-"] {
   padding: 0 15px;
   min-height: 1px;
-}
-
-.column.columns .column,
-.column.columns [class*="column-of-"],
-[class*="column-of-"].columns .column,
-[class*="column-of-"].columns [class*="column-of-"] {
-  padding: 0;
-}
-
-.column.columns .column:not(:last-child),
-.column.columns [class*="column-of-"]:not(:last-child),
-[class*="column-of-"].columns .column:not(:last-child),
-[class*="column-of-"].columns [class*="column-of-"]:not(:last-child) {
-  padding-right: 30px;
-}
-
-@media (min-width: 576px) and (max-width: 1199px) {
-  .column.columns .column:not(:last-child),
-  .column.columns [class*="column-of-"]:not(:last-child),
-  [class*="column-of-"].columns .column:not(:last-child),
-  [class*="column-of-"].columns [class*="column-of-"]:not(:last-child) {
-    padding-right: 20px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .column.columns .column:not(:last-child),
-  .column.columns [class*="column-of-"]:not(:last-child),
-  [class*="column-of-"].columns .column:not(:last-child),
-  [class*="column-of-"].columns [class*="column-of-"]:not(:last-child) {
-    padding: 0;
-  }
 }
 
 @media (min-width: 576px) and (max-width: 1199px) {

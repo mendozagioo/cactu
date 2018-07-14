@@ -29,6 +29,10 @@ $column-tablet-gap: 10px !default;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+
+  .columns {
+    padding: 0;
+  }
 }
 
 .column {
@@ -47,25 +51,6 @@ $column-tablet-gap: 10px !default;
 [class*="column-of-"] {
   padding: 0 $column-gap;
   min-height: 1px;
-
-  &.columns {
-    .column,
-    [class*="column-of-"] {
-      padding: 0;
-
-      &:not(:last-child) {
-        padding-right: $column-gap * 2;
-
-        @include breakpoint-cellphone-medium-desktop {
-          padding-right: $column-tablet-gap * 2;
-        }
-
-        @include breakpoint-cellphone {
-          padding: 0;
-        }
-      }
-    }
-  }
 }
 
 // Fix the global gap for column clases
