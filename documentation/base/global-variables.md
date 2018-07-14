@@ -25,7 +25,7 @@ Cactu has just one file used for global variables, those varibales are used for 
 | `$black`    | <small>color</small> | <span class="small-box" style="background:#000"></span> `#000` |
 | `$blue`     | <small>color</small> | <span class="small-box" style="background:#007bff"></span> `#007bff` |
 | `$yellow`   | <small>color</small> | <span class="small-box" style="background:#f0f083"></span> `#f0f083`|
-| `$red`      | <small>color</small> | <span class="small-box" style="background:#dc3545"></span>`#dc3545`|
+| `$red`      | <small>color</small> | <span class="small-box" style="background:#dc3545"></span> `#dc3545`|
 | `$green`    | <small>color</small> | <span class="small-box" style="background:#28a745"></span> `#28a745`|
 | `$text-color`   | <small>color</small> | <span class="small-box" style="background:#343a40"></span> `$gray-800` |
 | `$border-color` | <small>color</small> | <span class="small-box" style="background:#dee2e6"></span> `$gray-300` |
