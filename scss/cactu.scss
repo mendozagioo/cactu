@@ -10,10 +10,12 @@
 @import "base/reboot";
 
 @import "functions/colors";
+@import "functions/strings";
 
 @import "mixins/alerts";
 @import "mixins/breakpoints";
 @import "mixins/buttons";
+@import "mixins/forms";
 @import "mixins/grid";
 @import "mixins/hover";
 @import "mixins/transition";
@@ -25,7 +27,6 @@
 
 @import "components/alerts";
 @import "components/buttons";
-@import "components/figures";
 @import "components/forms";
 @import "components/grids";
 @import "components/lists";

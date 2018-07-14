@@ -17,7 +17,7 @@ $link-color:              $blue !default;
 $link-decoration:         none !default;
 $link-hover-color:        darken($link-color, 10%) !default;
 $link-hover-decoration:   underline !default;
-$link-transition:         $transition-all !default;
+$link-transition:         color $speed ease-in-out, text-decoration $speed ease-in-out !default;
 
 
 // Anchors

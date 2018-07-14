@@ -6,7 +6,7 @@
 //  Variables
 //
 $button-font-weight:          $font-weight-normal !default;
-$button-transition:           $transition-all !default;
+$button-transition:           color $speed ease-in-out, background-color $speed ease-in-out, border-color $speed ease-in-out, box-shadow $speed ease-in-out !default;
 $button-padding-y:            .375rem !default;
 $button-padding-x:            .75rem !default;
 $button-font-size:            1rem !default;
