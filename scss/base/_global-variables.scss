@@ -18,6 +18,9 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 
 $blue:     #007bff !default;
+$yellow:   #f0f083 !default;
+$red:      #dc3545 !default;
+$green:    #28a745 !default;
 
 $text-color:    $gray-800 !default;
 $border-color:  $gray-300 !default;
@@ -56,6 +59,6 @@ $radius-rounded:    290486px !default;
 $border-width:      1px !default;
 $speed:             .2s !default;
 $line-height:       1.5 !default;
-$transition-all:    all .2s ease-in-out !default;
-$outline-width:     .2rem !default;
+$transition-all:    all $speed ease-in-out !default;
+$outline-width:     .125rem !default;
 $zindex-top:        1000 !default;

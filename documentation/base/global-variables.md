@@ -24,6 +24,9 @@ Cactu has just one file used for global variables, those varibales are used for 
 | `$gray-900` | <small>color</small> | <span class="small-box" style="background:#212529"></span> `#212529` |
 | `$black`    | <small>color</small> | <span class="small-box" style="background:#000"></span> `#000` |
 | `$blue`     | <small>color</small> | <span class="small-box" style="background:#007bff"></span> `#007bff` |
+| `$yellow`   | <small>color</small> | <span class="small-box" style="background:#f0f083"></span> `#f0f083`|
+| `$red`      | <small>color</small> | <span class="small-box" style="background:#dc3545"></span>`#dc3545`|
+| `$green`    | <small>color</small> | <span class="small-box" style="background:#28a745"></span> `#28a745`|
 | `$text-color`   | <small>color</small> | <span class="small-box" style="background:#343a40"></span> `$gray-800` |
 | `$border-color` | <small>color</small> | <span class="small-box" style="background:#dee2e6"></span> `$gray-300` |
 | `$white-smoke`  | <small>color</small> | <span class="small-box" style="background:#f5f5f5"></span> `#f5f5f5` |
@@ -48,6 +51,6 @@ Cactu has just one file used for global variables, those varibales are used for 
 | `$border-width`     | <small>size</small> | `1px` |
 | `$speed`            | <small>speed</small> | `.2s` |
 | `$line-height`      | <small>unitless</small> | `1.3` |
-| `$transition-all`   | <small>transition</small> | `all .2s ease-in-out` |
-| `$outline-width`    | <small>unitless</small> | `.2rem` |
+| `$transition-all`   | <small>transition</small> | `all $speed ease-in-out` |
+| `$outline-width`    | <small>unitless</small> | `.125rem` |
 | `$zindex-top`       | <small>z-index</small> | `1000` |
