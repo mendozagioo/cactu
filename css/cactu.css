@@ -577,6 +577,83 @@ h6 {
   color: #262d35;
 }
 
+.button-group button,
+.button-group .button,
+.button-group-vertical button,
+.button-group-vertical .button {
+  z-index: 2;
+}
+
+.button-group button:focus, .button-group button:active, .button-group button.active,
+.button-group .button:focus,
+.button-group .button:active,
+.button-group .button.active,
+.button-group-vertical button:focus,
+.button-group-vertical button:active,
+.button-group-vertical button.active,
+.button-group-vertical .button:focus,
+.button-group-vertical .button:active,
+.button-group-vertical .button.active {
+  z-index: 1;
+}
+
+.button-group button.selected,
+.button-group .button.selected,
+.button-group-vertical button.selected,
+.button-group-vertical .button.selected {
+  background-color: #cbd3da;
+}
+
+.button-group {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.button-group button:not(:first-child):not(:last-child),
+.button-group .button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.button-group button:not(:first-child),
+.button-group .button:not(:first-child) {
+  margin-left: -1px;
+}
+
+.button-group button:first-child,
+.button-group .button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.button-group button:last-child,
+.button-group .button:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.button-group-vertical {
+  display: -ms-inline-grid;
+  display: inline-grid;
+}
+
+.button-group-vertical button:not(:first-child):not(:last-child),
+.button-group-vertical .button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.button-group-vertical button:not(:first-child),
+.button-group-vertical .button:not(:first-child) {
+  margin-top: -1px;
+}
+
+.button-group-vertical button:first-child,
+.button-group-vertical .button:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.button-group-vertical button:last-child,
+.button-group-vertical .button:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 select,
 textarea {
