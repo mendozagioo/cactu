@@ -49,7 +49,7 @@ Cactu has just one file used for global variables, those varibales are used for 
 | `$radius-large`     | <small>size</small> | `6px` |
 | `$radius-rounded`   | <small>radius</small> | `290486px` |
 | `$border-width`     | <small>size</small> | `1px` |
-| `$speed`            | <small>speed</small> | `.2s` |
+| `$speed`            | <small>speed</small> | `.15s` |
 | `$line-height`      | <small>unitless</small> | `1.3` |
 | `$transition-all`   | <small>transition</small> | `all $speed ease-in-out` |
 | `$outline-width`    | <small>unitless</small> | `.125rem` |
