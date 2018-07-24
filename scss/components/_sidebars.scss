@@ -8,7 +8,6 @@
   position: sticky;
   top: 3.375rem;
   border-right: 1px solid $border-color;
-  z-index: $zindex-top;
 
   @include breakpoint-cellphone {
     height: auto;

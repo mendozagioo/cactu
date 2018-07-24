@@ -8,6 +8,7 @@
 
 @import "base/global-variables";
 @import "base/reboot";
+@import "base/blocks";
 
 @import "functions/colors";
 @import "functions/strings";
@@ -27,6 +28,7 @@
 
 @import "components/alerts";
 @import "components/buttons";
+@import "components/dropdowns";
 @import "components/forms";
 @import "components/grids";
 @import "components/lists";

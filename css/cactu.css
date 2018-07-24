@@ -240,6 +240,17 @@ template {
   display: none !important;
 }
 
+.dropdown .button:after,
+.dropup .button:after,
+.dropright .button:after,
+.dropleft .button:after, .dropleft .button:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+}
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -266,7 +277,7 @@ button,
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 4px;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -397,7 +408,7 @@ a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
-  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+  transition: color 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
   -webkit-text-decoration-skip: objects;
 }
 
@@ -654,6 +665,195 @@ h6 {
   border-radius: 0 0 4px 4px;
 }
 
+.dropdown,
+.dropup,
+.dropright,
+.dropleft {
+  position: relative;
+}
+
+.dropdown [type="checkbox"],
+.dropup [type="checkbox"],
+.dropright [type="checkbox"],
+.dropleft [type="checkbox"] {
+  display: none;
+}
+
+.dropdown [type="checkbox"]:checked ~ .drop-menu,
+.dropup [type="checkbox"]:checked ~ .drop-menu,
+.dropright [type="checkbox"]:checked ~ .drop-menu,
+.dropleft [type="checkbox"]:checked ~ .drop-menu {
+  display: inline-block;
+}
+
+.dropdown [type="checkbox"]:checked ~ .button,
+.dropup [type="checkbox"]:checked ~ .button,
+.dropright [type="checkbox"]:checked ~ .button,
+.dropleft [type="checkbox"]:checked ~ .button {
+  background: #cbd3da;
+}
+
+.dropdown [type="checkbox"]:checked ~ .button:after,
+.dropup [type="checkbox"]:checked ~ .button:after,
+.dropright [type="checkbox"]:checked ~ .button:after,
+.dropleft [type="checkbox"]:checked ~ .button:after {
+  transform: rotate(180deg);
+}
+
+.dropdown .button:after,
+.dropup .button:after,
+.dropright .button:after,
+.dropleft .button:after {
+  margin-left: .4375rem;
+  transition: transform 0.1s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .dropdown .button:after,
+  .dropup .button:after,
+  .dropright .button:after,
+  .dropleft .button:after {
+    transition: none;
+  }
+}
+
+.dropdown .drop-menu,
+.dropup .drop-menu,
+.dropright .drop-menu,
+.dropleft .drop-menu {
+  position: absolute;
+  display: none;
+  min-width: 12.5rem;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.dropdown .drop-menu *,
+.dropup .drop-menu *,
+.dropright .drop-menu *,
+.dropleft .drop-menu * {
+  color: #343a40;
+  padding: 0.3125rem 1rem;
+  margin: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .dropdown .drop-menu *,
+  .dropup .drop-menu *,
+  .dropright .drop-menu *,
+  .dropleft .drop-menu * {
+    transition: none;
+  }
+}
+
+.dropdown .drop-menu a,
+.dropup .drop-menu a,
+.dropright .drop-menu a,
+.dropleft .drop-menu a {
+  display: block;
+}
+
+.dropdown .drop-menu a:hover, .dropdown .drop-menu a:focus,
+.dropup .drop-menu a:hover,
+.dropup .drop-menu a:focus,
+.dropright .drop-menu a:hover,
+.dropright .drop-menu a:focus,
+.dropleft .drop-menu a:hover,
+.dropleft .drop-menu a:focus {
+  text-decoration: none;
+  background-color: #f2f2f2;
+}
+
+.dropdown .drop-menu .drop-active,
+.dropup .drop-menu .drop-active,
+.dropright .drop-menu .drop-active,
+.dropleft .drop-menu .drop-active {
+  color: #343a40;
+  background-color: #e9ecef;
+}
+
+.dropdown .drop-menu .drop-separator,
+.dropup .drop-menu .drop-separator,
+.dropright .drop-menu .drop-separator,
+.dropleft .drop-menu .drop-separator {
+  height: 1px;
+  background: #dee2e6;
+  margin: .375rem 0;
+  padding: 0;
+}
+
+.dropdown .drop-menu .drop-item *,
+.dropup .drop-menu .drop-item *,
+.dropright .drop-menu .drop-item *,
+.dropleft .drop-menu .drop-item * {
+  display: inline-block;
+  padding: 0;
+}
+
+.dropdown .button:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #343a40;
+}
+
+.dropdown .drop-menu {
+  left: 0;
+  top: 2.5rem;
+}
+
+.dropup .button:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #343a40;
+}
+
+.dropup .drop-menu {
+  left: 0;
+  bottom: 3rem;
+}
+
+.dropright .button:after {
+  border-left: 5px solid #343a40;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.dropright .drop-menu {
+  margin-left: .125rem;
+}
+
+.dropleft input:checked ~ .button:before {
+  transform: rotate(180deg);
+}
+
+.dropleft .button:after {
+  display: none;
+}
+
+.dropleft .button:before {
+  margin-right: .4375rem;
+  border-right: 5px solid #343a40;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  transition: transform 0.1s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .dropleft .button:before {
+    transition: none;
+  }
+}
+
+.dropleft .drop-menu {
+  left: -12.625rem;
+}
+
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 select,
 textarea {
@@ -661,7 +861,7 @@ textarea {
   border: 1px solid #dee2e6;
   border-radius: 4px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -1475,7 +1675,6 @@ th {
   position: sticky;
   top: 3.375rem;
   border-right: 1px solid #dee2e6;
-  z-index: 1000;
 }
 
 @media screen and (max-width: 575px) {

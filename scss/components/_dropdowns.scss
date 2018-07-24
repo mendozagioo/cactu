@@ -1,0 +1,167 @@
+//
+// Dropdowns
+// --------------------------------------------------
+
+
+// Variables
+//
+$dropdown-menu-border:        1px solid $border-color !default;
+$dropdown-item-padding:       .3125rem 1rem !default;
+$dropdown-menu-top:           1.625rem + .75rem + .125rem !default;
+$drop-dow-open-shadow:        0 0 0 $outline-width darken($gray-200, 20%) !default;
+$button-background-dropped:   darken($gray-200, 10%) !default;
+$triangle-width:              5px !default;
+$triangle-color:              $text-color !default;
+$triangle-transition:         transform .1s ease-in-out !default;
+$drop-menu-min-width:         12.5rem !default;
+$drop-menu-padding:           .5rem 0 !default;
+$drop-menu-radius:            $radius !default;
+$drop-menu-color:             $text-color !default;
+$drop-menu-background:        $white !default;
+$drop-menu-transition:        color $speed ease-in-out, background-color $speed ease-in-out !default;
+$drop-active-color:           $text-color !default;
+$drop-active-background:      $gray-200 !default;
+$separator-color:             $border-color !default;
+
+
+.dropdown,
+.dropup,
+.dropright,
+.dropleft {
+  position: relative;
+
+  [type="checkbox"] {
+    display: none;
+
+    &:checked {
+      & ~ .drop-menu {
+        display: inline-block;
+      }
+
+      & ~ .button {
+        background: $button-background-dropped;
+
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .button {
+    &:after {
+      @extend %shape-base;
+      margin-left: .4375rem;
+      @include transition($triangle-transition);
+    }
+  }
+
+  .drop-menu {
+    position: absolute;
+    display: none;
+    min-width: $drop-menu-min-width;
+    flex-direction: column;
+    padding: $drop-menu-padding;
+    border: $dropdown-menu-border;
+    border-radius: $drop-menu-radius;
+    background-color: $drop-menu-background;
+    z-index: 10;
+
+    * {
+      
+      color: $drop-menu-color;
+      padding: $dropdown-item-padding;
+      margin: 0;
+      @include transition($drop-menu-transition);
+    }
+
+    a {
+      display: block;
+      @include hover-focus {
+        text-decoration: none;
+        background-color: darken($drop-menu-background, 5%);
+      }
+    }
+
+    .drop-active {
+      color: $drop-active-color;
+      background-color: $drop-active-background;
+    }
+
+    .drop-separator {
+      height: 1px;
+      background: $separator-color;
+      margin: .375rem 0;
+      padding: 0;
+    }
+
+    .drop-item {
+      * {
+        display: inline-block;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.dropdown {
+  .button:after {
+    border-left: $triangle-width solid transparent;
+    border-right: $triangle-width solid transparent;
+    border-top: $triangle-width solid $triangle-color;
+  }
+
+  .drop-menu {
+    left: 0;
+    top: $dropdown-menu-top;
+  }
+}
+
+.dropup {
+  .button:after {
+    border-left: $triangle-width solid transparent;
+    border-right: $triangle-width solid transparent;
+    border-bottom: $triangle-width solid $triangle-color;
+  }
+
+  .drop-menu {
+    left: 0;
+    bottom: 3rem;
+  }
+}
+
+.dropright {
+  .button:after {
+    border-left: $triangle-width solid $triangle-color;
+    border-top: $triangle-width solid transparent;
+    border-bottom: $triangle-width solid transparent;
+  }
+
+  .drop-menu {
+    margin-left: .125rem;
+  }
+}
+
+.dropleft {
+  input:checked ~ .button:before {
+    transform: rotate(180deg);
+  }
+
+  .button {
+    &:after {
+      display: none;
+    }
+    &:before {
+      @extend %shape-base;
+      margin-right: .4375rem;
+      border-right: $triangle-width solid $triangle-color;
+      border-top: $triangle-width solid transparent;
+      border-bottom: $triangle-width solid transparent;
+      @include transition($triangle-transition);
+    }
+  }
+
+  .drop-menu {
+    left: -$drop-menu-min-width - .125;
+  }
+}
