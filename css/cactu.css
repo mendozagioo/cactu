@@ -500,32 +500,33 @@ p {
   margin-bottom: .7rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   margin: 1rem 0 0.5rem;
   font-weight: 700;
 }
 
-h1 {
+h1, .h1 {
   font-size: 2.8125rem;
 }
 
-h2 {
+h2, .h2 {
   font-size: 2.125rem;
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.75rem;
 }
 
-h4 {
+h4, .h4 {
   font-size: 1.5rem;
 }
 
-h5 {
+h5, .h5 {
   font-size: 1.25rem;
 }
 
-h6 {
+h6, .h6 {
   font-size: 1rem;
 }
 
@@ -1669,11 +1670,15 @@ th {
   user-select: none;
 }
 
-.sidebar {
-  height: calc(100vh - 3.375rem);
+.sidebar,
+.sidebar-secondary {
   position: -webkit-sticky;
   position: sticky;
   top: 3.375rem;
+  height: calc(100vh - 3.375rem);
+}
+
+.sidebar {
   border-right: 1px solid #dee2e6;
 }
 
@@ -1682,6 +1687,22 @@ th {
     height: auto;
     border-right: 0;
   }
+}
+
+.sidebar-secondary {
+  font-size: .875rem;
+}
+
+.sidebar-secondary .section-nav {
+  margin-top: 1.5rem;
+  list-style: none;
+  padding-left: 1rem;
+  border-left: 1px solid #dee2e6;
+}
+
+.sidebar-secondary .section-nav li ul {
+  list-style: none;
+  padding-left: 1rem;
 }
 
 .empty-column {

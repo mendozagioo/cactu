@@ -3,6 +3,7 @@ layout: documentation
 title: Code
 description: Documentation and examples for displaying inline and multiline blocks of code with Cactu.
 group: elements
+toc: true
 ---
 
 

@@ -3,6 +3,7 @@ layout: documentation
 title: Dropdowns
 description: Basic use for Dropdowns with a few classes.
 group: components
+toc: true
 ---
 
 ## Overview

@@ -5,6 +5,7 @@ description: Documentation and examplesd for alerts.
 group: components
 redirect_from:
   - /documentation/components/
+toc: true
 ---
 
 

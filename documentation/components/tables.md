@@ -3,6 +3,7 @@ layout: documentation
 title: Tables
 description: Basic use for tables with a few classes.
 group: components
+toc: true
 ---
 
 

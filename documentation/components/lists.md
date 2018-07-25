@@ -3,6 +3,7 @@ layout: documentation
 title: Lists
 description: Basic use for Lists with a few classes.
 group: components
+toc: true
 ---
 
 

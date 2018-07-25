@@ -22,6 +22,7 @@ highlighter: rouge
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-toc
 
 exclude:
   - .git/
@@ -33,3 +34,7 @@ exclude:
   - package-lock.json
   - gulpfile.js
   - README.md
+
+toc:
+  min_level: 2
+  max_level: 3

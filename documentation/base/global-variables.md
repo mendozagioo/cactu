@@ -5,6 +5,7 @@ description: Variables used for Cactu to allow easy customization.
 group: elements
 redirect_from:
   - /documentation/base/
+toc: true
 ---
 
 

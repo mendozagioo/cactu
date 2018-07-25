@@ -3,6 +3,7 @@ layout: documentation
 title: Image
 description: Documentation and examples for basic style on image element.
 group: elements
+toc: true
 ---
 
 

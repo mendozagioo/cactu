@@ -3,14 +3,34 @@
 // --------------------------------------------------
 
 
-.sidebar {
-  height: calc(100vh - 3.375rem);
+.sidebar,
+.sidebar-secondary {
   position: sticky;
   top: 3.375rem;
+  height: calc(100vh - 3.375rem);
+}
+
+.sidebar {
   border-right: 1px solid $border-color;
 
   @include breakpoint-cellphone {
     height: auto;
     border-right: 0;
+  }
+}
+
+.sidebar-secondary {
+  font-size: .875rem;
+
+  .section-nav {
+    margin-top: 1.5rem;
+    list-style: none;
+    padding-left: 1rem;
+    border-left: $border-width solid $border-color;
+
+    li ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
   }
 }

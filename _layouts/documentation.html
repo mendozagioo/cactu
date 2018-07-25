@@ -17,9 +17,13 @@
           <p>{{ page.description }}</p>
           {{ content }}
         </main>
-        <aside class="column-of-2">
-          {% include sidebar-secondary.html %}
-        </aside>
+
+        {% if page.toc %}
+          <aside class="column-of-2 sidebar-secondary">
+            {{ content | toc_only }}
+          </aside>
+        {% endif %}
+
       </div>
     </section>
 

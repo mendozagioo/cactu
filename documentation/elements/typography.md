@@ -5,6 +5,7 @@ description: All typography styles documentation, including headings, body text,
 group: elements
 redirect_from:
   - /documentation/elements/
+toc: true
 ---
 
 
@@ -108,13 +109,31 @@ Styling for common inline HTML5 elements.
 
 All HTML headings, `<h1>` through `<h6>`, are available.
 
-{% capture example %}
+| Heading | Example |
+| ------- | ------- |
+| `<h1></h1>` | <span class="h1">h1. Cactu heading</span> |
+| `<h2></h2>` | <span class="h2">h2. Cactu heading</span> |
+| `<h3></h3>` | <span class="h3">h3. Cactu heading</span> |
+| `<h4></h4>` | <span class="h4">h4. Cactu heading</span> |
+| `<h5></h5>` | <span class="h5">h5. Cactu heading</span> |
+| `<h6></h6>` | <span class="h6">h6. Cactu heading</span> |
+
+{% highlight html %}
 <h1>h1. Cactu heading</h1>
 <h2>h2. Cactu heading</h2>
 <h3>h3. Cactu heading</h3>
 <h4>h4. Cactu heading</h4>
 <h5>h5. Cactu heading</h5>
 <h6>h6. Cactu heading</h6>
+{% endhighlight %}
+
+{% capture example %}
+<p class="h1">h1. Cactu heading</p>
+<p class="h2">h2. Cactu heading</p>
+<p class="h3">h3. Cactu heading</p>
+<p class="h4">h4. Cactu heading</p>
+<p class="h5">h5. Cactu heading</p>
+<p class="h6">h6. Cactu heading</p>
 {% endcapture %}
 {% include example.html content=example %}
 

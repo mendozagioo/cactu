@@ -3,6 +3,7 @@ layout: documentation
 title: Buttons
 description: Basic use for Buttons with a few classes.
 group: components
+toc: true
 ---
 
 
