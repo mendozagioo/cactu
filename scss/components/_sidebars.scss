@@ -8,6 +8,7 @@
   position: sticky;
   top: 3.375rem;
   height: calc(100vh - 3.375rem);
+  overflow-y: auto;
 }
 
 .sidebar {
@@ -32,5 +33,12 @@
       list-style: none;
       padding-left: 1rem;
     }
+  }
+
+  @include breakpoint-max($small-desktop-size - 1) {
+    display: none;
+  }
+  @include breakpoint-min($small-desktop-size) {
+    display: block;
   }
 }

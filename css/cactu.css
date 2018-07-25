@@ -1676,6 +1676,7 @@ th {
   position: sticky;
   top: 3.375rem;
   height: calc(100vh - 3.375rem);
+  overflow-y: auto;
 }
 
 .sidebar {
@@ -1703,6 +1704,18 @@ th {
 .sidebar-secondary .section-nav li ul {
   list-style: none;
   padding-left: 1rem;
+}
+
+@media screen and (max-width: 959px) {
+  .sidebar-secondary {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .sidebar-secondary {
+    display: block;
+  }
 }
 
 .empty-column {
