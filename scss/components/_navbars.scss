@@ -24,8 +24,6 @@ $brand-gap:           .625rem !default;
   }
 
   nav {
-    display: flex;
-
     a {
       padding: $link-padding-y;
     }
@@ -39,14 +37,73 @@ $brand-gap:           .625rem !default;
     flex-wrap: wrap;
     align-items: center;
   }
-}
 
-.navbar-brand {
-  margin-right: $brand-gap;
+  .navbar-toggler {
+    width: 45px;
+    height: 40px;
+    margin: 7px 0;
+
+    &:before {
+      @extend %shape-block;
+      height: 2px;
+      margin: 7px 0;
+      background-color: $text-color;
+    }
+
+    &:after {
+      @extend %shape-block;
+      height: 2px;
+      background-color: $text-color;
+    }
+  }
+
+  [type="checkbox"] {
+    display: none;
+
+    &:checked {
+      & ~ nav {
+        display: flex;
+      }
+    }
+  }
+
+  .navbar-brand {
+    margin-right: $brand-gap;
+  }
 }
 
 .sticky-navbar {
   position: sticky;
   top: 0;
   z-index: $zindex-top;
+}
+
+@include breakpoint-max($tablet-size - 1) {
+  .navbar {
+    justify-content: space-between;
+
+    nav {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+
+      a {
+        padding: .625rem 0;
+      }
+    }
+  }
+}
+
+@include breakpoint-min($tablet-size) {
+  .navbar {
+    justify-content: start;
+
+    nav {
+      display: flex;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+  }
 }
