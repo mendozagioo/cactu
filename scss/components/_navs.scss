@@ -3,6 +3,13 @@
 // --------------------------------------------------
 
 
+// Variables
+//
+$nav-link-padding: .5rem !default;
+$nav-dropdown-link-padding-y: $nav-link-padding !default;
+$nav-dropdown-link-padding-x: $nav-link-padding + .75 !default;
+
+
 [class*="nav-"] {
   a { text-decoration: none; }
 }
@@ -10,8 +17,44 @@
 .nav-vertical {
   a {
     display: block;
+    padding: $nav-link-padding;
   }
+}
+
+.nav-dropdown {
   nav {
-    padding-left: .8rem;
+    display: none;
+    a {
+      padding: $nav-dropdown-link-padding-y $nav-dropdown-link-padding-x;
+    }
+  }
+}
+
+
+// Only documentation style
+.nav-vertical {
+  a {
+    background-color: $white;
+    padding: $nav-link-padding 1rem;
+
+    @include breakpoint-cellphone-medium-desktop {
+      padding: $nav-link-padding .625rem;
+    }
+
+    &:hover {
+      background-color: darken($white, 5%);
+    }
+  }
+}
+
+.nav-dropdown {
+  nav {
+    a {
+      padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .75);
+
+      @include breakpoint-cellphone-medium-desktop {
+        padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .5);
+      }
+    }
   }
 }

@@ -6,6 +6,7 @@ group: getting-started
 redirect_from:
   - /documentation/
   - /documentation/getting-started/
+toc: true
 ---
 
 ## Quick start
