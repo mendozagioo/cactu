@@ -17,5 +17,5 @@ $example-code-color: $white-smoke;
   margin-top: 1rem;
 }
 
-.show { display: block; }
-.hidden { display: none; }
+.show { display: block !important; }
+.hidden { display: none !important; }
