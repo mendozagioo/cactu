@@ -9,13 +9,16 @@
   top: 3.375rem;
   height: calc(100vh - 3.375rem);
   overflow-y: auto;
+  background-color: $white;
 }
 
 .sidebar {
+  padding: .5rem 0;
   border-right: 1px solid $border-color;
 
   @include breakpoint-cellphone {
-    height: auto;
+    height: 0;
+    padding: 0;
     border-right: 0;
   }
 }
@@ -32,6 +35,12 @@
     li ul {
       list-style: none;
       padding-left: 1rem;
+    }
+
+    a {
+      @include hover-focus {
+        text-decoration: none;
+      }
     }
   }
 
