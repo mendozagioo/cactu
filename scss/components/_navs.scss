@@ -6,6 +6,7 @@
 // Variables
 //
 $nav-link-padding: .5rem !default;
+$nav-vertical-transition: background-color $speed ease-in-out, color $speed ease-in-out !default;
 $nav-dropdown-link-padding-y: $nav-link-padding !default;
 $nav-dropdown-link-padding-x: $nav-link-padding + .75 !default;
 
@@ -36,6 +37,7 @@ $nav-dropdown-link-padding-x: $nav-link-padding + .75 !default;
   a {
     background-color: $white;
     padding: $nav-link-padding 1rem;
+    @include transition($nav-vertical-transition);
 
     @include breakpoint-cellphone-medium-desktop {
       padding: $nav-link-padding .625rem;
