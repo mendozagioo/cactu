@@ -8,9 +8,9 @@
 $alert-padding:              1rem !default;
 $alert-radius:               $radius !default;
 $alert-background-level:     -10 !default;
-$alert-border-level:         -9 !default;
+$alert-border-level:         -2 !default;
 $alert-color-level:          6 !default;
-$alert-color-base:           $gray-300 !default;
+$alert-color-base:           $yellow !default;
 $alert-background:           theme-color-level($alert-color-base, $alert-background-level) !default;
 $alert-border:               theme-color-level($alert-color-base, $alert-border-level) !default;
 $alert-color:                theme-color-level($alert-color-base, $alert-color-level) !default;

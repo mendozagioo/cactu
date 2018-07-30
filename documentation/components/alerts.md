@@ -16,10 +16,10 @@ toc: true
 `$alert-background-level` | <small>unitless</small> | `-10` |
 `$alert-border-level` | <small>unitless</small> | `-9` |
 `$alert-color-level` | <small>unitless</small> | `6` |
-`$alert-color-base` | <small>color</small> | <span class="small-box" style="background:#dee2e6"></span> `$gray-300` |
-`$alert-background` | <small>color</small> | <span class="small-box" style="background:#f8f9fa"></span> `theme-color-level($alert-color-base, $alert-background-level)` |
-`$alert-border` | <small>color</small> | <span class="small-box" style="background:#f6f7f8"></span> `theme-color-level($alert-color-base, $alert-border-level)` |
-`$alert-color` | <small>color</small> | <span class="small-box" style="background:#737678"></span> `theme-color-level($alert-color-base, $alert-color-level)` |
+`$alert-color-base` | <small>color</small> | <span class="small-box" style="background:#f8f852"></span> `$yellow` |
+`$alert-background` | <small>color</small> | <span class="small-box" style="background:#fefedc"></span> `theme-color-level($alert-color-base, $alert-background-level)` |
+`$alert-border` | <small>color</small> | <span class="small-box" style="background:#f9f96e"></span> `theme-color-level($alert-color-base, $alert-border-level)` |
+`$alert-color` | <small>color</small> | <span class="small-box" style="background:#81812b"></span> `theme-color-level($alert-color-base, $alert-color-level)` |
 
 
 ## Simple alert

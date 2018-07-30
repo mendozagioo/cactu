@@ -555,14 +555,14 @@ h6, .h6 {
   position: relative;
   padding: 1rem;
   border-radius: 4px;
-  color: #737678;
-  border: 1px solid #f6f7f8;
-  background-color: #f8f9fa;
+  color: #81812b;
+  border: 1px solid #f9f96e;
+  background-color: #fefedc;
 }
 
 .alert hr,
 .alert-dismissible hr {
-  background-color: #e8eaed;
+  background-color: #f8f856;
 }
 
 .alert .alert-link,
@@ -594,7 +594,7 @@ h6, .h6 {
 }
 
 .alert-dismissible .close:hover, .alert-dismissible .close:focus {
-  color: #262d35;
+  color: #404002;
 }
 
 .button-group button,
@@ -906,7 +906,7 @@ textarea::placeholder {
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):disabled,
 select:disabled,
 textarea:disabled {
-  color: #adb5bd;
+  color: #838f9b;
   background-color: #e9ecef;
   cursor: not-allowed;
   opacity: .57;
@@ -928,7 +928,7 @@ input[type="range"]::-moz-focus-outer {
 }
 
 .disabled {
-  color: #adb5bd;
+  color: #838f9b;
   cursor: not-allowed;
 }
 

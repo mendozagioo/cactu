@@ -18,7 +18,7 @@ toc: true
 | `$input-placeholder-color`          | <small>color</small> | <span class="small-box" style="background:#6c757d"></span> `$gray-600` |
 | `$input-disabled-background`        | <small>color</small> | <span class="small-box" style="background:#e9ecef"></span> `$gray-200` |
 | `$input-transition`                 | <small>transition</small> | `border-color $speed ease-in-out, box-shadow $speed ease-in-out` |
-| `$disabled-color`                   | <small>color</small> | <span class="small-box" style="background:#adb5bd"></span> `$gray-500`|
+| `$disabled-color`                   | <small>color</small> | <span class="small-box" style="background:#838f9b"></span> `darken($gray-500, 15%)`|
 | `$help-font-size`                   | <small>font-size</small> | `.75rem` |
 | `$help-margin-top`                  | <small>margin</small> | `.25rem` |
 | `$select-height`                    | <small>unitless</small> | `calc(2.25rem + 2px)` |
