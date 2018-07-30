@@ -1,0 +1,37 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Variables
+//
+$nav-vertical-transition: background-color $speed ease-in-out, color $speed ease-in-out;
+
+
+.nav-vertical {
+  a {
+    background-color: $white;
+    padding: $nav-link-padding 1rem;
+    @include transition($nav-vertical-transition);
+
+    @include breakpoint-cellphone-medium-desktop {
+      padding: $nav-link-padding .625rem;
+    }
+
+    &:hover {
+      background-color: darken($white, 5%);
+    }
+  }
+}
+
+.nav-dropdown {
+  nav {
+    a {
+      padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .75);
+
+      @include breakpoint-cellphone-medium-desktop {
+        padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .5);
+      }
+    }
+  }
+}
