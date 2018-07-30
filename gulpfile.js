@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // Cactu scss source
 const cactuUrl = './scss/**/*.scss';
+const docUrl = './_sass/**/*.scss';
 
 const sassOpts = {
   outputStyle: 'compressed',
@@ -35,8 +36,24 @@ gulp.task('sass-compressed', () => gulp.src(cactuUrl)
   .pipe(gulp.dest('./css'))
 );
 
+gulp.task('sass-doc', () => gulp.src(docUrl)
+  .pipe(sass(sassOpts).on('error', sass.logError))
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
+  .pipe(rename({
+    suffix: ".min"
+  }))
+  .pipe(gulp.dest('./assets/css'))
+);
+
 gulp.task('sass-build', ['sass', 'sass-compressed']);
 
 gulp.task('sass:watch', () => {
   gulp.watch(cactuUrl, ['sass-build']);
+});
+
+gulp.task('doc:watch', () => {
+  gulp.watch(docUrl, ['sass-doc']);
 });
