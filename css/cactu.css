@@ -1443,6 +1443,32 @@ ul, ol {
   }
 }
 
+.chevron-down-icon {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  margin: 7px 0;
+  background: none;
+}
+
+.chevron-down-icon:before, .chevron-down-icon:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #343a40;
+}
+
+.chevron-down-icon:before {
+  transform: rotate(45deg);
+}
+
+.chevron-down-icon:after {
+  transform: rotate(-45deg);
+  margin-left: 9px;
+  margin-top: -2px;
+}
+
 [class*="nav-"] a {
   text-decoration: none;
 }

@@ -11,7 +11,10 @@ $nav-dropdown-link-padding-x: $nav-link-padding + .75 !default;
 
 
 [class*="nav-"] {
-  a { text-decoration: none; }
+  a {
+    position: relative;
+    text-decoration: none;
+  }
 }
 
 .nav-vertical {
@@ -22,10 +25,35 @@ $nav-dropdown-link-padding-x: $nav-link-padding + .75 !default;
 }
 
 .nav-dropdown {
+  &:not(:last-child) {
+    > a {
+      border-bottom: 1px solid #eee;
+    }
+  }
+  > a {
+    i:before,
+    i:after {
+      background-color: $link-color;
+    }
+
+    @include hover-focus {
+      i:before,
+      i:after {
+        background-color: $link-hover-color;
+      }
+    }
+  }
   nav {
     display: none;
     a {
       padding: $nav-dropdown-link-padding-y $nav-dropdown-link-padding-x;
+    }
+  }
+
+  &.dropped {
+    > a i {
+      &:before { transform: rotate(-45deg); }
+      &:after { transform: rotate(45deg); }
     }
   }
 }
