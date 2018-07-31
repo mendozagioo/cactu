@@ -48,12 +48,8 @@ gulp.task('sass-doc', () => gulp.src(docUrl)
   .pipe(gulp.dest('./assets/css'))
 );
 
-gulp.task('sass-build', ['sass', 'sass-compressed']);
+gulp.task('cactu-build', ['sass', 'sass-compressed']);
 
-gulp.task('sass:watch', () => {
-  gulp.watch(cactuUrl, ['sass-build']);
-});
-
-gulp.task('doc:watch', () => {
-  gulp.watch(docUrl, ['sass-doc']);
+gulp.task('sass:watch', ['cactu-build', 'sass-doc'], () => {
+  gulp.watch([cactuUrl, docUrl], ['sass-doc']);
 });
