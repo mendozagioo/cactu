@@ -1,0 +1,22 @@
+//
+// Documentation contents
+// --------------------------------------------------
+
+
+#documentation-contents {
+  display: flex;
+  flex-direction: column;
+
+  .description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint-cellphone-tablet {
+    padding: 1rem 1rem 1.5rem 1.5rem;
+  }
+
+  @include breakpoint-min($tablet-size) {
+    padding: 1rem 1rem 1.5rem 2rem;
+  }
+}

@@ -9,6 +9,8 @@ toc: true
 ---
 
 
+## Variables
+
 | Name  | Type  | Value |
 | ----- | ----- | ----- |
 `$alert-padding` | <small>padding</small> | `1rem` |
