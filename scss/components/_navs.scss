@@ -55,5 +55,7 @@ $nav-dropdown-link-padding-x: $nav-link-padding + .75 !default;
       &:before { transform: rotate(-45deg); }
       &:after { transform: rotate(45deg); }
     }
+
+    nav { display: block; }
   }
 }

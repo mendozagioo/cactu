@@ -389,6 +389,37 @@ kbd {
   background-color: #343a40;
 }
 
+.chevron-down-icon {
+  position: absolute;
+  right: 8px;
+  top: 16px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: -5px 0;
+  background: none;
+}
+
+.chevron-down-icon:before, .chevron-down-icon:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #343a40;
+}
+
+.chevron-down-icon:before {
+  transform: rotate(45deg);
+  margin-top: 8px;
+  margin-left: 1px;
+}
+
+.chevron-down-icon:after {
+  transform: rotate(-45deg);
+  margin-left: 6px;
+  margin-top: -2px;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1443,33 +1474,8 @@ ul, ol {
   }
 }
 
-.chevron-down-icon {
-  display: inline-block;
-  width: 25px;
-  height: 20px;
-  margin: 7px 0;
-  background: none;
-}
-
-.chevron-down-icon:before, .chevron-down-icon:after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 2px;
-  background-color: #343a40;
-}
-
-.chevron-down-icon:before {
-  transform: rotate(45deg);
-}
-
-.chevron-down-icon:after {
-  transform: rotate(-45deg);
-  margin-left: 9px;
-  margin-top: -2px;
-}
-
 [class*="nav-"] a {
+  position: relative;
   text-decoration: none;
 }
 
@@ -1478,12 +1484,39 @@ ul, ol {
   padding: 0.5rem;
 }
 
+.nav-dropdown:not(:last-child) > a {
+  border-bottom: 1px solid #eee;
+}
+
+.nav-dropdown > a i:before,
+.nav-dropdown > a i:after {
+  background-color: #007bff;
+}
+
+.nav-dropdown > a:hover i:before,
+.nav-dropdown > a:hover i:after, .nav-dropdown > a:focus i:before,
+.nav-dropdown > a:focus i:after {
+  background-color: #0062cc;
+}
+
 .nav-dropdown nav {
   display: none;
 }
 
 .nav-dropdown nav a {
   padding: 0.5rem 1.25rem;
+}
+
+.nav-dropdown.dropped > a i:before {
+  transform: rotate(-45deg);
+}
+
+.nav-dropdown.dropped > a i:after {
+  transform: rotate(45deg);
+}
+
+.nav-dropdown.dropped nav {
+  display: block;
 }
 
 th, td {
