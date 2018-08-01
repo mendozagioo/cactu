@@ -2,7 +2,7 @@
 layout: documentation
 title: Global variables
 description: Variables used for Cactu to allow easy customization.
-group: elements
+group: base
 redirect_from:
   - /documentation/base/
 toc: true

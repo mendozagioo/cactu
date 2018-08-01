@@ -2,7 +2,7 @@
 layout: documentation
 title: Reboot
 description: A collection of specific elements CSS to provide an elegant, consistent, and simple baseline to build upon.
-group: elements
+group: base
 toc: true
 ---
 
