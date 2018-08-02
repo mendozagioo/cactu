@@ -5,19 +5,20 @@
 
 // Variables
 //
+$sidebar-background: #fbfbfb;
 $nav-vertical-transition: background-color $speed ease-in-out, color $speed ease-in-out;
 $nav-link-color: lighten($text-color, 30%);
+$nav-active-background: darken($sidebar-background, 4%);
 
 
 // Blocks
 //
 %active-link {
-  color: $black;
-  font-weight: bold;
+  color: $link-color;
 }
 
 
-.nav-vertical {
+#submenu {
   a {
     color: $nav-link-color;
     padding: $nav-link-padding 2rem $nav-link-padding 1rem;
@@ -28,30 +29,32 @@ $nav-link-color: lighten($text-color, 30%);
     }
 
     &:hover {
-      background-color: darken($white, 5%);
+      background-color: darken($nav-active-background, 3%);
     }
   }
-}
 
-.nav-dropdown {
-  &:not(:last-child) {
-    border-bottom: 1px solid $border-color;
-  }
-
-  &.active > a {
-    @extend %active-link;
-  }
-  
-  nav {
-    a {
-      padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .75);
-
-      @include breakpoint-cellphone-medium-desktop {
-        padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .5);
-      }
-
-      &.active {
+  .nav-dropdown {
+    &.active {
+      > a {
         @extend %active-link;
+      }
+      
+      nav {
+        background-color: $nav-active-background;
+      }
+    }
+    
+    nav {
+      a {
+        padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .75);
+
+        @include breakpoint-cellphone-medium-desktop {
+          padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .5);
+        }
+
+        &.active {
+          @extend %active-link;
+        }
       }
     }
   }
