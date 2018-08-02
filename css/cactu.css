@@ -405,19 +405,17 @@ kbd {
   display: block;
   width: 50%;
   height: 2px;
+  margin-top: 3px;
   background-color: #343a40;
 }
 
 .chevron-down-icon:before {
   transform: rotate(45deg);
-  margin-top: 8px;
-  margin-left: 1px;
 }
 
 .chevron-down-icon:after {
   transform: rotate(-45deg);
-  margin-left: 6px;
-  margin-top: -2px;
+  margin-left: -3px;
 }
 
 img {
@@ -1479,6 +1477,12 @@ ul, ol {
   list-style: none;
 }
 
+[class^="nav-"] * {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
 [class^="nav-"] a {
   position: relative;
   text-decoration: none;
@@ -1523,21 +1527,6 @@ ul, ol {
 [class^="nav-"] .nav-dropdown.active nav {
   display: -ms-flexbox;
   display: flex;
-}
-
-.nav-horizontal,
-.nav-horizontal-center,
-.nav-horizontal-end {
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.nav-horizontal *,
-.nav-horizontal-center *,
-.nav-horizontal-end * {
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
 }
 
 .nav-vertical {
