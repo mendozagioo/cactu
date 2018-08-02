@@ -3,9 +3,11 @@
 // --------------------------------------------------
 
 
-$example-code-color: $white-smoke;
+$example-code-color: $white-smoke !default;
+$disabled-class-color: $disabled-color !default;
 
 // Class with -expanded to the end
+//
 [class$="-expanded"] {
   width: 100%;
   max-width: 100%;
@@ -17,5 +19,47 @@ $example-code-color: $white-smoke;
   margin-top: 1rem;
 }
 
+.disabled {
+  color: $disabled-class-color;
+  cursor: not-allowed;
+
+  @include hover-focus {
+    color: $disabled-class-color;
+  }
+}
+
+// Alignment classes to the end
+//
+// Not used for display flex
+[class$="-centered"] {
+  text-align: center;
+}
+[class$="-right"] {
+  text-align: right;
+}
+
+// For flex alignment
+[class$="-start"] {
+  justify-content: start;
+}
+[class$="-center"] {
+  justify-content: center;
+}
+[class$="-end"] {
+  justify-content: end;
+}
+[class$="-around"] {
+  justify-content: space-around;
+}
+[class$="-between"] {
+  justify-content: space-between;
+}
+[class$="-evenly"] {
+  justify-content: space-evenly;
+}
+
+
+// Dispay classes
+//
 .show { display: block !important; }
 .hidden { display: none !important; }
