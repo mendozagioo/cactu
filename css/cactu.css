@@ -1477,15 +1477,15 @@ ul, ol {
 [class*="nav-"] a {
   position: relative;
   text-decoration: none;
+  padding: 0.5rem;
+}
+
+.nav-horizontal a {
+  display: inline-block;
 }
 
 .nav-vertical a {
   display: block;
-  padding: 0.5rem;
-}
-
-.nav-dropdown:not(:last-child) > a {
-  border-bottom: 1px solid #eee;
 }
 
 .nav-dropdown > a i:before,
@@ -1504,18 +1504,19 @@ ul, ol {
 }
 
 .nav-dropdown nav a {
+  font-size: 90%;
   padding: 0.5rem 1.25rem;
 }
 
-.nav-dropdown.dropped > a i:before {
+.nav-dropdown.active > a i:before {
   transform: rotate(-45deg);
 }
 
-.nav-dropdown.dropped > a i:after {
+.nav-dropdown.active > a i:after {
   transform: rotate(45deg);
 }
 
-.nav-dropdown.dropped nav {
+.nav-dropdown.active nav {
   display: block;
 }
 

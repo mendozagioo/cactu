@@ -1,6 +1,13 @@
+//
+// Modified variables
+@import "base/modified-variables";
+
 // Importing Cactu
+//
 @import "../scss/cactu";
 
+// Documentation styles
+//
 @import "components/documentation-contents";
 @import "components/nav";
 @import "components/sidebars";

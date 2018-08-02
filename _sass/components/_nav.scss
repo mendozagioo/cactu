@@ -6,11 +6,20 @@
 // Variables
 //
 $nav-vertical-transition: background-color $speed ease-in-out, color $speed ease-in-out;
+$nav-link-color: lighten($text-color, 30%);
+
+
+// Blocks
+//
+%active-link {
+  color: $black;
+  font-weight: bold;
+}
 
 
 .nav-vertical {
   a {
-    background-color: $white;
+    color: $nav-link-color;
     padding: $nav-link-padding 2rem $nav-link-padding 1rem;
     @include transition($nav-vertical-transition);
 
@@ -25,12 +34,24 @@ $nav-vertical-transition: background-color $speed ease-in-out, color $speed ease
 }
 
 .nav-dropdown {
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &.active > a {
+    @extend %active-link;
+  }
+  
   nav {
     a {
       padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .75);
 
       @include breakpoint-cellphone-medium-desktop {
         padding: $nav-dropdown-link-padding-y ($nav-dropdown-link-padding-x + .5);
+      }
+
+      &.active {
+        @extend %active-link;
       }
     }
   }

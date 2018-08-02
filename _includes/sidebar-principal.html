@@ -7,7 +7,7 @@
     {%- assign active = nil -%}
 
     {%- if page.group == group_slug -%}
-      {%- assign active = 'dropped' -%}
+      {%- assign active = 'active' -%}
     {%- endif -%}
 
     <div class="nav-dropdown{% unless active == nil %} {{ active }}{% endunless %}">
@@ -21,10 +21,10 @@
           {%- assign active = nil -%}
 
           {%- if page.group == group_slug and page_slug == doc_slug -%}
-            {%- assign active = 'active bd-sidenav-active' -%}
+            {%- assign active = 'active' -%}
           {%- endif -%}
 
-          <a href="{{ site.baseurl }}/documentation/{{ group_slug }}/{{ doc_slug }}/">
+          <a {% unless active == nil %} class="{{ active }}"{% endunless %} href="{{ site.baseurl }}/documentation/{{ group_slug }}/{{ doc_slug }}/">
             {{ doc.title }}
           </a>
         {%- endfor -%}
