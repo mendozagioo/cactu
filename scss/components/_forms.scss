@@ -69,11 +69,6 @@ input[type="range"] {
   }
 }
 
-.disabled {
-  color: $disabled-color;
-  cursor: not-allowed;
-}
-
 select:not([size]):not([multiple]) {
   height: $select-height;
   padding: .375rem 1.75rem .375rem .75rem;
