@@ -9,9 +9,7 @@ $dropdown-menu-border:        1px solid $border-color !default;
 $dropdown-item-padding:       .3125rem 1rem !default;
 $dropdown-menu-top:           1.625rem + .75rem + .125rem !default;
 $drop-dow-open-shadow:        0 0 0 $outline-width darken($gray-200, 20%) !default;
-$button-background-dropped:   darken($gray-200, 10%) !default;
 $triangle-width:              5px !default;
-$triangle-color:              $text-color !default;
 $triangle-transition:         transform .1s ease-in-out !default;
 $drop-menu-min-width:         12.5rem !default;
 $drop-menu-padding:           .5rem 0 !default;
@@ -38,9 +36,7 @@ $separator-color:             $border-color !default;
         display: inline-block;
       }
 
-      & ~ .button {
-        background: $button-background-dropped;
-
+      & ~ .toggle  {
         &:after {
           transform: rotate(180deg);
         }
@@ -48,11 +44,18 @@ $separator-color:             $border-color !default;
     }
   }
 
-  .button {
+  .toggle {
+    padding: .5rem;
+    margin: 0;
+
     &:after {
       @extend %shape-base;
       margin-left: .4375rem;
       @include transition($triangle-transition);
+    }
+
+    @include hover-focus {
+      cursor: pointer;
     }
   }
 
@@ -105,10 +108,10 @@ $separator-color:             $border-color !default;
 }
 
 .dropdown {
-  .button:after {
+  .toggle:after {
     border-left: $triangle-width solid transparent;
     border-right: $triangle-width solid transparent;
-    border-top: $triangle-width solid $triangle-color;
+    border-top: $triangle-width solid;
   }
 
   .drop-menu {
@@ -118,10 +121,10 @@ $separator-color:             $border-color !default;
 }
 
 .dropup {
-  .button:after {
+  .toggle:after {
     border-left: $triangle-width solid transparent;
     border-right: $triangle-width solid transparent;
-    border-bottom: $triangle-width solid $triangle-color;
+    border-bottom: $triangle-width solid;
   }
 
   .drop-menu {
@@ -131,8 +134,8 @@ $separator-color:             $border-color !default;
 }
 
 .dropright {
-  .button:after {
-    border-left: $triangle-width solid $triangle-color;
+  .toggle:after {
+    border-left: $triangle-width solid;
     border-top: $triangle-width solid transparent;
     border-bottom: $triangle-width solid transparent;
   }
@@ -147,14 +150,14 @@ $separator-color:             $border-color !default;
     transform: rotate(180deg);
   }
 
-  .button {
+  .toggle {
     &:after {
       display: none;
     }
     &:before {
       @extend %shape-base;
       margin-right: .4375rem;
-      border-right: $triangle-width solid $triangle-color;
+      border-right: $triangle-width solid;
       border-top: $triangle-width solid transparent;
       border-bottom: $triangle-width solid transparent;
       @include transition($triangle-transition);

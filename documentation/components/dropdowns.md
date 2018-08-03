@@ -19,9 +19,7 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 | `$dropdown-item-padding` | <small>padding</small> | `.3125rem 1rem` |
 | `$dropdown-menu-top` | <small>unitless</small> | `1.625rem + .75rem + .125rem` |
 | `$drop-dow-open-shadow` | <small>unitless</small> | `0 0 0 $outline-width darken($gray-200, 20%)` |
-| `$button-background-dropped` | <small>color</small> | <span class="small-box" style="background:#cbd3da"></span> `darken($gray-200, 10%)` |
 | `$triangle-width` | <small>width</small> | `5px` |
-| `$triangle-color` | <small>color</small> | <span class="small-box" style="background:#343a40"></span> `$text-color` |
 | `$triangle-transition` | <small>unitless</small> | `transform .1s ease-in-out` |
 | `$drop-menu-min-width` | <small>min-width</small> | `12.5rem` |
 | `$drop-menu-padding` | <small>padding</small> | `.5rem 0` |
@@ -39,12 +37,12 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 {% capture example %}
 <div class="dropdown">
   <input type="checkbox" id="drop-1-down">
-  <label class="button" for="drop-1-down">
+  <label class="button toggle" for="drop-1-down">
     Dropdown button
   </label>
   <nav class="drop-menu">
     <a href="#">Lorem ipsum dolor</a>
-    <a href="#" class="drop-active  ">Pellentesque nibh</a>
+    <a href="#" class="drop-active">Pellentesque nibh</a>
     <a href="#">Maecenas at dapibus</a>
     <hr class="drop-separator">
     <a href="#">Quisque eleifend</a>
@@ -57,7 +55,7 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 {% capture example %}
 <div class="dropdown">
   <input type="checkbox" id="drop-1-1-down">
-  <label class="button" for="drop-1-1-down">
+  <label class="button toggle" for="drop-1-1-down">
     Dropdown button
   </label>
   <nav class="drop-menu">
@@ -81,7 +79,7 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 {% capture example %}
 <div class="dropup">
   <input type="checkbox" id="drop-1-top">
-  <label class="button" for="drop-1-top">
+  <label class="button toggle" for="drop-1-top">
     Dropup button
   </label>
   <nav class="drop-menu">
@@ -99,7 +97,7 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 {% capture example %}
 <div class="dropright">
   <input type="checkbox" id="drop-1-right">
-  <label class="button" for="drop-1-right">
+  <label class="button toggle" for="drop-1-right">
     Dropright button
   </label>
   <nav class="drop-menu">
@@ -117,7 +115,7 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 {% capture example %}
 <div class="dropleft">
   <input type="checkbox" id="drop-1-left">
-  <label class="button" for="drop-1-left">
+  <label class="button toggle" for="drop-1-left">
     Dropleft button
   </label>
   <nav class="drop-menu">
