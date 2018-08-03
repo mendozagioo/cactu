@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Forms
-description: Documentation and examplesd for forms.
+description: Documentation and examples for forms.
 group: components
 toc: true
 ---

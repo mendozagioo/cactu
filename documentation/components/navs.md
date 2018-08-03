@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Navs
-description: Documentation and examplesd for navs.
+description: Documentation and examples for navs.
 group: components
 toc: true
 ---

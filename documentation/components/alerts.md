@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Alerts
-description: Documentation and examplesd for alerts.
+description: Documentation and examples for alerts.
 group: components
 redirect_from:
   - /documentation/components/
