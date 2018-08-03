@@ -5,6 +5,7 @@
 
 // Variables
 //
+$submenu-padding-y: .5rem;
 $sidebar-background: #fbfbfb;
 $nav-vertical-transition: background-color $speed ease-in-out, color $speed ease-in-out;
 $nav-link-color: lighten($text-color, 30%);
@@ -21,11 +22,11 @@ $nav-active-background: darken($sidebar-background, 4%);
 #submenu {
   a {
     color: $nav-link-color;
-    padding: $nav-link-padding 2rem $nav-link-padding 1rem;
+    padding: $submenu-padding-y 2rem $submenu-padding-y 1rem;
     @include transition($nav-vertical-transition);
 
     @include breakpoint-cellphone-medium-desktop {
-      padding: $nav-link-padding 2rem $nav-link-padding .625rem;
+      padding: $submenu-padding-y 2rem $submenu-padding-y .625rem;
     }
 
     &:hover {

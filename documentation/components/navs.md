@@ -101,11 +101,61 @@ Just adding flex justification like a class to the end of `nav-horizontal` class
 {% include example.html content=example %}
 
 
+### Dropdown inside
+
+{% capture example %}
+<nav class="nav-horizontal">
+  <a href="#">Link</a>
+  <div class="dropdown">
+    <input type="checkbox" id="drop-1-down">
+    <label class="toggle" for="drop-1-down">
+      Dropdown
+    </label>
+    <nav class="drop-menu">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </nav>
+  </div>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="disabled">Disabled</a>
+</nav>
+{% endcapture %}
+{% include example.html content=example %}
+
+
 ## Nav vertical
+
+This `nav-vertical` is adapts the container size.
 
 {% capture example %}
 <nav class="nav-vertical">
   <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="disabled">Disabled</a>
+</nav>
+{% endcapture %}
+{% include example.html content=example %}
+
+
+### Dropdown inside
+
+{% capture example %}
+<nav class="nav-vertical">
+  <a href="#">Link</a>
+  <div class="dropdown">
+    <input type="checkbox" id="drop-2-down">
+    <label class="toggle" for="drop-2-down">
+      Dropdown
+    </label>
+    <nav class="drop-menu">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </nav>
+  </div>
   <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#" class="disabled">Disabled</a>

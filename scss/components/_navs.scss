@@ -5,11 +5,11 @@
 
 // Variables
 //
-$nav-link-padding:                .5rem !default;
+$nav-link-padding:                .5rem .75rem !default;
 $nav-dropdown-icon-color:         $link-color !default;
 $nav-dropdown-hover-icon-color:   $link-hover-color !default;
-$nav-dropdown-link-padding-y:     $nav-link-padding !default;
-$nav-dropdown-link-padding-x:     $nav-link-padding + .75 !default;
+$nav-dropdown-link-padding-y:     .5rem !default;
+$nav-dropdown-link-padding-x:     $nav-dropdown-link-padding-y + .75 !default;
 
 
 [class^="nav-"] {
@@ -30,10 +30,27 @@ $nav-dropdown-link-padding-x:     $nav-link-padding + .75 !default;
     padding: $nav-link-padding;
   }
 
+  // Adapts to nav styles
+  .dropdown {
+    .toggle {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      color: $link-color;
+      padding: $nav-link-padding;
+      background-color: transparent;
+
+      @include hover-focus {
+        color: $link-hover-color;
+      }
+    }
+  }
+
   .nav-dropdown {
     flex-direction: column;
 
     > a {
+      padding-right: 2rem;
       i:before,
       i:after {
         background-color: $nav-dropdown-icon-color;
@@ -70,4 +87,8 @@ $nav-dropdown-link-padding-x:     $nav-link-padding + .75 !default;
 
 .nav-vertical {
   flex-direction: column;
+
+  .dropdown nav {
+    width: 100%;
+  }
 }
