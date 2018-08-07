@@ -6,10 +6,6 @@
 // Variables
 //
 $nav-link-padding:                .5rem .75rem !default;
-$nav-dropdown-icon-color:         $link-color !default;
-$nav-dropdown-hover-icon-color:   $link-hover-color !default;
-$nav-dropdown-link-padding-y:     .5rem !default;
-$nav-dropdown-link-padding-x:     $nav-dropdown-link-padding-y + .75 !default;
 
 
 [class^="nav-"] {
@@ -43,44 +39,6 @@ $nav-dropdown-link-padding-x:     $nav-dropdown-link-padding-y + .75 !default;
       @include hover-focus {
         color: $link-hover-color;
       }
-    }
-  }
-
-  .nav-dropdown {
-    flex-direction: column;
-
-    > a {
-      padding-right: 2rem;
-      i:before,
-      i:after {
-        background-color: $nav-dropdown-icon-color;
-      }
-
-      @include hover-focus {
-        i:before,
-        i:after {
-          background-color: $nav-dropdown-hover-icon-color;
-        }
-      }
-    }
-    
-    nav {
-      display: none;
-      flex-direction: column;
-
-      a {
-        font-size: 90%;
-        padding: $nav-dropdown-link-padding-y $nav-dropdown-link-padding-x;
-      }
-    }
-
-    &.active {
-      > a i {
-        &:before { transform: rotate(-45deg); }
-        &:after { transform: rotate(45deg); }
-      }
-
-      nav { display: flex; }
     }
   }
 }
