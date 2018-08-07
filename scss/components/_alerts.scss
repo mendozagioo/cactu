@@ -33,10 +33,12 @@ $alert-color:                theme-color-level($alert-color-base, $alert-color-l
 
   .close {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
     font-size: 1.625rem;
+    line-height: 1;
     color: inherit;
+    box-shadow: none !important;
     background-color: transparent;
 
     @include hover-focus {

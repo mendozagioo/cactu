@@ -615,10 +615,12 @@ h6, .h6 {
 
 .alert-dismissible .close {
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 0;
   font-size: 1.625rem;
+  line-height: 1;
   color: inherit;
+  box-shadow: none !important;
   background-color: transparent;
 }
 
