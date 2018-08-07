@@ -18,6 +18,7 @@
   pages:
     - title: Alerts
     - title: Buttons
+    - title: Collapse
     - title: Dropdowns
     - title: Forms
     - title: Lists

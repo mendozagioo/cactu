@@ -703,6 +703,67 @@ h6, .h6 {
   border-radius: 0 0 4px 4px;
 }
 
+.collapse .collapse-container.collapsed, .collapse [type="checkbox"]:checked ~ .collapse-container,
+.collapse [type="radio"]:checked ~ .collapse-container {
+  height: 100%;
+  opacity: 1;
+  padding: 1rem;
+}
+
+.collapse .collapse-container {
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  transition: all 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .collapse .collapse-container {
+    transition: none;
+  }
+}
+
+.collapse [type="checkbox"],
+.collapse [type="radio"] {
+  display: none;
+}
+
+.accordion {
+  overflow: hidden;
+}
+
+.accordion .collapse {
+  border: 1px solid #dee2e6;
+  overflow: hidden;
+}
+
+.accordion .collapse .header {
+  display: block;
+  padding: 1rem;
+  margin: 0;
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+.accordion .collapse .header:hover {
+  background-color: #eff1f3;
+}
+
+.accordion .collapse:not(:first-child) {
+  margin-top: -1px;
+}
+
+.accordion .collapse:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.accordion .collapse:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
 .dropdown,
 .dropup,
 .dropright,
@@ -1513,50 +1574,6 @@ ul, ol {
 
 [class^="nav-"] .dropdown .toggle:hover, [class^="nav-"] .dropdown .toggle:focus {
   color: #0062cc;
-}
-
-[class^="nav-"] .nav-dropdown {
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-[class^="nav-"] .nav-dropdown > a {
-  padding-right: 2rem;
-}
-
-[class^="nav-"] .nav-dropdown > a i:before,
-[class^="nav-"] .nav-dropdown > a i:after {
-  background-color: #007bff;
-}
-
-[class^="nav-"] .nav-dropdown > a:hover i:before,
-[class^="nav-"] .nav-dropdown > a:hover i:after, [class^="nav-"] .nav-dropdown > a:focus i:before,
-[class^="nav-"] .nav-dropdown > a:focus i:after {
-  background-color: #0062cc;
-}
-
-[class^="nav-"] .nav-dropdown nav {
-  display: none;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-[class^="nav-"] .nav-dropdown nav a {
-  font-size: 90%;
-  padding: 0.5rem 1.25rem;
-}
-
-[class^="nav-"] .nav-dropdown.active > a i:before {
-  transform: rotate(-45deg);
-}
-
-[class^="nav-"] .nav-dropdown.active > a i:after {
-  transform: rotate(45deg);
-}
-
-[class^="nav-"] .nav-dropdown.active nav {
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .nav-vertical {
