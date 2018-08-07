@@ -5,7 +5,7 @@
 
 // Variables
 //
-$dropdown-menu-border:        1px solid $border-color !default;
+$dropdown-menu-border:        $border-base !default;
 $dropdown-item-padding:       .3125rem 1rem !default;
 $dropdown-menu-top:           1.625rem + .75rem + .125rem !default;
 $drop-dow-open-shadow:        0 0 0 $outline-width darken($gray-200, 20%) !default;

@@ -15,7 +15,7 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 
 | Name  | Type  | Value |
 | ----- | ----- | ----- |
-| `$dropdown-menu-border` | <small>border</small> | `1px solid $border-color` |
+| `$dropdown-menu-border` | <small>unitless</small> | `$border-base` |
 | `$dropdown-item-padding` | <small>padding</small> | `.3125rem 1rem` |
 | `$dropdown-menu-top` | <small>unitless</small> | `1.625rem + .75rem + .125rem` |
 | `$drop-dow-open-shadow` | <small>unitless</small> | `0 0 0 $outline-width darken($gray-200, 20%)` |

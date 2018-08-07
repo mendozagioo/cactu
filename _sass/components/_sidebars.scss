@@ -14,7 +14,7 @@
 
 .sidebar {
   padding: .5rem 0;
-  border-right: 1px solid $border-color;
+  border-right: $border-base;
   background-color: $sidebar-background;
 
   @include breakpoint-cellphone {
@@ -31,7 +31,7 @@
     margin-top: 1.5rem;
     list-style: none;
     padding-left: 1rem;
-    border-left: $border-width solid $border-color;
+    border-left: $border-base;
 
     li ul {
       list-style: none;

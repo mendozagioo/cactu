@@ -12,7 +12,7 @@ toc: true
 | Name  | Type  | Value |
 | ----- | ----- | ----- |
 | `$input-padding`                    | <small>padding</small> | `.375rem .75rem` |
-| `$input-border`                     | <small>border</small> | `$border-width solid $border-color` |
+| `$input-border`                     | <small>unitless</small> | `$border-base` |
 | `$input-radius`                     | <small>radius</small> | `$radius` |
 | `$input-box-shadow`                 | <small>shadow</small> | `inset 0 1px 2px rgba($black, .075)` |
 | `$input-placeholder-color`          | <small>color</small> | <span class="small-box" style="background:#6c757d"></span> `$gray-600` |

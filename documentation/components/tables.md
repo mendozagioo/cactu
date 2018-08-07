@@ -12,7 +12,7 @@ toc: true
 | Name  | Type  | Value |
 | ----- | ----- | ----- |
 | `$cell-padding` | <small>padding</small> | `.625rem 1rem` |
-| `$cell-border` | <small>border</small> | <span class="small-box" style="background:#dee2e6"></span> `$border-width solid $border-color` |
+| `$cell-border` | <small>unitless</small> | `$border-base` |
 | `$cell-interleaved-color` | <small>color</small> | <span class="small-box" style="background:#f5f5f5"></span> `$white-smoke` |
 
 

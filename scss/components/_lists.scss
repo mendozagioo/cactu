@@ -7,7 +7,7 @@
 //
 $list-padding-left:       1.75rem !default;
 $list-item-padding:       .625rem 1rem !default;
-$list-item-border:        1px solid $border-color !default;
+$list-item-border:        $border-base !default;
 $list-item-background:    transparent !default;
 $list-item-radius:        $radius !default;
 $list-item-interleaved:   $white-smoke !default;
