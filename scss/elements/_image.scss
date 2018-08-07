@@ -3,10 +3,10 @@
 // --------------------------------------------------
 
 
-$image-padding:     .25rem;
-$image-radius:      $radius;
-$image-border:      1px solid $border-color;
-$image-background:  $white;
+$image-padding:     .25rem !default;
+$image-radius:      $radius !default;
+$image-border:      $border-base !default;
+$image-background:  $white !default;
 
 
 img {
@@ -26,8 +26,8 @@ figcaption {
 }
 
 .image-edge {
-  padding: .25rem;
-  border-radius: $radius;
-  border: 1px solid $border-color;
-  background-color: $white;
+  padding: $image-padding;
+  border-radius: $image-radius;
+  border: $image-border;
+  background-color: $image-background;
 }

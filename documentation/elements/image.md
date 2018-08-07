@@ -13,7 +13,7 @@ toc: true
 | ----- | ----- | ----- |
 | `$image-padding`    | <small>padding</small> | `.25rem` |
 | `$image-radius`     | <small>radius</small>  | `$radius` |
-| `$image-border`     | <small>border</small>  | <span class="small-box" style="background:#dee2e6"></span> `1px solid $border-color` |
+| `$image-border`     | <small>unitless</small>  | `$border-base` |
 | `$image-background` | <small>color</small>   | <span class="small-box" style="background:#fff"></span> `$white` |
 
 
