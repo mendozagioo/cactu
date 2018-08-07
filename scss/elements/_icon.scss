@@ -8,6 +8,20 @@
 $icon-color: $text-color !default;
 
 
+.menu-icon {
+  display: block;
+  width: 22px;
+
+  &:before,
+  &:after {
+    @extend %shape-block;
+    height: 2px;
+    margin: 7px 0;
+    background-color: $icon-color;
+    @include transition($transition-all);
+  }
+}
+
 .chevron-down-icon {
   position: absolute;
   right: 8px;

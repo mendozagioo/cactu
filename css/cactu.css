@@ -251,9 +251,7 @@ template {
   vertical-align: middle;
 }
 
-.navbar .navbar-toggler:before, .navbar .navbar-toggler:after,
-.navbar-expanded .navbar-toggler:before,
-.navbar-expanded .navbar-toggler:after {
+.menu-icon:before, .menu-icon:after {
   content: "";
   display: block;
   width: 100%;
@@ -387,6 +385,24 @@ kbd {
 kbd {
   color: #fff;
   background-color: #343a40;
+}
+
+.menu-icon {
+  display: block;
+  width: 22px;
+}
+
+.menu-icon:before, .menu-icon:after {
+  height: 2px;
+  margin: 7px 0;
+  background-color: #343a40;
+  transition: all 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .menu-icon:before, .menu-icon:after {
+    transition: none;
+  }
 }
 
 .chevron-down-icon {
@@ -1438,22 +1454,10 @@ ul, ol {
 
 .navbar .navbar-toggler,
 .navbar-expanded .navbar-toggler {
-  width: 45px;
+  width: auto;
   height: 40px;
   margin: 7px 0;
   background: none;
-}
-
-.navbar .navbar-toggler:before, .navbar .navbar-toggler:after,
-.navbar-expanded .navbar-toggler:before,
-.navbar-expanded .navbar-toggler:after {
-  height: 2px;
-  background-color: #343a40;
-}
-
-.navbar .navbar-toggler:before,
-.navbar-expanded .navbar-toggler:before {
-  margin: 7px 0;
 }
 
 .navbar [type="checkbox"],
@@ -1467,14 +1471,14 @@ ul, ol {
   display: flex;
 }
 
-.navbar [type="checkbox"]:checked ~ .navbar-toggler:before,
-.navbar-expanded [type="checkbox"]:checked ~ .navbar-toggler:before {
+.navbar [type="checkbox"]:checked ~ .navbar-toggler > .menu-icon:before,
+.navbar-expanded [type="checkbox"]:checked ~ .navbar-toggler > .menu-icon:before {
   transform: rotate(45deg);
   margin-top: 12px;
 }
 
-.navbar [type="checkbox"]:checked ~ .navbar-toggler:after,
-.navbar-expanded [type="checkbox"]:checked ~ .navbar-toggler:after {
+.navbar [type="checkbox"]:checked ~ .navbar-toggler > .menu-icon:after,
+.navbar-expanded [type="checkbox"]:checked ~ .navbar-toggler > .menu-icon:after {
   transform: rotate(-45deg);
   margin-top: -9px;
 }

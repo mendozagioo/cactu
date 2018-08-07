@@ -40,21 +40,10 @@ $brand-gap:           .625rem !default;
   }
 
   .navbar-toggler {
-    width: 45px;
+    width: auto;
     height: 40px;
     margin: 7px 0;
     background: none;
-
-    &:before,
-    &:after {
-      @extend %shape-block;
-      height: 2px;
-      background-color: $toggler-color;
-    }
-
-    &:before {
-      margin: 7px 0;
-    }
   }
 
   [type="checkbox"] {
@@ -65,7 +54,7 @@ $brand-gap:           .625rem !default;
         display: flex;
       }
 
-      & ~ .navbar-toggler {
+      & ~ .navbar-toggler > .menu-icon {
         &:before {
           transform: rotate(45deg);
           margin-top: 12px;
