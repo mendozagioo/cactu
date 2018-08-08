@@ -13,6 +13,14 @@ $link-padding-y:      .9375rem !default;
 $brand-gap:           .625rem !default;
 
 
+// Blocks
+//
+%show-menu {
+  opacity: 1;
+  height: auto;
+}
+
+
 .navbar,
 .navbar-expanded {
   position: relative;
@@ -26,13 +34,19 @@ $brand-gap:           .625rem !default;
   }
 
   nav {
+    display: flex;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    @include transition($transition-all);
+
     a {
       padding: $link-padding-y;
     }
   }
 
   // Because flex properties aren't inherited, we need to redeclare these first
-  // few properities so that c  ontent nested within behave properly.
+  // few properities so that content nested within behave properly.
   [class*="column"] {
     display: flex;
     flex-wrap: wrap;
@@ -46,12 +60,16 @@ $brand-gap:           .625rem !default;
     background: none;
   }
 
+  .show-menu {
+    @extend %show-menu;
+  }
+
   [type="checkbox"] {
     display: none;
 
     &:checked {
       & ~ nav {
-        display: flex;
+        @extend %show-menu;
       }
 
       & ~ .navbar-toggler > .menu-icon {
@@ -67,13 +85,14 @@ $brand-gap:           .625rem !default;
       }
     }
   }
+}
 
-  .navbar-brand {
-    margin-right: $brand-gap;
-  }
+.navbar-brand {
+  margin-right: $brand-gap;
 }
 
 .navbar-expanded {
+  width: 100%;  
   padding: $navbar-padding-y $navbar-padding-x;
 
   // Set grid padding between cellphone and medium desktop sizes
@@ -82,19 +101,14 @@ $brand-gap:           .625rem !default;
   }
 }
 
-.sticky-navbar {
-  position: sticky;
-  top: 0;
-  z-index: $zindex-top;
-}
-
+// Responsive navbars
+//
 @include breakpoint-max($tablet-size - 1) {
   .navbar,
   .navbar-expanded {
     justify-content: space-between;
 
     nav {
-      display: none;
       width: 100%;
       flex-direction: column;
 
@@ -117,7 +131,8 @@ $brand-gap:           .625rem !default;
     justify-content: start;
 
     nav {
-      display: flex;
+      height: auto;
+      opacity: 1;
     }
 
     .navbar-toggler {

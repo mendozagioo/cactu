@@ -14,4 +14,9 @@ $(document).ready(function() {
       $(this).parent().find('.collapse-container').addClass('collapsed');
     }
   });
+
+  $('#principal-menu .navbar-toggler').on('click', function() {
+    $(this).find('i').toggleClass('close-icon');
+    $('.navbar-expanded nav').toggleClass('show-menu');
+  });
 });
