@@ -8,7 +8,8 @@
 $icon-color: $text-color !default;
 
 
-.menu-icon {
+.menu-icon,
+.close-icon {
   display: block;
   width: 22px;
 
@@ -19,6 +20,18 @@ $icon-color: $text-color !default;
     margin: 7px 0;
     background-color: $icon-color;
     @include transition($transition-all);
+  }
+}
+
+.close-icon {
+  &:before {
+    transform: rotate(45deg);
+    margin-top: 12px;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+    margin-top: -9px;
   }
 }
 
@@ -51,3 +64,9 @@ $icon-color: $text-color !default;
     margin-left: -3px;
   }
 }
+
+// Close icon
+//
+// .close {
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M23 23L7 7 M7 23L23 7'/%3E%3C/svg%3E");
+// }
