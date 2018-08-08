@@ -8,7 +8,7 @@ $disabled-class-color: $disabled-color !default;
 
 // Class with -expanded to the end
 //
-[class$="-expanded"] {
+[class*="-expanded"] {
   width: 100%;
   max-width: 100%;
 }
@@ -31,30 +31,30 @@ $disabled-class-color: $disabled-color !default;
 // Alignment classes to the end
 //
 // Not used for display flex
-[class$="-centered"] {
+[class*="-centered"] {
   text-align: center;
 }
-[class$="-right"] {
+[class*="-right"] {
   text-align: right;
 }
 
 // For flex alignment
-[class$="-start"] {
+[class*="-start"] {
   justify-content: start;
 }
-[class$="-center"] {
+[class*="-center"] {
   justify-content: center;
 }
-[class$="-end"] {
+[class*="-end"] {
   justify-content: end;
 }
-[class$="-around"] {
+[class*="-around"] {
   justify-content: space-around;
 }
-[class$="-between"] {
+[class*="-between"] {
   justify-content: space-between;
 }
-[class$="-evenly"] {
+[class*="-evenly"] {
   justify-content: space-evenly;
 }
 
