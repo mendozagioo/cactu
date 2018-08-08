@@ -5,6 +5,8 @@
 
 // Variables
 //
+$input-color:                       $text-color !default;
+$input-background:                  $white !default;
 $input-padding:                     .375rem .75rem !default;
 $input-border:                      $border-base !default;
 $input-radius:                      $radius !default;
@@ -29,10 +31,12 @@ $invalid-color:                     $red !default;
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 select,
 textarea {
+  color: $input-color;
   padding: $input-padding;
   border: $input-border;
   border-radius: $input-radius;
   box-shadow: $input-box-shadow;
+  background-color: $input-background;
 
   @include transition($input-transition);
 
@@ -78,16 +82,24 @@ select:not([size]):not([multiple]) {
 
   &:disabled { background-color: $input-disabled-background; }
 
-  // &::-ms-value {
-  //   // For visual consistency with IE and (under certain conditions) Edge.
-  //   color: $input-color;
-  //   background-color: $input-bg;
-  // }
+  &::-ms-value {
+    // For visual consistency with IE and (under certain conditions) Edge.
+    color: $input-color;
+    background-color: $input-background;
+  }
 }
-// Remove the outline focus on Firefox
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 $text-color;
+
+select {
+  // Remove the outline focus on Firefox
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $text-color;
+  }
+
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
 }
 
 .form-group {
