@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-@mixin navbar-variant($base-color: null, $theme: 'light') {
+@mixin navbar-theme($base-color: null, $theme: 'light') {
   $text: if($theme == 'light', rgba(0,0,0,.5), rgba(255,255,255,.5));
   $text-hover: if($theme == 'light', rgba(0,0,0,.7), rgba(255,255,255,.7));
 

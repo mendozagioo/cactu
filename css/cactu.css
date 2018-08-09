@@ -1479,6 +1479,11 @@ ul, ol {
   color: rgba(0, 0, 0, 0.7);
 }
 
+.navbar a.active,
+.navbar-expanded a.active {
+  color: #fff;
+}
+
 .navbar a,
 .navbar-expanded a {
   text-decoration: none;

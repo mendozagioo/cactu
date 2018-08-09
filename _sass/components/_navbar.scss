@@ -5,5 +5,5 @@
 
 #principal-menu {
   @include sticky-top;
-  @include navbar-variant(#f8e768);
+  @include navbar-theme(#f8e768);
 }

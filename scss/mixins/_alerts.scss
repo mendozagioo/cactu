@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-@mixin alert-variant($background, $border, $color) {
+@mixin alert-theme($background, $border, $color) {
   color: $color;
   border: $border-width solid $border;
   background-color: $background;

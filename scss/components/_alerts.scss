@@ -21,7 +21,7 @@ $alert-color:                theme-color-level($alert-color-base, $alert-color-l
   position: relative;
   padding: $alert-padding;
   border-radius: $alert-radius;
-  @include alert-variant($alert-background, $alert-border, $alert-color);
+  @include alert-theme($alert-background, $alert-border, $alert-color);
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
