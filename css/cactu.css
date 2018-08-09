@@ -1481,7 +1481,7 @@ ul, ol {
 
 .navbar a.active,
 .navbar-expanded a.active {
-  color: #fff;
+  color: #000;
 }
 
 .navbar a,
