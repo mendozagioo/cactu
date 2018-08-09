@@ -27,7 +27,7 @@ $brand-gap:           .625rem !default;
   display: flex;
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
-  background-color: $navbar-background;
+  @include navbar-variant;
 
   a {
     text-decoration: none;
