@@ -1,4 +1,15 @@
 $(document).ready(function() {
+  // None links
+  //
+  $('[href="#"]').on('click', function(e) {
+    e.preventDefault();
+  });
+
+  $('.toggle').on('click', function() {
+    $(this).parent().toggleClass('dropped');
+  });
+
+
   // Collapse component
   //
   $('#basic-collapse > button').on('click', function() {
@@ -15,8 +26,10 @@ $(document).ready(function() {
     }
   });
 
-  $('#principal-menu .navbar-toggler').on('click', function() {
+  // Navbars
+  //
+  $('.navbar-toggler').on('click', function() {
     $(this).find('i').toggleClass('close-icon');
-    $('.navbar-expanded nav').toggleClass('show-menu');
+    $(this).parent().find('nav').toggleClass('show-menu');
   });
 });

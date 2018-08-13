@@ -7,10 +7,15 @@
 //
 $navbar-padding-y:    0 !default;
 $navbar-padding-x:    15px !default;
-$navbar-background:   $white-smoke !default;
+$navbar-base-color:   $white-smoke !default;
+$navbar-last-padding: .5rem !default;
 $toggler-color:       $text-color !default;
 $link-padding-y:      .9375rem !default;
+$brand-padding-y:     .75rem !default;
+$brand-padding-x:     0 !default;
 $brand-gap:           .625rem !default;
+$brand-font-size:     1.25rem !default;
+$search-gap:          .5rem !default;
 
 
 // Blocks
@@ -24,40 +29,37 @@ $brand-gap:           .625rem !default;
 .navbar,
 .navbar-expanded {
   position: relative;
-  display: flex;
-  flex-wrap: wrap; // allow us to do the line break for collapsing content
-  align-items: center;
+  @extend %flex-wrap-center;
   // The base navbar-variant get the base grays colors
-  @include navbar-theme;
+  @include navbar-theme($navbar-base-color);
+
+  * {
+    @extend %flex-wrap-center;
+  }
 
   a {
     text-decoration: none;
   }
 
   nav {
-    display: flex;
     height: 0;
     opacity: 0;
-    overflow: hidden;
     @include transition($transition-all);
 
     a {
       padding: $link-padding-y;
     }
-  }
 
-  // Because flex properties aren't inherited, we need to redeclare these first
-  // few properities so that content nested within behave properly.
-  [class*="column"] {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    &.navigation-end {
+      margin-left: auto;
+    }
   }
 
   .navbar-toggler {
     width: auto;
     height: 40px;
     margin: 7px 0;
+    @extend %flex-wrap-center;
     background: none;
   }
 
@@ -76,19 +78,26 @@ $brand-gap:           .625rem !default;
       & ~ .navbar-toggler > .menu-icon {
         &:before {
           transform: rotate(45deg);
-          margin-top: 9px;
+          margin-top: 5px;
         }
 
         &:after {
           transform: rotate(-45deg);
-          margin-top: -9px;
+          margin-top: -7px;
         }
       }
     }
   }
+
+  .dropdown {
+    .toggle { padding: $link-padding-y; }
+    .drop-menu { top: 3rem; }
+  }
 }
 
 .navbar-brand {
+  font-size: $brand-font-size;
+  padding: $brand-padding-y $brand-padding-x;
   margin-right: $brand-gap;
 }
 
@@ -113,8 +122,39 @@ $brand-gap:           .625rem !default;
       width: 100%;
       flex-direction: column;
 
-      a {
+      * {
+        display: block;
+        width: 100%;
+      }
+
+      a,
+      .dropdown {
         padding: .625rem 0;
+      }
+
+      .dropdown {
+        .toggle {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          padding: 0;
+        }
+      }
+
+      &:not([class*="show-menu"]) {
+        overflow: hidden;
+      }
+
+      .navbar-search {
+        input {
+          margin-bottom: $search-gap;
+        }
+      }
+    }
+
+    .show-menu {
+      &:last-child() {
+        padding-bottom: $navbar-last-padding;
       }
     }
   }
@@ -138,6 +178,12 @@ $brand-gap:           .625rem !default;
 
     .navbar-toggler {
       display: none;
+    }
+
+    .navbar-search {
+      input {
+        margin-right: $search-gap;
+      }
     }
   }
 }
