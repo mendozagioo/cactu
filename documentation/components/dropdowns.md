@@ -51,6 +51,24 @@ Dropdowns are toggleable, contextual overlays for displaying lists of links and 
 {% endcapture %}
 {% include example.html content=example %}
 
+Changing classes with JS.
+
+{% capture example %}
+<div class="dropdown">
+  <button class="toggle">
+    Dropdown button
+  </button>
+  <nav class="drop-menu">
+    <a href="#">Lorem ipsum dolor</a>
+    <a href="#" class="drop-active">Pellentesque nibh</a>
+    <a href="#">Maecenas at dapibus</a>
+    <hr class="drop-separator">
+    <a href="#">Quisque eleifend</a>
+  </nav>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
 
 {% capture example %}
 <div class="dropdown">

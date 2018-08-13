@@ -105,6 +105,16 @@ $separator-color:             $border-color !default;
       }
     }
   }
+
+  &.dropped {
+    .toggle {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    .drop-menu { display: inline-block; }
+  }
 }
 
 .dropdown {
