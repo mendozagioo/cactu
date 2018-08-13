@@ -17,7 +17,7 @@ $icon-color: $text-color !default;
   &:after {
     @extend %shape-block;
     height: 2px;
-    margin: 7px 0;
+    margin: 5px 0;
     background-color: $icon-color;
     @include transition($transition-all);
   }
@@ -26,12 +26,12 @@ $icon-color: $text-color !default;
 .close-icon {
   &:before {
     transform: rotate(45deg);
-    margin-top: 9px;
+    margin-top: 5px;
   }
 
   &:after {
     transform: rotate(-45deg);
-    margin-top: -9px;
+    margin-top: -7px;
   }
 }
 
