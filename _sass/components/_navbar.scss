@@ -6,9 +6,4 @@
 #principal-menu {
   @include sticky-top;
   @include navbar-theme(#f8e768);
-
-  .navbar-brand {
-    color: $black;
-    font-weight: bold;
-  }
 }

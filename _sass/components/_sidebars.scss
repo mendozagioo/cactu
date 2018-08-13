@@ -21,7 +21,7 @@
     height: 0;
     padding: 0;
     border-right: 0;
-    z-index: $zindex-top;
+    z-index: $zindex-top - 10;
   }
 }
 
