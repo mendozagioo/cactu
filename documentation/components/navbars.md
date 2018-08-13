@@ -92,7 +92,10 @@ The same navbar but now using JS.
 {% endcapture %}
 {% include example.html content=example %}
 
+
 ## Lateral navigation
+
+To add a lateral navigation, you just add a new `nav` label with the `navigation-end` class.
 
 {% capture example %}
 <div class="navbar-expanded">
