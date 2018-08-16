@@ -5,10 +5,41 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+  // Dropdowns
+  //
   $('.toggle').on('click', function() {
     $(this).parent().toggleClass('dropped');
   });
 
+  // Modals
+  //
+  function isOverflowing() {
+    var rect = $('html')[0].getBoundingClientRect();
+    return rect.left + rect.right < window.innerWidth;
+  }
+  var overflowing = isOverflowing();
+
+  $(window).on('resize', function() {
+    overflowing = isOverflowing();
+  });
+
+  $('.modal-launcher').on('click', function() {
+    var modalTarget = $(this).data('target');
+    $(modalTarget).addClass('active');
+    $('html').addClass('clipped').css({
+      'padding-right': overflowing ? '15px' : ''
+    });
+  });
+  $('.modal, .modal-center, .modal .close, .modal-center .close').on('click', function() {
+    $('.modal, .modal-center').removeClass('active');
+    setTimeout(function() {
+      $('html').removeAttr('style');
+      $('html').removeClass('clipped');
+    }, 200);
+  });
+  $('.modal-content').on('click', function(e) {
+    e.stopPropagation();
+  });
 
   // Collapse component
   //

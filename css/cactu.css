@@ -1,8 +1,7 @@
 /*!
- * Cactu v0.3.0 (https://cactu.io/)
+ * Cactu v0.15.0 (https://cactu.io/)
  * Copyright 2018 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/LICENSE)
- * Based mostly on Bootstrap & Bulma
  */
 *,
 *::before,
@@ -28,6 +27,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
+  z-index: 1;
 }
 
 div, article, aside, details, figcaption, figure,
@@ -351,6 +351,13 @@ button:not(:disabled):not(.disabled):active:focus, button:not(:disabled):not(.di
 .button:not(:disabled):not(.disabled):active:focus,
 .button:not(:disabled):not(.disabled).active:focus {
   box-shadow: 0 0 0 0.125rem #aeb9c4, inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+button ~ button,
+button ~ .button,
+.button ~ button,
+.button ~ .button {
+  margin-left: .5rem;
 }
 
 pre,
@@ -698,6 +705,17 @@ h6, .h6 {
 .button-group-vertical button.selected,
 .button-group-vertical .button.selected {
   background-color: #cbd3da;
+}
+
+.button-group button ~ button,
+.button-group button ~ .button,
+.button-group .button ~ button,
+.button-group .button ~ .button,
+.button-group-vertical button ~ button,
+.button-group-vertical button ~ .button,
+.button-group-vertical .button ~ button,
+.button-group-vertical .button ~ .button {
+  margin-left: 0;
 }
 
 .button-group {
@@ -1474,6 +1492,143 @@ ul, ol {
   background-color: #f5f5f5;
 }
 
+.modal,
+.modal-center {
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .modal,
+  .modal-center {
+    transition: none;
+  }
+}
+
+.modal *,
+.modal-center * {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modal-content,
+.modal-center .modal-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 500px;
+  margin: 2rem auto auto;
+  border-radius: 4px;
+  background-color: #fff;
+  transform: translate(0, -25%);
+  transition: all 0.35s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .modal .modal-content,
+  .modal-center .modal-content {
+    transition: none;
+  }
+}
+
+.modal .modal-content > *:not(:last-child),
+.modal-center .modal-content > *:not(:last-child) {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal .modal-content > * ,
+.modal-center .modal-content > * {
+  padding: 1rem;
+  margin: 0;
+}
+
+.modal .modal-content > .close,
+.modal-center .modal-content > .close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 30px;
+  height: 30px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 0;
+  color: #fff;
+  border: 0 !important;
+  border-radius: 50%;
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+.modal .modal-content > .close > span,
+.modal-center .modal-content > .close > span {
+  font-size: 1.25rem;
+  margin-top: -2px;
+}
+
+.modal .modal-content > .close:hover, .modal .modal-content > .close:focus,
+.modal-center .modal-content > .close:hover,
+.modal-center .modal-content > .close:focus {
+  background-color: black;
+}
+
+.modal .modal-header,
+.modal-center .modal-header {
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.modal .modal-header h4,
+.modal-center .modal-header h4 {
+  margin: 0;
+}
+
+.modal .modal-body,
+.modal-center .modal-body {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.modal .modal-footer,
+.modal-center .modal-footer {
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.modal.active,
+.modal-center.active {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.modal.active .modal-content,
+.modal-center.active .modal-content {
+  transform: translate(0, 0);
+}
+
+.modal-center .modal-content {
+  margin: auto;
+}
+
+@media screen and (max-width: 575px) {
+  .modal .modal-content,
+  .modal-center .modal-content {
+    width: 84%;
+  }
+}
+
 .navbar .show-menu,
 .navbar-expanded .show-menu, .navbar [type="checkbox"]:checked ~ nav,
 .navbar-expanded [type="checkbox"]:checked ~ nav {
@@ -1815,6 +1970,10 @@ th {
 
 .hidden {
   display: none !important;
+}
+
+.clipped {
+  overflow: hidden;
 }
 
 .hll {

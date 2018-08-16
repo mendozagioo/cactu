@@ -1,9 +1,7 @@
-
 /*!
- * Cactu v0.3.0 (https://cactu.io/)
+ * Cactu v0.15.0 (https://cactu.io/)
  * Copyright 2018 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/LICENSE)
- * Based mostly on Bootstrap & Bulma
  */
 
 @import "base/global-variables";
@@ -36,6 +34,7 @@
 @import "components/forms";
 @import "components/grids";
 @import "components/lists";
+@import "components/modals";
 @import "components/navbars";
 @import "components/navs";
 @import "components/tables";
