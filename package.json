@@ -1,6 +1,6 @@
 {
   "name": "cactu",
-  "version": "0.3.0",
+  "version": "0.15.0",
   "description": "Cactu is a SASS framework created to help any developer to create web pages very quickly and an easy way",
   "main": "index.js",
   "scripts": {
