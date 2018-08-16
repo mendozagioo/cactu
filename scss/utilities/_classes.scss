@@ -63,3 +63,7 @@ $disabled-class-color: $disabled-color !default;
 //
 .show { display: block !important; }
 .hidden { display: none !important; }
+
+.clipped {
+  overflow: hidden;
+}
