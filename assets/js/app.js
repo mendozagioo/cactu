@@ -1,4 +1,15 @@
 $(document).ready(function() {
+  // Right navigation
+  //
+  $('.section-nav a').on('click', function(e) {
+    e.preventDefault();
+    var scrollTo = $($(this).attr('href')).offset().top - 70;
+    
+    $('html, body').animate({
+      scrollTop: scrollTo
+    }, 300);
+  });
+
   // None links
   //
   $('[href="#"]').on('click', function(e) {
