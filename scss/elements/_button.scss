@@ -81,4 +81,9 @@ button,
       box-shadow: $button-focus-box-shadow, $button-active-box-shadow;
     }
   }
+
+  & ~ button,
+  & ~ .button {
+    margin-left: .5rem;
+  }
 }
