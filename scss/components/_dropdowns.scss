@@ -119,9 +119,7 @@ $separator-color:             $border-color !default;
 
 .dropdown {
   .toggle:after {
-    border-left: $triangle-width solid transparent;
-    border-right: $triangle-width solid transparent;
-    border-top: $triangle-width solid;
+    @include triangle-icon($triangle-width, 'down');
   }
 
   .drop-menu {
@@ -132,9 +130,7 @@ $separator-color:             $border-color !default;
 
 .dropup {
   .toggle:after {
-    border-left: $triangle-width solid transparent;
-    border-right: $triangle-width solid transparent;
-    border-bottom: $triangle-width solid;
+    @include triangle-icon($triangle-width, 'up');
   }
 
   .drop-menu {
@@ -145,9 +141,7 @@ $separator-color:             $border-color !default;
 
 .dropright {
   .toggle:after {
-    border-left: $triangle-width solid;
-    border-top: $triangle-width solid transparent;
-    border-bottom: $triangle-width solid transparent;
+    @include triangle-icon($triangle-width, 'right');
   }
 
   .drop-menu {
@@ -167,9 +161,7 @@ $separator-color:             $border-color !default;
     &:before {
       @extend %shape-base;
       margin-right: .4375rem;
-      border-right: $triangle-width solid;
-      border-top: $triangle-width solid transparent;
-      border-bottom: $triangle-width solid transparent;
+      @include triangle-icon($triangle-width, 'left');
       @include transition($triangle-transition);
     }
   }
