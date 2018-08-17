@@ -44,11 +44,8 @@ Cactu has just one file used for global variables, those varibales are used for 
 | `$medium-desktop-size` | <small>size</small> |  `1200px` |
 | `$large-desktop-size`  | <small>size</small> |  `1344px` |
 | `$maximum-columns`     | <small>size</small> |  `12` |
-| `$easing`           | <small>transition</small> | `ease-out` |
-| `$radius-small`     | <small>size</small> | `2px` |
 | `$radius`           | <small>size</small> | `4px` |
-| `$radius-large`     | <small>size</small> | `6px` |
-| `$radius-rounded`   | <small>radius</small> | `290486px` |
+| `$radius-rounded`   | <small>radius</small> | `300000px` |
 | `$border-width`     | <small>size</small> | `1px` |
 | `$border-base`      | <small>unitless</small> | `$border-width solid $border-color` |
 | `$speed`            | <small>speed</small> | `.15s` |

@@ -51,11 +51,8 @@ $maximum-columns:      12 !default;
 
 // Miscellaneous
 //
-$easing:            ease-out !default;
-$radius-small:      2px !default;
 $radius:            4px !default;
-$radius-large:      6px !default;
-$radius-rounded:    290486px !default;
+$radius-rounded:    300000px !default;
 $border-width:      1px !default;
 $border-base:       $border-width solid $border-color !default;
 $speed:             .15s !default;
