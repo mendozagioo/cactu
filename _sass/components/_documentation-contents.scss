@@ -12,6 +12,8 @@
     margin-bottom: 2rem;
   }
 
+  .highlight { z-index: 1; }
+
   @include breakpoint-cellphone-tablet {
     padding: 1rem 1rem 1.5rem 1.5rem;
   }
