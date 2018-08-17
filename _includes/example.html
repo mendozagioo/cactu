@@ -1,19 +1,18 @@
 {%- comment -%}
-Usage: {% include example.html content=markup %},
-where content is a capture with the HTML content
-id - null (default)
-class - "highlight-example" (default)
-optional: hide_preview - disabled (default)
-optional: hide_markup - disabled (default)
+  Usage: {% include example.html content=example %}, after of {% endcapture %}
+  optional: id - "" (default)
+  optional: class - "highlight-example" (default)
+  optional: hide_preview - null (default)
+  optional: hide_markup - null (default)
 {%- endcomment -%}
 
 {%- assign preview_id = include.id -%}
 {%- assign preview_class = include.class -%}
 
 {%- if include.hide_preview == null -%}
-<div{% if preview_id %} id="{{ preview_id }}" {% endif %} class="highlight-example{% if preview_class %} {{ preview_class }}{% endif %}">
-  {{- include.content -}}
-</div>
+  <div{% if preview_id %} id="{{ preview_id }}" {% endif %} class="highlight-example{% if preview_class %} {{ preview_class }}{% endif %}">
+    {{- include.content -}}
+  </div>
 {%- endif -%}
 
 {%- if include.hide_markup == null -%}

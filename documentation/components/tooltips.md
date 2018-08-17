@@ -43,4 +43,4 @@ Lorem ipsum dolor sit amet, <a class="tooltip-top" href="#" data-tooltip="Lorem 
   <a class="disabled tooltip-bottom" href="#" data-tooltip="link 4">Link</a>
 </nav>
 {% endcapture %}
-{% include example.html content=example %}  
+{% include example.html content=example %}
