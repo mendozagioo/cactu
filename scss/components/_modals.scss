@@ -35,10 +35,6 @@ $modal-close-icon-size:             1.25rem !default;
   background-color: $modal-background;
   @include transition($transition-all);
 
-  * {
-    display: flex;
-  }
-
   .modal-content {
     position: relative;
     top: 0;
@@ -64,6 +60,7 @@ $modal-close-icon-size:             1.25rem !default;
     }
 
     > .close {
+      display: flex;
       position: absolute;
       top: $modal-close-gap;
       right: $modal-close-gap;
