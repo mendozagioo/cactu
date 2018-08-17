@@ -6,15 +6,15 @@
 
 // Variables
 //
-$font-weight: $font-weight-normal !default;
-$body-background-color: $white !default;
-$hr-hight: 1px !default;
-$hr-background-color: $gray-600 !default;
-$headings-weight: bold !default;
-$dt-font-weight: $font-weight-bold !default;
-$table-cell-padding: .75rem !default;
-$table-caption-color: $gray-600 !default;
-$label-margin-bottom: .5rem !default;
+$font-weight:               $font-weight-normal !default;
+$body-background-color:     $white !default;
+$hr-hight:                  1px !default;
+$hr-background-color:       $gray-600 !default;
+$headings-weight:           bold !default;
+$dt-font-weight:            $font-weight-bold !default;
+$table-cell-padding:        .75rem !default;
+$table-caption-color:       $gray-600 !default;
+$label-margin-bottom:       .5rem !default;
 
 
 // Reset
@@ -69,6 +69,7 @@ table {
 }
 
 // Reboot styles
+// Mostly based on Bootstrap
 //
 html {
   overflow-x: hidden;

@@ -5,11 +5,11 @@
 
 // Variables
 //
-$button-first-radius: $radius 0 0 $radius !default;
-$button-last-radius: 0 $radius $radius 0 !default;
-$vertical-button-first-radius: $radius $radius 0 0 !default;
-$vertical-button-last-radius: 0 0 $radius $radius !default;
-$button-background-selected: darken($gray-200, 10%) !default;
+$button-first-radius:             $radius 0 0 $radius !default;
+$button-last-radius:              0 $radius $radius 0 !default;
+$vertical-button-first-radius:    $radius $radius 0 0 !default;
+$vertical-button-last-radius:     0 0 $radius $radius !default;
+$button-background-selected:      darken($gray-200, 10%) !default;
 
 
 .button-group,
