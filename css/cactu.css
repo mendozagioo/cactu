@@ -1,5 +1,5 @@
 /*!
- * Cactu v0.15.0 (https://cactu.io/)
+ * Cactu v0.16.0 (https://cactu.io/)
  * Copyright 2018 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/LICENSE)
  */
@@ -27,7 +27,6 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
-  z-index: 1;
 }
 
 div, article, aside, details, figcaption, figure,
@@ -1008,9 +1007,9 @@ h6, .h6 {
 }
 
 .dropright .toggle:after {
-  border-left: 5px solid;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
+  border-left: 5px solid;
 }
 
 .dropright .drop-menu {
@@ -1027,9 +1026,9 @@ h6, .h6 {
 
 .dropleft .toggle:before {
   margin-right: .4375rem;
-  border-right: 5px solid;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
+  border-right: 5px solid;
   transition: transform 0.1s ease-in-out;
 }
 
@@ -1516,12 +1515,6 @@ ul, ol {
   }
 }
 
-.modal *,
-.modal-center * {
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .modal .modal-content,
 .modal-center .modal-content {
   position: relative;
@@ -1558,6 +1551,8 @@ ul, ol {
 
 .modal .modal-content > .close,
 .modal-center .modal-content > .close {
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: -25px;
   right: -25px;
@@ -1904,6 +1899,121 @@ th {
 
 .table-borderless th, .table-borderless td {
   border: 0;
+}
+
+[class*="tooltip"] {
+  position: relative;
+}
+
+[class*="tooltip"]:before, [class*="tooltip"]:after {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  [class*="tooltip"]:before, [class*="tooltip"]:after {
+    transition: none;
+  }
+}
+
+[class*="tooltip"]:before {
+  content: '';
+  color: #000;
+}
+
+[class*="tooltip"]:after {
+  content: attr(data-tooltip);
+  display: block;
+  color: #fff;
+  font-size: 90%;
+  padding: 0.5rem 0.625rem;
+  white-space: nowrap;
+  line-height: 1;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+[class*="tooltip"]:hover:after, [class*="tooltip"]:hover:before {
+  opacity: 1;
+}
+
+[class*="tooltip"]:not([data-tooltip]):before, [class*="tooltip"]:not([data-tooltip]):after {
+  display: none;
+}
+
+[data-tooltip='']:before, [data-tooltip='']:after {
+  display: none;
+}
+
+.tooltip-top:before, .tooltip-top:after {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-top:before {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid;
+}
+
+.tooltip-top:after {
+  margin-bottom: 5px;
+}
+
+.tooltip-right:before, .tooltip-right:after {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.tooltip-right:before {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid;
+}
+
+.tooltip-right:after {
+  margin-left: 6px;
+}
+
+.tooltip-bottom:before, .tooltip-bottom:after {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-bottom:before {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid;
+}
+
+.tooltip-bottom:after {
+  margin-top: 6px;
+}
+
+.tooltip-left:before, .tooltip-left:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-left:before {
+  left: 0;
+  margin-left: -6px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid;
+}
+
+.tooltip-left:after {
+  right: 100%;
+  margin-right: 6px;
 }
 
 [class*="-expanded"] {

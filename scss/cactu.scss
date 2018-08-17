@@ -1,5 +1,5 @@
 /*!
- * Cactu v0.15.0 (https://cactu.io/)
+ * Cactu v0.16.0 (https://cactu.io/)
  * Copyright 2018 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/LICENSE)
  */
@@ -17,6 +17,7 @@
 @import "mixins/forms";
 @import "mixins/grid";
 @import "mixins/hover";
+@import "mixins/icons";
 @import "mixins/navbar";
 @import "mixins/positions";
 @import "mixins/transition";
@@ -38,6 +39,7 @@
 @import "components/navbars";
 @import "components/navs";
 @import "components/tables";
+@import "components/tooltips";
 
 @import "utilities/classes";
 @import "utilities/syntax";
