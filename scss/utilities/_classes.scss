@@ -21,7 +21,7 @@ $disabled-class-color: $disabled-color !default;
 
 .disabled {
   color: $disabled-class-color;
-  cursor: not-allowed;
+  pointer-events: none;
 
   @include hover-focus {
     color: $disabled-class-color;
