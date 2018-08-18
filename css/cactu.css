@@ -1,5 +1,5 @@
 /*!
- * Cactu v0.16.0 (https://cactu.io/)
+ * Cactu v0.17.0 (https://cactu.io/)
  * Copyright 2018 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/LICENSE)
  */
@@ -50,8 +50,6 @@ table {
 }
 
 html {
-  overflow-x: hidden;
-  overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
@@ -1869,6 +1867,106 @@ ul, ol {
   width: 100%;
 }
 
+.pagination,
+.pagination-center,
+.pagination-end {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 0.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination > *,
+.pagination > a,
+.pagination-center > *,
+.pagination-center > a,
+.pagination-end > *,
+.pagination-end > a {
+  display: -ms-flexbox;
+  display: flex;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .pagination > *,
+  .pagination > a,
+  .pagination-center > *,
+  .pagination-center > a,
+  .pagination-end > *,
+  .pagination-end > a {
+    transition: none;
+  }
+}
+
+.pagination > *:not(:first-child),
+.pagination > a:not(:first-child),
+.pagination-center > *:not(:first-child),
+.pagination-center > a:not(:first-child),
+.pagination-end > *:not(:first-child),
+.pagination-end > a:not(:first-child) {
+  margin-left: -1px;
+}
+
+.pagination > *:first-child,
+.pagination > *:first-child a,
+.pagination-center > *:first-child,
+.pagination-center > *:first-child a,
+.pagination-end > *:first-child,
+.pagination-end > *:first-child a {
+  border-radius: 4px 0 0 4px;
+}
+
+.pagination > *:last-child,
+.pagination > *:last-child a,
+.pagination-center > *:last-child,
+.pagination-center > *:last-child a,
+.pagination-end > *:last-child,
+.pagination-end > *:last-child a {
+  border-radius: 0 4px 4px 0;
+}
+
+.pagination > *:hover, .pagination > *:focus,
+.pagination-center > *:hover,
+.pagination-center > *:focus,
+.pagination-end > *:hover,
+.pagination-end > *:focus {
+  background-color: transparent;
+}
+
+.pagination a,
+.pagination-center a,
+.pagination-end a {
+  padding: 0.25rem 0.625rem;
+  border: 1px solid #dee2e6;
+}
+
+.pagination a:hover, .pagination a:focus,
+.pagination-center a:hover,
+.pagination-center a:focus,
+.pagination-end a:hover,
+.pagination-end a:focus {
+  text-decoration: none;
+  background-color: #f2f2f2;
+}
+
+.pagination a.active,
+.pagination-center a.active,
+.pagination-end a.active {
+  color: #626d78;
+  background-color: #e6e6e6;
+}
+
+.pagination a.disabled:hover, .pagination a.disabled:focus,
+.pagination-center a.disabled:hover,
+.pagination-center a.disabled:focus,
+.pagination-end a.disabled:hover,
+.pagination-end a.disabled:focus {
+  background-color: #fff;
+}
+
 th, td {
   padding: 0.625rem 1rem;
   border: 1px solid #dee2e6;
@@ -2029,7 +2127,7 @@ th {
 
 .disabled {
   color: #838f9b;
-  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .disabled:hover, .disabled:focus {
