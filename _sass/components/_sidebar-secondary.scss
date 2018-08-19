@@ -1,29 +1,7 @@
 //
-// Sidebars
+// Sidebar secondary
 // --------------------------------------------------
 
-
-.sidebar,
-.sidebar-secondary {
-  position: sticky;
-  top: 3.4375rem;
-  height: calc(100vh - 3.4375rem);
-  overflow-y: auto;
-  background-color: $white;
-}
-
-.sidebar {
-  padding: .5rem 0;
-  border-right: $border-base;
-  background-color: $sidebar-background;
-
-  @include breakpoint-cellphone {
-    height: 0;
-    padding: 0;
-    border-right: 0;
-    z-index: 90;
-  }
-}
 
 .sidebar-secondary {
   font-size: .875rem;
