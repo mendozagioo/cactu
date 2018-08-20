@@ -10,10 +10,9 @@
       {%- assign active = 'active' -%}
     {%- endif -%}
 
-    <div class="nav-dropdown{% unless active == nil %} {{ active }}{% endunless %}">
+    <div class="nav-nested{% unless active == nil %} {{ active }}{% endunless %}">
       <a href="{{ site.baseurl }}/documentation/{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
         {{ group.title }}
-        <i class="chevron-down-icon"></i>
       </a>
       <nav>
         {%- for doc in group.pages -%}
