@@ -8,7 +8,8 @@
     <i class="menu-icon"></i>
   </button>
   <nav>
-    <a href="/">Home</a>
-    <a class="active" href="/documentation/getting-started/introduction/">Documentation</a>
+    <a class="{% if page.layout == "home" %}active{% endif %}" href="/">Home</a>
+    <a class="{% if page.layout == "documentation" %}active{% endif %}" href="/documentation/getting-started/introduction/">Documentation</a>
+    <a class="{% if page.layout == "api" %}active{% endif %}" href="/api/getting-started/introduction/">API</a>
   </nav>
 </header>
