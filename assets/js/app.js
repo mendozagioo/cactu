@@ -9,6 +9,7 @@ var Cactu = {
     // Global interactions
     this.noLinks();
     this.rightNavigation();
+    this.submenu();
     // Componenets
     this.collapse();
     this.dropDowns();
@@ -33,8 +34,24 @@ var Cactu = {
     });
   },
 
+  submenu: function() {
+    var $submenu = $('.submenu-toggle');
+    var $navbarToggler = $('.navbar-toggler');
+
+    $submenu.on('click', function() {
+      $('.submenu-toggle span').toggle(100);
+      $('.sidebar').toggleClass('dropped');
+      $navbarToggler.toggle(100);
+      $('html').toggleClass('clipped');
+    });
+
+    $navbarToggler.on('click', function() {
+      $submenu.toggle(100);
+    });
+  },
+
   collapse: function() {
-    $('#basic-collapse > button').on('click', function () {
+    $('#basic-collapse > button').on('click', function() {
       $('#basic-collapse > .collapse-container').toggleClass('collapsed');
     });
 
@@ -67,7 +84,7 @@ var Cactu = {
       overflowing = self._isOverflowing();
     });
 
-    $('.modal-launcher').on('click', function () {
+    $('.modal-launcher').on('click', function() {
       var modalTarget = $(this).data('target');
       $(modalTarget).addClass('active');
       $('html').addClass('clipped').css({
@@ -81,13 +98,13 @@ var Cactu = {
         $('html').removeClass('clipped');
       }, 200);
     });
-    $('.modal-content').on('click', function (e) {
+    $('.modal-content').on('click', function(e) {
       e.stopPropagation();
     });
   },
 
   navbars: function() {
-    $('.navbar-toggler').on('click', function () {
+    $('.navbar-toggler').on('click', function() {
       $(this).find('i').toggleClass('close-icon');
       $(this).parent().find('nav').toggleClass('show-menu');
     });
