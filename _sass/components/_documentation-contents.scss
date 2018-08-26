@@ -13,7 +13,8 @@ $column-example-background: #f9f1b6;
 $column-example-border: 1px solid darken($column-example-background, 40%);
 
 
-#documentation-contents {
+#documentation-contents,
+#example-contents {
   display: flex;
   flex-direction: column;
 
@@ -30,7 +31,9 @@ $column-example-border: 1px solid darken($column-example-background, 40%);
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
+}
 
+#documentation-contents {
   @include breakpoint-tablet {
     padding: 1rem 1rem 1.5rem 1.5rem;
   }
