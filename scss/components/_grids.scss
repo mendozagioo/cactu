@@ -6,6 +6,8 @@
 // Variables
 $column-gap:            15px !default;
 $column-tablet-gap:     10px !default;
+$size-name-tablets:     'tablet' !default;
+$size-name-cellphones:  'cellphone' !default;
 
 
 .container {
@@ -64,17 +66,18 @@ $column-tablet-gap:     10px !default;
 
 // Columns generator
 // for different breakpoints
+// column-of-[x]
 //
 @include make-specific-columns;
 
 // tablet-column-of-[x]
 @include breakpoint-tablet {
-  @include make-specific-columns('tablet')
+  @include make-specific-columns($size-name-tablets)
 }
 
 // cellphone-column-of-[x]
 @include breakpoint-cellphone-tablet {
-  @include make-specific-columns('cellphone');
+  @include make-specific-columns($size-name-cellphones);
 }
 
 @include breakpoint-cellphone {
