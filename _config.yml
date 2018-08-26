@@ -19,6 +19,10 @@ permalink: pretty
 markdown: kramdown
 highlighter: rouge
 
+# Custom variables
+current_version:      0.17.0
+current_ruby_version: 0.17.0
+
 plugins:
   - jekyll-redirect-from
   - jekyll-toc
