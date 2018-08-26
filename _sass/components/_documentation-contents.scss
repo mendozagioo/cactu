@@ -3,6 +3,16 @@
 // --------------------------------------------------
 
 
+// Variables
+//
+$container-max-width: 60%;
+$container-height: 8rem;
+$container-example-background: #fcf094;
+$column-example-padding-y: .625rem;
+$column-example-background: #f9f1b6;
+$column-example-border: 1px solid darken($column-example-background, 40%);
+
+
 #documentation-contents {
   display: flex;
   flex-direction: column;
@@ -14,11 +24,38 @@
 
   .highlight { z-index: 1; }
 
+  table {
+    display: block;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
   @include breakpoint-tablet {
     padding: 1rem 1rem 1.5rem 1.5rem;
   }
 
   @include breakpoint-min($tablet-size) {
-    padding: 1rem 1rem 1.5rem 2rem;
+    padding: 1rem 1rem 1.5rem 2.5rem;
   }
+}
+
+// Containers
+//
+.container-example,
+.container-expanded-example {
+  height: $container-height;
+  margin: auto;
+  border-radius: $radius;
+  background: $container-example-background;
+}
+
+.container-example { max-width: $container-max-width; }
+.container-expanded-example { max-width: 100%; }
+
+.column-example {
+  padding-top: $column-example-padding-y;
+  padding-bottom: $column-example-padding-y;
+  border: $column-example-border;
+  background-color: $column-example-background;
 }
