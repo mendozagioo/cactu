@@ -49,4 +49,4 @@ Please read the code, follow the same conventions, keep it simple, keep it minim
 
 ## Copyright and license
 
-Code released under the [MIT License](https://github.com/mendozagioo/cactu/blob/master/LICENSE)
+Code released under the [MIT License](https://github.com/mendozagioo/cactu/master/LICENSE)
