@@ -3,9 +3,12 @@
 // --------------------------------------------------
 
 
+$navbar-background-color: $principal-color;
+
+
 #principal-menu {
   @include sticky-top;
-  @include navbar-theme(#f8e768);
+  @include navbar-theme($navbar-background-color);
 
   .submenu-toggle {
     margin-left: auto;

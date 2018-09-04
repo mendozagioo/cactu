@@ -7,10 +7,10 @@
 //
 $container-max-width: 60%;
 $container-height: 8rem;
-$container-example-background: #fcf094;
+$container-example-background: lighten($principal-color, 14%);
 $column-example-padding-y: .625rem;
-$column-example-background: #f9f1b6;
-$column-example-border: 1px solid darken($column-example-background, 40%);
+$column-example-background: $container-example-background;
+$column-example-border: 1px solid darken($column-example-background, 30%);
 
 
 #documentation-contents,
@@ -31,6 +31,8 @@ $column-example-border: 1px solid darken($column-example-background, 40%);
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
+
+  .dropleft { float: right; }
 }
 
 #documentation-contents {

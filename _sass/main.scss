@@ -8,10 +8,17 @@
 
 // Documentation styles
 //
+@import "components/buttons";
 @import "components/documentation-contents";
 @import "components/example-contents";
 @import "components/navbar";
 @import "components/sidebar-principal";
 @import "components/sidebar-secondary";
+
+@import "sections/home-top";
+@import "sections/home-features";
+@import "sections/home-principles";
+@import "sections/home-target";
+@import "sections/home-footer";
 
 @import "utilities/classes";

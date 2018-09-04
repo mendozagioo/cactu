@@ -2114,7 +2114,7 @@ th {
   margin-right: 6px;
 }
 
-[class*="-expanded"] {
+[class*="expanded"] {
   width: 100%;
   max-width: 100%;
 }
@@ -2134,40 +2134,40 @@ th {
   color: #838f9b;
 }
 
-[class*="-centered"] {
+[class*="centered"] {
   text-align: center;
 }
 
-[class*="-right"] {
+[class*="right"] {
   text-align: right;
 }
 
-[class*="-start"] {
+[class*="start"] {
   -ms-flex-pack: start;
   justify-content: start;
 }
 
-[class*="-center"] {
+[class*="center"] {
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-[class*="-end"] {
+[class*="end"] {
   -ms-flex-pack: end;
   justify-content: end;
 }
 
-[class*="-around"] {
+[class*="around"] {
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
-[class*="-between"] {
+[class*="between"] {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-[class*="-evenly"] {
+[class*="evenly"] {
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
