@@ -1,3 +1,158 @@
 //
 // Forms
 // --------------------------------------------------
+
+
+// Variables
+//
+$input-color:                       $text-color !default;
+$input-background:                  $white !default;
+$input-padding:                     .375rem .75rem !default;
+$input-border:                      $border-base !default;
+$input-radius:                      $radius !default;
+$input-box-shadow:                  inset 0 1px 2px rgba($black, .075) !default;
+$input-placeholder-color:           $gray-600 !default;
+$input-disabled-background:         $gray-200 !default;
+$input-transition:                  border-color $speed ease-in-out, box-shadow $speed ease-in-out !default;
+$disabled-color:                    darken($gray-500, 15%) !default;
+$help-font-size:                    .75rem !default;
+$help-margin-top:                   .25rem !default;
+$select-height:                     calc(2.25rem + 2px) !default;
+$custom-select-padding-x:           .75rem !default;
+$custom-select-indicator-padding:   1rem !default;
+$custom-select-indicator-color:     $gray-800 !default;
+$custom-select-indicator:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-select-background-size:     8px 10px !default; // In pixels because image dimensions
+$select-background:                 $input-background $custom-select-indicator no-repeat right $custom-select-padding-x center !default;
+$valid-color:                       $green !default;
+$invalid-color:                     $red !default;
+
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+select,
+textarea {
+  color: $input-color;
+  padding: $input-padding;
+  border: $input-border;
+  border-radius: $input-radius;
+  box-shadow: $input-box-shadow;
+  background-color: $input-background;
+
+  @include transition($input-transition);
+
+  &:focus {
+    outline: 0;
+    @include input-focus;
+  }
+
+  &::placeholder {
+    color: $input-placeholder-color;
+    opacity: 1;
+  }
+
+  &:disabled {
+    color: $disabled-color;
+    background-color: $input-disabled-background;
+    cursor: not-allowed;
+    opacity: .57;
+  }
+
+  &[readonly] {
+    background-color: $input-disabled-background;
+    opacity: 1;
+  }
+}
+
+input[type="range"] {
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+}
+
+select:not([size]):not([multiple]) {
+  height: $select-height;
+  padding: .375rem 1.75rem .375rem .75rem;
+  background: $select-background;
+  background-size: $custom-select-background-size;
+  appearance: none;
+
+  &:disabled { background-color: $input-disabled-background; }
+
+  &::-ms-value {
+    // For visual consistency with IE and (under certain conditions) Edge.
+    color: $input-color;
+    background-color: $input-background;
+  }
+}
+
+select {
+  // Remove the outline focus on Firefox
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $text-color;
+  }
+
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    display: inline;
+    width: .8125rem;
+    height: 1rem;
+    margin-right: .125rem;
+  }
+
+  .help,
+  [class$="-feedback"] {
+    display: block;
+    font-size: $help-font-size;
+    margin-top: $help-margin-top;
+  }
+
+  .checkbox + .checkbox,
+  .radio + .radio {
+    margin-left: 1rem;
+  }
+}
+
+@include validation-states("valid", $valid-color);
+@include validation-states("invalid", $invalid-color);
+
+.form-columns {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .column,
+  [class*="column-of-"] {
+    padding: 0 .5rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include breakpoint-cellphone {
+      padding: 0;
+    }
+  }
+}

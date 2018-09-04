@@ -1,0 +1,124 @@
+//
+// Modals
+// --------------------------------------------------
+
+
+// Variables
+//
+$modal-background:                rgba(0, 0, 0, .7) !default;
+$modal-content-width:               500px !default;
+$modal-content-margin:              2rem auto auto !default;
+$modal-content-radius:              $radius !default;
+$modal-content-background:          $white !default;
+$modal-content-transition:          all .35s ease-in-out !default;
+$modal-close-size:                  30px !default;
+$modal-close-gap:                   -25px !default;
+$modal-close-color:                 $white !default;
+$modal-close-radio:                 50% !default;
+$modal-close-background:          rgba(30, 30, 30, .8) !default;
+$modal-close-background-hover:    rgba(0, 0, 0, 1) !default;
+$modal-close-icon-size:             1.25rem !default;
+
+
+.modal,
+.modal-center {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $modal-background;
+  @include transition($transition-all);
+
+  .modal-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    width: $modal-content-width;
+    margin: $modal-content-margin;
+    border-radius: $modal-content-radius;
+    background-color: $modal-content-background;
+    transform: translate(0, -25%);
+    @include transition(all .35s ease-in-out);
+
+    > * {
+      &:not(:last-child) {
+        border-bottom: $border-base;
+      }
+
+      &:not(:nth-child(1):not(:nth-child(2))) {
+        padding: 1rem;
+        margin: 0;
+      }
+    }
+
+    > .close {
+      display: flex;
+      position: absolute;
+      top: $modal-close-gap;
+      right: $modal-close-gap;
+      width: $modal-close-size;
+      height: $modal-close-size;
+      justify-content: center;
+      line-height: 0;
+      color: $modal-close-color;
+      border: 0 !important;
+      border-radius: $modal-close-radio;
+      background-color: $modal-close-background;
+
+      > span {
+        font-size: $modal-close-icon-size;
+        margin-top: -2px; // to force the centered
+      }
+
+      @include hover-focus {
+        background-color: $modal-close-background-hover;
+      }
+    }
+  }
+
+  .modal-header {
+    align-items: center;
+
+    h4 { margin: 0; }
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-footer {
+    justify-content: flex-end;
+  }
+
+  &.active {
+    opacity: 1;
+    z-index: $zindex-top;
+
+    .modal-content {
+      transform: translate(0,0);
+    }
+  }
+}
+
+.modal-center {
+  .modal-content {
+    margin: auto;
+  }
+}
+
+@include breakpoint-cellphone {
+  .modal,
+  .modal-center {
+    .modal-content {
+      width: 84%;
+    }
+  }
+}

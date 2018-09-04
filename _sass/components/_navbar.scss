@@ -1,0 +1,36 @@
+//
+// Navbars
+// --------------------------------------------------
+
+
+$navbar-background-color: $principal-color;
+
+
+#principal-menu {
+  @include sticky-top;
+  @include navbar-theme($navbar-background-color);
+
+  .submenu-toggle {
+    margin-left: auto;
+    font-size: 85%;
+    background-color: transparent;
+
+    span {
+      color: $black;
+
+      &:last-child() { display: none; }
+    }
+  }
+}
+
+@include breakpoint-min($tablet-size) {
+  .submenu-toggle {
+    display: none;
+  }
+}
+
+@include breakpoint-max($tablet-size - 1) {
+  .submenu-toggle {
+    display: flex;
+  }
+}

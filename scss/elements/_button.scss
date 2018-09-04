@@ -6,10 +6,10 @@
 //  Variables
 //
 $button-font-weight:          $font-weight-normal !default;
-$button-transition:           $transition-all !default;
+$button-transition:           color $speed ease-in-out, background-color $speed ease-in-out, border-color $speed ease-in-out, box-shadow $speed ease-in-out !default;
 $button-padding-y:            .375rem !default;
 $button-padding-x:            .75rem !default;
-$button-font-size:            $font-size !default;
+$button-font-size:            1rem !default;
 $button-line-height:          $line-height !default;
 $button-border-radius:        $radius !default;
 $button-color:                $text-color !default;
@@ -57,6 +57,7 @@ button,
   &.focus {
     outline: 0;
     box-shadow: $button-focus-box-shadow;
+    background-color: $button-hover-background;
   }
 
   // Disabled comes first so active can properly restyle
@@ -79,5 +80,10 @@ button,
     &:focus {
       box-shadow: $button-focus-box-shadow, $button-active-box-shadow;
     }
+  }
+
+  & ~ button,
+  & ~ .button {
+    margin-left: .5rem;
   }
 }

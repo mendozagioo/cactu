@@ -5,40 +5,186 @@
 
 // Variables
 //
-$navbar-padding-y: .6rem;
-$navbar-padding-x: 1rem;
-$navbar-background: #f5f5f5;
-$link-padding-y: .5rem;
-$brand-gap: .5rem;
+$navbar-padding-y:      0 !default;
+$navbar-padding-x:      15px !default;
+$navbar-base-color:     $white-smoke !default;
+$navbar-last-padding:   .5rem !default;
+$toggler-color:         $text-color !default;
+$link-padding-y:        .9375rem !default;
+$brand-padding-y:       .75rem !default;
+$brand-padding-x:       0 !default;
+$brand-gap:             .625rem !default;
+$brand-font-size:       1.25rem !default;
+$search-gap:            .5rem !default;
+$breakpoint-mobile:     $tablet-size !default; // Set you breakpoint to get the navbar mobile
 
-.navbar {
+
+// Blocks
+//
+%show-menu {
+  opacity: 1;
+  height: auto;
+}
+
+
+.navbar,
+.navbar-expanded {
   position: relative;
-  display: flex;
-  flex-wrap: wrap; // allow us to do the line break for collapsing content
-  align-items: center;
-  padding: $navbar-padding-y $navbar-padding-x;
-  background-color: $navbar-background;
+  @extend %flex-wrap-center;
+  // The base navbar-variant get the base grays colors
+  @include navbar-theme($navbar-base-color);
+
+  * {
+    @extend %flex-wrap-center;
+  }
 
   a {
     text-decoration: none;
   }
 
   nav {
+    height: 0;
+    opacity: 0;
+    @include transition($transition-all);
+
     a {
       padding: $link-padding-y;
     }
+
+    &.navigation-end {
+      margin-left: auto;
+    }
   }
 
-  // Because flex properties aren't inherited, we need to redeclare these first
-  // few properities so that content nested within behave properly.
-  > .container,
-  > .container-expanded {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  .navbar-toggler {
+    width: auto;
+    height: 40px;
+    margin: 7px 0;
+    @extend %flex-wrap-center;
+    background: none;
+  }
+
+  .show-menu {
+    @extend %show-menu;
+  }
+
+  [type="checkbox"] {
+    display: none;
+
+    &:checked {
+      & ~ nav {
+        @extend %show-menu;
+      }
+
+      & ~ .navbar-toggler > .menu-icon {
+        &:before {
+          transform: rotate(45deg);
+          margin-top: 5px;
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+          margin-top: -7px;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    .toggle { padding: $link-padding-y; }
+    .drop-menu { top: 3rem; }
   }
 }
 
 .navbar-brand {
+  font-size: $brand-font-size;
+  padding: $brand-padding-y $brand-padding-x;
   margin-right: $brand-gap;
+}
+
+.navbar-expanded {
+  width: 100%;  
+  padding: $navbar-padding-y $navbar-padding-x;
+
+  // Set grid padding between cellphone and medium desktop sizes
+  @include breakpoint-cellphone-medium-desktop {
+    padding: $navbar-padding-y ($navbar-padding-x - 5px);
+  }
+}
+
+// Responsive navbars
+//
+@include breakpoint-max($breakpoint-mobile - 1) {
+  .navbar,
+  .navbar-expanded {
+    justify-content: space-between;
+
+    nav {
+      width: 100%;
+      flex-direction: column;
+
+      * {
+        display: block;
+        width: 100%;
+      }
+
+      a,
+      .dropdown {
+        padding: .625rem 0;
+      }
+
+      .dropdown {
+        .toggle {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          padding: 0;
+        }
+      }
+
+      &:not([class*="show-menu"]) {
+        overflow: hidden;
+      }
+
+      .navbar-search {
+        input {
+          margin-bottom: $search-gap;
+        }
+      }
+    }
+
+    .show-menu {
+      &:last-child() {
+        padding-bottom: $navbar-last-padding;
+      }
+    }
+  }
+
+  .navbar {
+    [class*="column"] {
+      justify-content: space-between;
+    }
+  }
+}
+
+@include breakpoint-min($breakpoint-mobile) {
+  .navbar,
+  .navbar-expanded {
+    justify-content: start;
+
+    nav {
+      height: auto;
+      opacity: 1;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+
+    .navbar-search {
+      input {
+        margin-right: $search-gap;
+      }
+    }
+  }
 }

@@ -1,0 +1,172 @@
+//
+// Dropdowns
+// --------------------------------------------------
+
+
+// Variables
+//
+$dropdown-menu-border:        $border-base !default;
+$dropdown-item-padding:       .3125rem 1rem !default;
+$dropdown-menu-top:           1.625rem + .75rem + .125rem !default;
+$drop-dow-open-shadow:        0 0 0 $outline-width darken($gray-200, 20%) !default;
+$triangle-width:              5px !default;
+$triangle-transition:         transform .1s ease-in-out !default;
+$drop-menu-min-width:         12.5rem !default;
+$drop-menu-padding:           .5rem 0 !default;
+$drop-menu-radius:            $radius !default;
+$drop-menu-color:             $text-color !default;
+$drop-menu-background:        $white !default;
+$drop-menu-transition:        color $speed ease-in-out, background-color $speed ease-in-out !default;
+$drop-active-color:           $text-color !default;
+$drop-active-background:      $gray-200 !default;
+$separator-color:             $border-color !default;
+
+
+.dropdown,
+.dropup,
+.dropright,
+.dropleft {
+  position: relative;
+
+  [type="checkbox"] {
+    display: none;
+
+    &:checked {
+      & ~ .drop-menu {
+        display: inline-block;
+      }
+
+      & ~ .toggle  {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .toggle {
+    padding: .5rem;
+    margin: 0;
+
+    &:after {
+      @extend %shape-base;
+      margin-left: .4375rem;
+      @include transition($triangle-transition);
+    }
+
+    @include hover-focus {
+      cursor: pointer;
+    }
+  }
+
+  .drop-menu {
+    position: absolute;
+    display: none;
+    min-width: $drop-menu-min-width;
+    flex-direction: column;
+    padding: $drop-menu-padding;
+    border: $dropdown-menu-border;
+    border-radius: $drop-menu-radius;
+    background-color: $drop-menu-background;
+    z-index: 10;
+
+    * {
+      
+      color: $drop-menu-color;
+      padding: $dropdown-item-padding;
+      margin: 0;
+      @include transition($drop-menu-transition);
+    }
+
+    a {
+      display: block;
+      @include hover-focus {
+        text-decoration: none;
+        background-color: darken($drop-menu-background, 5%);
+      }
+    }
+
+    .drop-active {
+      color: $drop-active-color;
+      background-color: $drop-active-background;
+    }
+
+    .drop-separator {
+      height: 1px;
+      background: $separator-color;
+      margin: .375rem 0;
+      padding: 0;
+    }
+
+    .drop-item {
+      * {
+        display: inline-block;
+        padding: 0;
+      }
+    }
+  }
+
+  &.dropped {
+    .toggle {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    .drop-menu { display: inline-block; }
+  }
+}
+
+.dropdown {
+  .toggle:after {
+    @include triangle-icon($triangle-width, 'down');
+  }
+
+  .drop-menu {
+    left: 0;
+    top: $dropdown-menu-top;
+  }
+}
+
+.dropup {
+  .toggle:after {
+    @include triangle-icon($triangle-width, 'up');
+  }
+
+  .drop-menu {
+    left: 0;
+    bottom: 3rem;
+  }
+}
+
+.dropright {
+  .toggle:after {
+    @include triangle-icon($triangle-width, 'right');
+  }
+
+  .drop-menu {
+    margin-left: .125rem;
+  }
+}
+
+.dropleft {
+  input:checked ~ .button:before {
+    transform: rotate(180deg);
+  }
+
+  .toggle {
+    &:after {
+      display: none;
+    }
+    &:before {
+      @extend %shape-base;
+      margin-right: .4375rem;
+      @include triangle-icon($triangle-width, 'left');
+      @include transition($triangle-transition);
+    }
+  }
+
+  .drop-menu {
+    left: -$drop-menu-min-width - .125;
+  }
+}

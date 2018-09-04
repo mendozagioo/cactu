@@ -1,0 +1,55 @@
+//
+// Home Features Section
+// --------------------------------------------------
+
+
+// Variables
+//
+$features-breakpoint-min: 817px;
+$features-breakpoint-max: 816px;
+
+
+#home-features-section {
+  padding: 0;
+  margin: 1rem 0;
+
+  @include breakpoint-min($cellphone-size) {
+    padding: 0;
+    margin: 3rem 0;
+  }
+  @include breakpoint-min($features-breakpoint-min) {
+    padding: 5rem 0;
+    background: url("/assets/images/features-background.svg") no-repeat center center;
+  }
+}
+
+.pair-features {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+
+  > .column {
+    padding: 0 2rem;
+
+    &:first-child { text-align: right; }
+
+    @include breakpoint-max($features-breakpoint-max) {
+      flex-basis: auto;
+      padding: 0 .5rem;
+
+      h1 { font-size: 2rem; }
+    }
+
+    > p {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      min-height: 5rem;
+      font-size: 1.5rem;
+
+      @include breakpoint-min($features-breakpoint-min) {
+        min-height: 8rem;
+      }
+    }
+  }
+}

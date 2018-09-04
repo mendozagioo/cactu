@@ -1,3 +1,49 @@
 //
 // Tables
 // --------------------------------------------------
+
+
+// Variables
+//
+$cell-padding:              .625rem 1rem !default;
+$cell-border:               $border-base !default;
+$cell-interleaved-color:    $white-smoke !default;
+
+
+th, td {
+  padding: $cell-padding;
+  border: $cell-border;
+}
+
+th {
+  font-weight: bold;
+  border-bottom-width: 2px;
+}
+
+.table-flush,
+.table-flush-interleaved {
+  th, td {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+  }
+
+  tr:last-child td {
+    border-bottom: 0;
+  }
+}
+
+.table-interleaved,
+.table-flush-interleaved {
+  tr {
+    &:nth-child(2n) {
+      background-color: $cell-interleaved-color;
+    }
+  }
+}
+
+.table-borderless {
+  th, td {
+    border: 0;
+  }
+}

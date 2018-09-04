@@ -1,41 +1,46 @@
-
 /*!
- * Cactu v0.3.0 (https://cactu.io/)
+ * Cactu v0.17.0 (https://cactu.io/)
  * Copyright 2018 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/LICENSE)
- * Based mostly on Bootstrap & Bulma
  */
 
 @import "base/global-variables";
-@import "base/reset";
 @import "base/reboot";
+@import "base/blocks";
 
+@import "functions/colors";
+@import "functions/strings";
+
+@import "mixins/alerts";
 @import "mixins/breakpoints";
 @import "mixins/buttons";
+@import "mixins/forms";
 @import "mixins/grid";
 @import "mixins/hover";
+@import "mixins/icons";
+@import "mixins/navbar";
+@import "mixins/positions";
 @import "mixins/transition";
 
 @import "elements/button";
 @import "elements/code";
+@import "elements/icon";
 @import "elements/image";
-@import "elements/link";
-@import "elements/type";
+@import "elements/typography";
 
-@import "components/blockquotes";
+@import "components/alerts";
 @import "components/buttons";
-@import "components/figures";
+@import "components/collapse";
+@import "components/dropdowns";
 @import "components/forms";
 @import "components/grids";
+@import "components/lists";
+@import "components/modals";
 @import "components/navbars";
 @import "components/navs";
+@import "components/paginations";
 @import "components/tables";
+@import "components/tooltips";
 
 @import "utilities/classes";
-
-
-// Different elements
-@import "components/sidebars";
-
-
-@import "base/examples";
+@import "utilities/syntax";

@@ -1,0 +1,60 @@
+//
+// Navbar mixins
+// --------------------------------------------------
+
+
+@mixin navbar-theme($base-color: null, $theme: 'light') {
+  $text: if($theme == 'light', rgba(0,0,0,.5), rgba(255,255,255,.5));
+  $text-hover: if($theme == 'light', rgba(0,0,0,.7), rgba(255,255,255,.7));
+  $text-active: if($theme == 'light', $black, $white);
+  $text-disabled: if($theme == 'light', rgba(0,0,0,.3), rgba(255,255,255,.3));
+
+  @if $base-color == null {
+    // Set default colors
+    border-bottom: $border-base;
+    background-color: $white-smoke;
+    
+    * {
+      color: $text;
+
+      &:hover,
+      &:focus {
+        color: $text-hover;
+      }
+
+      &.active { color: $text-active; }
+    }
+
+    .navbar-brand { color: $text-active; }
+
+    .disabled {
+      color: $text-disabled;
+      &:hover,
+      &:focus { color: $text-disabled; }
+    }
+    
+    // Set selected
+  } @else {
+    border-bottom: $border-width solid theme-color-level($base-color, 1);
+    background: $base-color;
+
+    * {
+      color: $text;
+
+      &:hover,
+      &:focus {
+        color: $text-hover;
+      }
+
+      &.active { color: $text-active; }
+    }
+
+    .navbar-brand { color: $text-active; }
+
+    .disabled {
+      color: $text-disabled;
+      &:hover,
+      &:focus { color: $text-disabled; }
+    }
+  }
+}

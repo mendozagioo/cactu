@@ -1,26 +1,32 @@
 # Social
 title: Cactu
 description: >
-  Cactu is a SASS framework created to help any developer to create web pages
-  very quickly and an easy way
+  A Sass framework to create webs easily, created to be simple, semantic, fast to learn, customizable, and scalable.
+keywords: cactu, css framework, sass framework, css, sass, mobile-first, responsive, front-end, web
 author: Giovanni Mendoza
 email: mendozagioo@gmail.com
-twitter_username: mendozagioo
-github_username:  mendozagioo
+username: mendozagioo
+twitter: cactu-framework
 
 # Server
-baseurl: ""
-url: "https://cactu.io"
+baseurl:   ""
+url:       "https://cactu.io"
+encoding:  UTF-8
 
 # Permalinks
 permalink: pretty
 
 # Build settings
-markdown: kramdown
+markdown:    kramdown
 highlighter: rouge
+
+# Custom variables
+current_version:      0.17.0
+current_ruby_version: 0.17.0
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-toc
 
 exclude:
   - .git/
@@ -32,3 +38,7 @@ exclude:
   - package-lock.json
   - gulpfile.js
   - README.md
+
+toc:
+  min_level: 2
+  max_level: 3

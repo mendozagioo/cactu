@@ -1,0 +1,84 @@
+//
+// Collapse
+// --------------------------------------------------
+
+
+// Variables
+//
+$content-collaspse-padding:           1rem !default;
+$accordion-collapse-border:           $border-base !default;
+$accordion-collapse-first-radius:     $radius $radius 0 0 !default;
+$accordion-collapse-last-radius:      0 0 $radius $radius !default;
+$accordion-header-padding:            1rem !default;
+$accordion-header-background:         lighten($gray-200, 5%) !default;
+$accordion-header-hover-background:   darken($accordion-header-background, 3%) !default;
+
+
+// Blocks
+//
+%basic-collapse {
+  height: 100%;
+  opacity: 1;
+  padding: $content-collaspse-padding;
+}
+
+
+.collapse {
+  .collapse-container {
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    @include transition($transition-all);
+
+    &.collapsed {
+      @extend %basic-collapse;
+    }
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    display: none;
+
+    &:checked {
+      ~ .collapse-container {
+        @extend %basic-collapse;
+      }
+    }
+  }
+}
+
+.accordion {
+  overflow: hidden;
+
+  .collapse {
+    border: $accordion-collapse-border;
+    overflow: hidden;
+
+    .header {
+      display: block;
+      padding: $accordion-header-padding;
+      margin: 0;
+      cursor: pointer;
+      background-color: $accordion-header-background;
+
+      &:hover {
+        background-color: $accordion-header-hover-background;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: -$border-width;
+    }
+    
+    &:first-child {
+      border-radius: $accordion-collapse-first-radius;
+    }
+
+    &:last-child {
+      border-radius: $accordion-collapse-last-radius;
+    }
+  }
+}

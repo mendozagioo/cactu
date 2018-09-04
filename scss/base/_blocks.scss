@@ -1,0 +1,24 @@
+//
+// Blocks
+// --------------------------------------------------
+
+
+%flex-wrap-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+%shape-base {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+}
+
+%shape-block {
+  content: "";
+  display: block;
+  width: 100%;
+}

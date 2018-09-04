@@ -4,11 +4,14 @@
 
 
 // Variables
-$column-gap: 15px !default;
-$column-tablet-gap: 10px !default;
+$column-gap:            15px !default;
+$column-tablet-gap:     10px !default;
+$size-name-tablets:     'tablet' !default;
+$size-name-cellphones:  'cellphone' !default;
 
 
 .container {
+  width: 100%;
   margin: 0 auto;
   position: relative;
   
@@ -29,6 +32,10 @@ $column-tablet-gap: 10px !default;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+
+  .columns {
+    padding: 0;
+  }
 }
 
 .column {
@@ -47,25 +54,6 @@ $column-tablet-gap: 10px !default;
 [class*="column-of-"] {
   padding: 0 $column-gap;
   min-height: 1px;
-
-  &.columns {
-    .column,
-    [class*="column-of-"] {
-      padding: 0;
-
-      &:not(:last-child) {
-        padding-right: $column-gap * 2;
-
-        @include breakpoint-cellphone-medium-desktop {
-          padding-right: $column-tablet-gap * 2;
-        }
-
-        @include breakpoint-cellphone {
-          padding: 0;
-        }
-      }
-    }
-  }
 }
 
 // Fix the global gap for column clases
@@ -78,17 +66,18 @@ $column-tablet-gap: 10px !default;
 
 // Columns generator
 // for different breakpoints
+// column-of-[x]
 //
 @include make-specific-columns;
 
 // tablet-column-of-[x]
 @include breakpoint-tablet {
-  @include make-specific-columns('tablet')
+  @include make-specific-columns($size-name-tablets)
 }
 
 // cellphone-column-of-[x]
 @include breakpoint-cellphone-tablet {
-  @include make-specific-columns('cellphone');
+  @include make-specific-columns($size-name-cellphones);
 }
 
 @include breakpoint-cellphone {

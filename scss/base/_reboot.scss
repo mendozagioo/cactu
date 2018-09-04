@@ -1,41 +1,105 @@
 //
 // Reboot
+// Mostly taken of Bootstrap reboot
 // --------------------------------------------------
 
 
 // Variables
 //
-$font-weight: $font-weight-normal !default;
-$body-background-color: $white !default;
-$hr-hight: 1px !default;
-$hr-background-color: $gray-600 !default;
-$headings-weight: bold !default;
-$dt-font-weight: $font-weight-bold !default;
-$table-cell-padding: .75rem !default;
-$table-caption-color: $gray-600 !default;
-$label-margin-bottom: .5rem !default;
+$font-weight:               $font-weight-normal !default;
+$body-background-color:     $white !default;
+$hr-hight:                  1px !default;
+$hr-background-color:       $gray-600 !default;
+$headings-weight:           bold !default;
+$dt-font-weight:            $font-weight-bold !default;
+$table-cell-padding:        .75rem !default;
+$table-caption-color:       $gray-600 !default;
+$label-margin-bottom:       .5rem !default;
 
 
+// Reset
+// http://meyerweb.com/eric/tools/css/reset/ 
+// v2.0 | 20110126
+// License: none (public domain)
+// Some changes:
+// - Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+// - Addition div tag for display: block
+// - No reset list-styles
+//
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+  vertical-align: baseline;
+}
+div, article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// Reboot styles
+// Mostly taken of Bootstrap
+// Credit: http://getbootstrap.com/
+// v4.1
+// License: MIT
+//
 html {
-  font-family: sans-serif;
-  font-size: $font-size;
-  line-height: 1.15;
-  overflow-x: hidden;
-  overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba($black, 0);
 }
 
+// IE10+ doesn't honor `<meta name="viewport">` in some cases.
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+body {
+  text-align: left;
+  background-color: $body-background-color;
+}
+
+html,
 body {
   font-family: $font-family;
-  font-size: 1rem;
+  font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
   color: $text-color;
-  text-align: left;
-  background-color: $body-background-color;
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -58,6 +122,13 @@ ol,
 ul,
 dl {
   margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
 }
 
 dt {

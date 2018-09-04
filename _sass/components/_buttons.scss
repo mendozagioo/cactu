@@ -1,0 +1,8 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+.button-principal {
+  @include button-theme($background: $principal-color);
+}

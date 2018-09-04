@@ -1,0 +1,12 @@
+//
+// Position mixins
+// --------------------------------------------------
+
+
+// Set an element with position sticky and top but you decide
+//the overpositioned
+@mixin sticky-top($zindex: 100) {
+  position: sticky;
+  top: 0;
+  z-index: $zindex;
+}

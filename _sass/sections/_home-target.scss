@@ -1,0 +1,29 @@
+//
+// Home Target Section
+// --------------------------------------------------
+
+
+// Variables
+//
+
+
+#home-target-section {
+  padding: 3rem 0 9rem;
+
+  .column-of-6 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+.home-minimal-size {
+  width: 7rem;
+  align-self: center;
+  margin-bottom: 2rem;
+  color: $white;
+  background-color: $text-color;
+}

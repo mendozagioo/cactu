@@ -1,0 +1,23 @@
+<header id="principal-menu" class="navbar-expanded">
+  <a class="navbar-brand" href="/">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 40 40" width="30" height="30" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+      <title>Cactu</title>
+      <path fill="#343A40" d="M21.5,33.1c-6.5,0-11.8-4.9-11.8-11c0-6.1,5.3-11,11.8-11c4,0,7.5,1.8,9.6,4.6l6.1-2.1
+    	c-3.1-5.1-9.1-8.6-15.9-8.6c-1.5,0-2.9,0.2-4.3,0.5L9.9,1.8l0,7.2c-4.1,3.1-6.7,7.8-6.7,13.2c0,9.4,8.2,17,18.3,17
+    	c6.8,0,12.7-3.4,15.8-8.5l-6.1-2.1C29,31.3,25.5,33.1,21.5,33.1z" />
+    </svg>
+  </a>
+  {% if page.layout == "documentation" or page.layout == "api" %}
+    {% include submenu-toggle.html %}
+  {% endif %}
+  <button class="navbar-toggler">
+    <i class="menu-icon"></i>
+  </button>
+  <nav>
+    <a class="{% if page.layout == "home" %}active{% endif %}" href="/">Home</a>
+    <a class="{% if page.layout == "documentation" %}active{% endif %}" href="/documentation/getting-started/introduction/">Documentation</a>
+    <!-- <a class="{% if page.layout == "api" %}active{% endif %}" href="/api/getting-started/introduction/">API</a> -->
+    <a class="{% if page.layout == "examples" %}active{% endif %}" href="/examples/">Examples</a>
+  </nav>
+</header>

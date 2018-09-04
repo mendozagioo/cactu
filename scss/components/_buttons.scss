@@ -1,3 +1,82 @@
 //
 // Buttons
 // --------------------------------------------------
+
+
+// Variables
+//
+$button-first-radius:             $radius 0 0 $radius !default;
+$button-last-radius:              0 $radius $radius 0 !default;
+$vertical-button-first-radius:    $radius $radius 0 0 !default;
+$vertical-button-last-radius:     0 0 $radius $radius !default;
+$button-background-selected:      darken($gray-200, 10%) !default;
+
+
+.button-group,
+.button-group-vertical {
+  button,
+  .button {
+    z-index: 2;
+
+    &:focus,
+    &:active,
+    &.active {
+      z-index: 1;
+    }
+    
+    &.selected {
+      background-color: $button-background-selected;
+    }
+    
+    & ~ button,
+    & ~ .button {
+      margin-left: 0;
+    }
+  }
+}
+
+.button-group {
+  display: inline-flex;
+
+  button,
+  .button {
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+
+    &:not(:first-child) {
+      margin-left: -$border-width;
+    }
+
+    &:first-child {
+      border-radius: $button-first-radius;
+    }
+
+    &:last-child {
+      border-radius: $button-last-radius;
+    }
+  }
+}
+
+.button-group-vertical {
+  display: inline-grid;
+
+  button,
+  .button {
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+
+    &:not(:first-child) {
+      margin-top: -$border-width;
+    }
+
+    &:first-child {
+      border-radius: $vertical-button-first-radius;
+    }
+
+    &:last-child {
+      border-radius: $vertical-button-last-radius;
+    }
+  }
+}

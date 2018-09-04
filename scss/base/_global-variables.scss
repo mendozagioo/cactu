@@ -18,13 +18,17 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 
 $blue:     #007bff !default;
+$yellow:   #f8f852 !default;
+$red:      #dc3545 !default;
+$green:    #28a745 !default;
 
 $text-color:    $gray-800 !default;
 $border-color:  $gray-300 !default;
+$white-smoke:   #f5f5f5;
 
 // Typography
 //
-$font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans", "Helvetica Neue", sans-serif !default;
+$font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family:             $font-family-sans-serif !default;
 $font-size:               16px !default;
@@ -47,13 +51,12 @@ $maximum-columns:      12 !default;
 
 // Miscellaneous
 //
-$easing:            ease-out !default;
-$radius-small:      2px !default;
 $radius:            4px !default;
-$radius-large:      6px !default;
-$radius-rounded:    290486px !default;
+$radius-rounded:    300000px !default;
 $border-width:      1px !default;
-$speed:             .2s !default;
-$line-height:       1.3 !default;
-$transition-all:    all .2s ease-in-out !default;
-$outline-width:     .2rem;
+$border-base:       $border-width solid $border-color !default;
+$speed:             .15s !default;
+$line-height:       1.5 !default;
+$transition-all:    all $speed ease-in-out !default;
+$outline-width:     .125rem !default;
+$zindex-top:        1000 !default;

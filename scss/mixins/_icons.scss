@@ -1,0 +1,22 @@
+//
+// Icons mixin
+// --------------------------------------------------
+
+
+// The direction corresponds to where the arrow is
+@mixin triangle-icon($size: 5px, $direction: 'down') {
+  @if $direction == 'up' or $direction == 'down' {
+    $side: if($direction == 'up', 'bottom', 'top');
+
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-#{$side}: $size solid;
+  }
+  @else {
+    $side: if($direction == 'left', 'right', 'left');
+
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-#{$side}: $size solid;
+  }
+}

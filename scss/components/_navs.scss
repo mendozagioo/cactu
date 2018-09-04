@@ -3,15 +3,50 @@
 // --------------------------------------------------
 
 
-[class*="nav-"] {
-  a { text-decoration: none; }
+// Variables
+//
+$nav-link-padding:  .5rem .75rem !default;
+
+
+[class^="nav-"] {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  * {
+    display: flex;
+    margin: 0;
+  }
+
+  a {
+    position: relative;
+    text-decoration: none;
+    padding: $nav-link-padding;
+  }
+
+  // Adapts to nav styles
+  .dropdown {
+    .toggle {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      color: $link-color;
+      padding: $nav-link-padding;
+      background-color: transparent;
+
+      @include hover-focus {
+        color: $link-hover-color;
+      }
+    }
+  }
 }
 
 .nav-vertical {
-  a {
-    display: block;
-  }
-  nav {
-    padding-left: .8rem;
+  flex-direction: column;
+
+  .dropdown nav {
+    width: 100%;
   }
 }

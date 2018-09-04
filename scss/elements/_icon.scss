@@ -1,0 +1,66 @@
+//
+// Icon
+// --------------------------------------------------
+
+
+// Variables
+//
+$icon-color: $text-color !default;
+
+
+.menu-icon,
+.close-icon {
+  display: block;
+  width: 22px;
+
+  &:before,
+  &:after {
+    @extend %shape-block;
+    height: 2px;
+    margin: 5px 0;
+    background-color: $icon-color;
+    @include transition($transition-all);
+  }
+}
+
+.close-icon {
+  &:before {
+    transform: rotate(45deg);
+    margin-top: 5px;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+    margin-top: -7px;
+  }
+}
+
+.chevron-down-icon {
+  position: absolute;
+  right: 8px;
+  top: 16px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: -5px 0;
+  background: none;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    margin-top: 3px;
+    background-color: $icon-color;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  
+  &:after {
+    transform: rotate(-45deg);
+    margin-left: -3px;
+  }
+}

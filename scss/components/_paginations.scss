@@ -1,0 +1,76 @@
+//
+// Paginations
+// --------------------------------------------------
+
+
+// Variables
+//
+$pagination-margin:                     .5rem 0 !default;
+$pagination-item-padding:               .25rem .625rem !default;
+$pagination-item-border-width:          $border-width !default;
+$pagination-item-border:                $pagination-item-border-width solid $border-color !default;
+$pagination-tem-background:             $white !default;
+$pagination-item-background-hover:      darken($pagination-tem-background, 5%) !default;
+$pagination-item-transition:            background-color $speed ease-in-out, color $speed ease-in-out !default;
+$pagination-item-radius-first:          $radius 0 0 $radius !default;
+$pagination-item-radius-last:           0 $radius $radius 0 !default;
+$pagination-item-active-color:          lighten($text-color, 20%) !default;
+$pagination-item-active-background:     darken($pagination-item-background-hover, 5%) !default;
+
+
+.pagination,
+.pagination-center,
+.pagination-end {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: $pagination-margin;
+  padding: 0;
+  list-style: none;
+
+  > *,
+  > a {
+    display: flex;
+    @include transition($pagination-item-transition);
+
+    &:not(:first-child) {
+      margin-left: -$pagination-item-border-width;
+    }
+  }
+
+  > * {
+    &:first-child,
+    &:first-child a {
+      border-radius: $pagination-item-radius-first;
+    }
+
+    &:last-child,
+    &:last-child a {
+      border-radius: $pagination-item-radius-last;
+    }
+
+    @include hover-focus {
+      background-color: transparent;
+    }
+  }
+
+  a {
+    padding: $pagination-item-padding;
+    border: $pagination-item-border;
+
+    @include hover-focus {
+      text-decoration: none;
+      background-color: $pagination-item-background-hover;
+    }
+
+    &.active {
+      color: $pagination-item-active-color;
+      background-color: $pagination-item-active-background;
+    }
+
+    &.disabled {
+      @include hover-focus {
+        background-color: $pagination-tem-background;
+      }
+    }
+  }
+}

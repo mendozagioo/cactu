@@ -1,0 +1,37 @@
+//
+// Home Footer Section
+// --------------------------------------------------
+
+
+// Variables
+//
+$footer-link-color: darken($pale-background, 55%);
+$footer-link-hover-color: darken($footer-link-color, 10%);
+
+
+#home-footer-section {
+  padding: 8rem 0 2rem;;
+  font-size: 85%;
+  position: relative;
+  background-color: $pale-background;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 100px;
+    width: 100%;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    margin-top: -5px;
+    background-size: 3000px 100px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-image: url("/assets/images/footer-background.svg");
+    z-index: 9;
+  }
+
+  nav {
+    margin-bottom: 1rem;
+  }
+}

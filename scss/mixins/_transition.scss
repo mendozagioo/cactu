@@ -1,11 +1,11 @@
 //
-// Transition
+// Transition mixins
 // --------------------------------------------------
 
 
 @mixin transition($transition...) {
   @if length($transition) == 0 {
-    transition: $transition-base;
+    transition: $transition-all;
   } @else {
     transition: $transition;
   }

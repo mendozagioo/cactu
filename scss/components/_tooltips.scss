@@ -1,0 +1,138 @@
+//
+// Tooltips
+// --------------------------------------------------
+
+
+// Variables
+//
+$tooltip-color:             $white !default;
+$tooltip-background:        $black !default;
+$tooltip-triangle-size:     6px !default;
+$tooltip-padding-y:         .5rem !default;
+$tooltip-padding-x:         .625rem !default;
+$tooltip-radius:            $radius !default;
+$tooltip-transition:        opacity .2s ease-in-out !default;
+
+
+[class*="tooltip"] {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    z-index: $zindex-top;
+    @include transition($tooltip-transition);
+  }
+
+  &:before {
+    content: '';
+    color: $tooltip-background;
+  }
+
+  &:after {
+    content: attr(data-tooltip);
+    display: block;
+    color: $tooltip-color;
+    font-size: 90%;
+    padding: $tooltip-padding-y $tooltip-padding-x;
+    white-space: nowrap;
+    line-height: 1;
+    border-radius: $tooltip-radius;
+    background-color: $tooltip-background;
+  }
+
+  &:hover {
+    &:after,
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  // Has not data-tooltip attribute
+  &:not([data-tooltip]) {
+    &:before,
+    &:after { display: none; }
+  }
+}
+
+// Empy data-tooltip attribute
+[data-tooltip=''] {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+.tooltip-top {
+  &:before,
+  &:after {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:before {
+    @include triangle-icon($tooltip-triangle-size, 'down');
+  }
+
+  &:after {
+    margin-bottom: $tooltip-triangle-size - 1;
+  }
+}
+
+.tooltip-right {
+  &:before,
+  &:after {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    @include triangle-icon($tooltip-triangle-size, 'left');
+  }
+
+  &:after {
+    margin-left: $tooltip-triangle-size;
+  }
+}
+
+.tooltip-bottom {
+  &:before,
+  &:after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:before {
+    @include triangle-icon($tooltip-triangle-size, 'up');
+  }
+
+  &:after {
+    margin-top: $tooltip-triangle-size;
+  }
+}
+
+.tooltip-left {
+  &:before,
+  &:after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    left: 0;
+    margin-left: -$tooltip-triangle-size;
+    @include triangle-icon($tooltip-triangle-size, 'right');
+  }
+
+  &:after {
+    right: 100%;
+    margin-right: $tooltip-triangle-size;
+  }
+}
