@@ -16,7 +16,11 @@ Download ready-to-use compiled code for **Cactu v0.17.0** to easily drop into yo
 
 ## Source files
 
-Compile Cactu with your own asset pipeline by downloading our source Sass.
+Compile Cactu with your own asset pipeline by downloading our source Sass. This option requires some additional tooling:
+
+* Sass compiler (Libsass or Ruby Sass is supported) for compiling your CSS.
+* Autoprefixer for CSS vendor prefixing.
+
 
 <a class="button" href="https://github.com/mendozagioo/cactu/archive/master.zip">Download</a>
 
