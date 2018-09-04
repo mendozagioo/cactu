@@ -1,0 +1,31 @@
+{
+  "name": "cactu",
+  "version": "0.3.0",
+  "description": "Cactu is a SASS framework created to help any developer to create web pages very quickly and an easy way",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp sass:watch | bundle exec jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mendozagioo/cactu.git"
+  },
+  "keywords": [
+    "CSS",
+    "Framework",
+    "SASS",
+    "styles"
+  ],
+  "author": "Giovanni Mendoza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mendozagioo/cactu/issues"
+  },
+  "homepage": "https://cactu.io",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

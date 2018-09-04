@@ -4,6 +4,7 @@
 .bundle
 .config
 .yardoc
+Gemfile
 Gemfile.lock
 InstalledFiles
 _yardoc
@@ -20,3 +21,8 @@ node_modules/
 package-lock.json
 .sass_cache/
 _site/
+
+_includes/
+_layouts/
+assets/
+documentation/

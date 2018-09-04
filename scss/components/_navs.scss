@@ -1,0 +1,17 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+[class*="nav-"] {
+  a { text-decoration: none; }
+}
+
+.nav-vertical {
+  a {
+    display: block;
+  }
+  nav {
+    padding-left: .8rem;
+  }
+}

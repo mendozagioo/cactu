@@ -1,0 +1,83 @@
+//
+// Button
+// --------------------------------------------------
+
+
+//  Variables
+//
+$button-font-weight:          $font-weight-normal !default;
+$button-transition:           $transition-all !default;
+$button-padding-y:            .375rem !default;
+$button-padding-x:            .75rem !default;
+$button-font-size:            $font-size !default;
+$button-line-height:          $line-height !default;
+$button-border-radius:        $radius !default;
+$button-color:                $text-color !default;
+$button-background:           $gray-200 !default;
+$button-border:               $border-width solid transparent !default;
+$button-hover-background:     darken($button-background, 10%) !default;
+$button-focus-box-shadow:     0 0 0 $outline-width darken($button-background, 20%) !default;
+$button-disabled-opacity:     .57 !default;
+$button-active-box-shadow:    inset 0 3px 5px rgba($black, .125) !default;
+
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+// .button used for links too
+button,
+.button {
+  display: inline-block;
+  font-weight: $button-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  color: $button-color;
+  background-color: $button-background;
+  border: $button-border;
+  @include button-size($button-padding-y, $button-padding-x, $button-font-size, $button-line-height, $button-border-radius);
+  @include transition($button-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    color: $button-color;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $button-hover-background;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $button-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    opacity: $button-disabled-opacity;
+    box-shadow: none;
+
+    @include hover-focus {
+      background-color: $button-background;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-image: none;
+    box-shadow: $button-active-box-shadow;
+
+    &:focus {
+      box-shadow: $button-focus-box-shadow, $button-active-box-shadow;
+    }
+  }
+}

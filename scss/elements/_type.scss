@@ -1,0 +1,80 @@
+//
+// Type
+// --------------------------------------------------
+
+
+// Variables
+//
+$headings-font-family:    $font-family !default;
+$headings-font-weight:    $font-weight-bold !default;
+$headings-color:          $text-color !default;
+$headings-margins:        1rem 0 .5rem !default;
+$h1-font-size:            $font-size * 2.6 !default;
+$h2-font-size:            $font-size * 2.1 !default;
+$h3-font-size:            $font-size * 1.8 !default;
+$h4-font-size:            $font-size * 1.5 !default;
+$h5-font-size:            $font-size * 1.2 !default;
+$h6-font-size:            $font-size !default;
+
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: .8em; // 80%
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: .75em; // 75%
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+
+p { margin-bottom: .7rem; }
+
+
+// Headings
+//
+h1, h2, h3, h4, h5, h6 {
+  margin: $headings-margins;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+}
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }

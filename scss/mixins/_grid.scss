@@ -1,0 +1,18 @@
+//
+// Grid mixins
+// --------------------------------------------------
+
+
+// Columns generator
+//
+@mixin make-specific-columns($name: '', $total-columns: $maximum-columns) {
+  @if $name != '' {
+    $name: $name + '-';
+  }
+
+  @for $i from 1 through $total-columns {
+    .#{$name}column-of-#{$i} {
+      width: percentage($i / $total-columns);
+    }
+  }
+}
