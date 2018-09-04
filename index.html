@@ -3,12 +3,132 @@ layout: home
 ---
 
 
-<div class="columns">
-  <div class="column">
-    <h1>Hello Cactu</h1>
-    
-    <a href="/documentation/getting-started/introduction">Documentation</a>
-    <br>
-    <a href="/examples/">Examples</a>
+<section id="home-top-section">
+  <div class="container">
+    <div class="columns">
+      <div class="column-of-10">
+        <h1>
+          Cactu is the new generation
+          <br> of <span class="sass-framework">Sass framework</span>
+        </h1>
+        <a href="{{site.base_url}}/documentation/getting-started/introduction" class="button button-principal">Get Started</a>
+        <a href="#" class="button">Download</a>
+        <p class="currently-version">Currently v{{ site.current_version }}</p>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<section id="home-features-section">
+  <div class="container">
+    <div class="columns">
+      <div class="column-of-9 pair-features">
+        <div class="column">
+          <h1>Scalable</h1>
+          <p>
+            Start with the necessary and continue adding what you need using our mixins
+          </p>
+          <a href="{{site.base_url}}/documentation/getting-started/introduction">Get Started</a>
+        </div>
+        <div class="column">
+          <h1>Modular</h1>
+          <p>
+            Just import what you need. You know what is important for you project
+          </p>
+          <a href="{{site.base_url}}/documentation/getting-started/contents">Watch contents</a>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column-of-9 pair-features">
+        <div class="column">
+          <h1>Responsive</h1>
+          <p>
+            Mobile-first on mind, adapted to any resolution needed
+          </p>
+          <a href="{{site.base_url}}/documentation/layout/overview">Watch layout</a>
+        </div>
+        <div class="column">
+          <h1>NO JavaScript</h1>
+          <p>
+            Just Saas code compiled to CSS, define the interaction with you favorite JS framework
+          </p>
+          <a href="{{site.base_url}}/documentation/components/dropdowns">Watch an example</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="home-principles-section">
+  <div class="container">
+    <div class="columns -center">
+      <h1>Based on two principles</h1>
+    </div>
+    <div class="columns element-component">
+      <div class="column-of-5">
+        <img src="/assets/images/element.svg" alt="Element representation">
+        <h2>Elements</h2>
+        <p>
+          HTML tags in which it is not necessary to include extra structure to be used, and which in turn make their style inherited
+          when they are used within component.
+        </p>
+        <div class="home-elements-examples">
+          <button>Button</button>
+          <a href="#">Link</a>
+          <span>Span</span>
+        </div>
+      </div>
+      <div class="column-of-5">
+        <img src="/assets/images/component.svg" alt="Component representation">
+        <h2>Components</h2>
+        <p>
+          HTML structures of two or more elements, these components can be simple (two elements), or as complex as necessary.
+        </p>
+        <div class="home-components-examples">
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+          </ul>
+          <nav class="nav-horizontal">
+            <a href="#">Navs</a>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="home-target-section">
+  <div class="container">
+    <div class="column-of-6">
+      <h2>
+        Cactu has been created to be simple, semantic, fast to learn, customizable, and scalable
+      </h2>
+      <span class="home-minimal-size">Just 35kb</span>
+      <div>
+        <a href="{{site.base_url}}/documentation/getting-started/introduction" class="button button-principal">Get started</a>
+        <a href="https://github.com/mendozagioo/cactu" target="_blank" class="button">Get involved</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="home-footer-section">
+  <div class="container">
+    <div class="column">
+      <nav class="nav-horizontal-center">
+        <a href="{{site.base_url}}/documentation/getting-started/introduction">Documentation</a>
+        <a href="https://github.com/mendozagioo/cactu" target="_blank">Github</a>
+        <a href="https://twitter.com/cactu_framework" target="_blank">Twitter</a>
+      </nav>
+      <p class="-centered">
+        Designed and built with love by <a href="https://mendozagioo.github.io" target="_blank">Giovanni Mendoza</a>
+        <br>
+        Currently v{{site.current_version}}. Code licensed <a href="https://github.com/mendozagioo/cactu/blob/master/LICENSE" target="_blank">MIT</a>
+      </p>
+    </div>
+  </div>
+</footer>
