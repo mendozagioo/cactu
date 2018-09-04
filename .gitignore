@@ -22,7 +22,11 @@ package-lock.json
 .sass_cache/
 _site/
 
+_data/
 _includes/
 _layouts/
+_sass/
+api/
 assets/
 documentation/
+examples/
