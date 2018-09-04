@@ -5,6 +5,3 @@ group :development, :test do
   gem 'jekyll-redirect-from', '~> 0.13.0'
   gem 'jekyll-toc', '~> 0.6.0'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
