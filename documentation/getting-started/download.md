@@ -11,7 +11,7 @@ toc: true
 
 Download ready-to-use compiled code for **Cactu v0.17.0** to easily drop into your project.
 
-<a class="button" href="https://github.com/mendozagioo/cactu/releases/download/v0.17.0/cactu-0.17.0-css.zip">Download</a>
+<a class="button" href="https://github.com/mendozagioo/cactu/releases/download/0.17.0/cactu-0.17.0-css.zip">Download</a>
 
 
 ## Source files
