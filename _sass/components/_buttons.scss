@@ -3,6 +3,21 @@
 // --------------------------------------------------
 
 
+// Variables
+//
+$button-principal-color: #30d41e;
+$button-secondary-color: #757d6c;
+
+
 .button-principal {
-  @include button-theme($background: $principal-color);
+  @include button-theme($button-principal-color);
+}
+
+.button-secondary {
+  @include button-theme($button-secondary-color);
+}
+
+.button-outline {
+  font-size: 80%;
+  @include button-outline($button-principal-color);
 }

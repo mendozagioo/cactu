@@ -12,9 +12,10 @@ $principles-breakpoint-max: 816px;
 #home-principles-section {
   padding: 2rem 1rem 0;
   text-align: center;
+  background-color: $pale-background;
 
   @include breakpoint-min($principles-breakpoint-min) {
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 3rem;
   }
 }
 
@@ -22,36 +23,6 @@ $principles-breakpoint-max: 816px;
   padding: 2rem 0 3rem;
   justify-content: center;
   position: relative;
-
-  @include breakpoint-min($principles-breakpoint-min) {
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      width: 550px;
-      visibility: visible;
-      position: absolute;
-      bottom: 0;
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
-
-    &:before {
-      height: 370px;
-      left: 0;
-      background-size: 550px 370px;
-      background-position: bottom left;
-      background-image: url("/assets/images/element-background.svg");
-    }
-
-    &:after {
-      height: 470px;
-      right: 0;
-      background-size: 550px 470px;
-      background-position: bottom right;
-      background-image: url("/assets/images/component-background.svg");
-    }
-  }
 
   @include breakpoint-max($principles-breakpoint-max) {
     .column-of-5 {

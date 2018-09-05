@@ -12,19 +12,6 @@ $current-version-color: #9c9c9c;
 #home-top-section {
   background-color: $pale-background;
 
-  &:after {
-    content: '';
-    display: block;
-    height: 100px;
-    width: 100%;
-    visibility: visible;
-    background-size: 3000px 100px;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-image: url("/assets/images/background-home-top.svg");
-    z-index: 9;
-  }
-
   .columns {
     height: 30rem;
     align-content: center;

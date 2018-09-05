@@ -10,16 +10,9 @@ $features-breakpoint-max: 816px;
 
 
 #home-features-section {
-  padding: 0;
-  margin: 1rem 0;
-
-  @include breakpoint-min($cellphone-size) {
-    padding: 0;
-    margin: 3rem 0;
-  }
+  padding: 1rem 0 3rem;
   @include breakpoint-min($features-breakpoint-min) {
-    padding: 5rem 0;
-    background: url("/assets/images/features-background.svg") no-repeat center center;
+    padding: 4rem 0 6rem;
   }
 }
 
@@ -29,13 +22,11 @@ $features-breakpoint-max: 816px;
   margin: auto;
 
   > .column {
-    padding: 0 2rem;
-
-    &:first-child { text-align: right; }
+    padding: 1rem 2rem 1rem 0;
 
     @include breakpoint-max($features-breakpoint-max) {
       flex-basis: auto;
-      padding: 0 .5rem;
+      padding: 1rem 0;
 
       h1 { font-size: 2rem; }
     }
