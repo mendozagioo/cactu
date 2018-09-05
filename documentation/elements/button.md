@@ -29,3 +29,11 @@ toc: true
 <button class="focus" type="button">Focused</button>
 {% endcapture %}
 {% include example.html content=example %}
+
+
+## Active button
+
+{% capture example %}
+<button class="active" type="button">Activated</button>
+{% endcapture %}
+{% include example.html content=example %}
