@@ -5,7 +5,10 @@
 
 // Variables
 //
-$theme-color-interval:    8%;
+$theme-color-interval:      8% !default;
+$yiq-text-dark:             $text-color !default;
+$yiq-text-light:            $white !default;
+$yiq-contrasted-threshold:  150 !default;
 
 
 @function theme-color-level($color: $gray-300, $level: 0) {
@@ -13,4 +16,25 @@ $theme-color-interval:    8%;
   $level: abs($level);
 
   @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+
+// Color contrast
+// Credit: Bootstrap functions
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/_functions.scss
+// v4.1.3
+// License: MIT
+//
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= $yiq-contrasted-threshold) {
+    @return $yiq-text-dark;
+  } @else {
+    @return $yiq-text-light;
+  }
 }
