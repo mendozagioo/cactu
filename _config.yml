@@ -10,7 +10,7 @@ twitter: cactu-framework
 
 # Server
 baseurl:   ""
-url:       "https://cactu.io"
+url:       "https://cactu.site"
 encoding:  UTF-8
 
 # Permalinks
@@ -19,6 +19,9 @@ permalink: pretty
 # Build settings
 markdown:    kramdown
 highlighter: rouge
+
+kramdown:
+  auto_ids: true
 
 # Custom variables
 current_version:      0.17.0
