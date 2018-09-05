@@ -1,10 +1,7 @@
 # Cactu
 
 
-### A Sass framework to create webs easily, created to be simple, semantic, fast to learn, customizable, and scalable
-
-Cactu is a SASS framework created to help any developer to create web pages
-very quickly and an easy way
+A Sass framework to create webs easily, created to be simple, semantic, fast to learn, customizable, and scalable.
 
 
 ## Quick start
