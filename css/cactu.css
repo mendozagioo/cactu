@@ -1,7 +1,7 @@
 /*!
- * Cactu v0.17.0 (https://cactu.site/)
+ * Cactu v0.18.0 (http://cactu.site/)
  * Copyright 2018 Giovanni Mendoza
- * Licensed under MIT (https://github.com/mendozagioo/cactu/LICENSE)
+ * Licensed under MIT (https://github.com/mendozagioo/cactu/blob/master/LICENSE)
  */
 *,
 *::before,
@@ -288,8 +288,8 @@ button,
   -ms-user-select: none;
   user-select: none;
   color: #343a40;
-  background-color: #e9ecef;
   border: 1px solid transparent;
+  background-color: #e9ecef;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -304,12 +304,10 @@ button,
   }
 }
 
-button:hover, button:focus,
-.button:hover,
-.button:focus {
+button:hover,
+.button:hover {
   color: #343a40;
   text-decoration: none;
-  cursor: pointer;
   background-color: #cbd3da;
 }
 
@@ -317,14 +315,14 @@ button:focus, button.focus,
 .button:focus,
 .button.focus {
   outline: 0;
+  color: #343a40;
+  text-decoration: none;
   box-shadow: 0 0 0 0.125rem #aeb9c4;
-  background-color: #cbd3da;
 }
 
 button.disabled, button:disabled,
 .button.disabled,
 .button:disabled {
-  cursor: not-allowed;
   opacity: 0.57;
   box-shadow: none;
 }
@@ -337,10 +335,16 @@ button.disabled:hover, button.disabled:focus, button:disabled:hover, button:disa
   background-color: #e9ecef;
 }
 
+button:not(:disabled):not(.disabled),
+.button:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
 button:not(:disabled):not(.disabled):active, button:not(:disabled):not(.disabled).active,
 .button:not(:disabled):not(.disabled):active,
 .button:not(:disabled):not(.disabled).active {
   background-image: none;
+  background-color: #cbd3da;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 

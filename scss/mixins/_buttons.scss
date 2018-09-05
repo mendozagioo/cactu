@@ -13,20 +13,21 @@
 
 
 // Button theme
-@mixin button-theme($color: $text-color, $background: $gray-200) {
-  $focus-box-shadow:     0 0 0 $outline-width darken($background, 20%) !default;
-  $active-box-shadow:    inset 0 3px 5px rgba($black, .125) !default;
+@mixin button-theme($background: $gray-200) {
+  $focus-box-shadow:     0 0 0 $outline-width darken($background, 15%);
+  $active-box-shadow:    inset 0 3px 5px rgba($black, .125);
 
-  color: $color;
+  color: color-yiq($background);
   background-color: $background;
 
-  &:hover,
-  &:focus {
+  &:hover {
+    color: color-yiq($background);
     background-color: darken($background, 10%);
   }
 
   &:focus,
   &.focus {
+    color: color-yiq($background);
     box-shadow: $focus-box-shadow;
   }
 
@@ -34,13 +35,58 @@
   &:disabled {
     &:hover,
     &:focus {
-      color: $color;
+      color: color-yiq($background);
       background-color: $background;
     }
   }
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
+    box-shadow: $active-box-shadow;
+    background-color: darken($background, 10%);
+
+    &:focus {
+      box-shadow: $focus-box-shadow, $active-box-shadow;
+    }
+  }
+}
+
+// Button contoured
+@mixin button-outline($color: $text-color) {
+  $focus-box-shadow:     0 0 0 $outline-width lighten($color, 30%);
+  $active-box-shadow:    inset 0 3px 5px rgba($black, .125);
+
+  color: $color;
+  border-color: $color;
+  background-color: transparent;
+
+  &:hover {
+    color: color-yiq($color);
+    border-color: $color;
+    background-color: $color;
+  }
+
+  &:focus,
+  &.focus {
+    color: $color;
+    box-shadow: $focus-box-shadow;
+
+    &:hover { color: color-yiq($color); }
+  }
+
+  &.disabled,
+  &:disabled {
+    &:hover,
+    &:focus {
+      color: $color;
+      background-color: transparent;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    color: color-yiq($color);
+    background-color: $color;
     box-shadow: $active-box-shadow;
 
     &:focus {
