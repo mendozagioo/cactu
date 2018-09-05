@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/mendozagioo/cactu/issues"
   },
-  "homepage": "https://cactu.io",
+  "homepage": "https://cactu.site",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",

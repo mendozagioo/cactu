@@ -10,7 +10,7 @@ twitter: cactu-framework
 
 # Server
 baseurl:   ""
-url:       "https://cactu.io"
+url:       "https://cactu.site"
 encoding:  UTF-8
 
 # Permalinks
