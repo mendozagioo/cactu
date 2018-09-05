@@ -40,30 +40,29 @@ button,
   vertical-align: middle;
   user-select: none;
   color: $button-color;
-  background-color: $button-background;
   border: $button-border;
+  background-color: $button-background;
   @include button-size($button-padding-y, $button-padding-x, $button-font-size, $button-line-height, $button-border-radius);
   @include transition($button-transition);
 
   // Share hover and focus styles
-  @include hover-focus {
+  &:hover {
     color: $button-color;
     text-decoration: none;
-    cursor: pointer;
     background-color: $button-hover-background;
   }
 
   &:focus,
   &.focus {
     outline: 0;
+    color: $button-color;
+    text-decoration: none;
     box-shadow: $button-focus-box-shadow;
-    background-color: $button-hover-background;
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    cursor: not-allowed;
     opacity: $button-disabled-opacity;
     box-shadow: none;
 
@@ -72,9 +71,15 @@ button,
     }
   }
 
+  // Only for selectable buttons
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
     background-image: none;
+    background-color: $button-hover-background;
     box-shadow: $button-active-box-shadow;
 
     &:focus {
