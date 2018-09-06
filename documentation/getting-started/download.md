@@ -9,9 +9,9 @@ toc: true
 
 ## Compiled CSS
 
-Download ready-to-use compiled code for **Cactu v0.17.0** to easily drop into your project.
+Download ready-to-use compiled code for **Cactu v{{ site.current_ruby_version }}** to easily drop into your project.
 
-<a class="button" href="https://github.com/mendozagioo/cactu/releases/download/0.17.0/cactu-0.17.0-css.zip">Download</a>
+<a class="button" href="https://github.com/mendozagioo/cactu/releases/download/{{ site.current_ruby_version }}/cactu-{{ site.current_ruby_version }}-css.zip">Download</a>
 
 
 ## Source files
