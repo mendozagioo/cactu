@@ -24,8 +24,8 @@ kramdown:
   auto_ids: true
 
 # Custom variables
-current_version:      0.18.0
-current_ruby_version: 0.18.0
+current_version:      0.18.1
+current_ruby_version: 0.18.1
 
 plugins:
   - jekyll-redirect-from

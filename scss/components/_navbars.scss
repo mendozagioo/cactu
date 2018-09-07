@@ -154,7 +154,7 @@ $breakpoint-mobile:     $tablet-size !default; // Set you breakpoint to get the 
     }
 
     .show-menu {
-      &:last-child() {
+      &:last-child {
         padding-bottom: $navbar-last-padding;
       }
     }
