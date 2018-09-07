@@ -18,7 +18,7 @@ $navbar-background-color: $principal-color;
     span {
       color: $black;
 
-      &:last-child() { display: none; }
+      &:last-child { display: none; }
     }
   }
 }
