@@ -126,9 +126,9 @@ select {
     margin-top: $help-margin-top;
   }
 
-  .checkbox + .checkbox,
-  .radio + .radio {
-    margin-left: 1rem;
+  .checkbox:not(:last-child),
+  .radio:not(:last-child) {
+    margin-right: 1rem;
   }
 }
 
