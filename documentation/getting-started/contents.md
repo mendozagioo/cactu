@@ -18,7 +18,7 @@ The **componenets**, are formed from two or more elements, for example, navigati
 
 ## Source code
 
-Cactu has been built on <a href="https://sass-lang.com/" target="_blank">Sass</a> with `.scss` extensions.
+Cactu has been built on <a href="https://sass-lang.com/" target="_blank">Sass</a> with `.scss` extension.
 
 {% highlight plaintext %}
 cactu/
