@@ -1,5 +1,7 @@
 # Cactu
 
+[![Gem version](https://img.shields.io/npm/v/cactu.svg)](https://rubygems.org/gems/cactu)
+[![Gem version](https://img.shields.io/gem/v/cactu.svg)](https://rubygems.org/gems/cactu)
 
 A Sass framework to create webs easily, created to be simple, semantic, fast to learn, customizable, and scalable.
 
@@ -10,7 +12,7 @@ Some options available:
 
 * [Donload the latest release](https://github.com/mendozagioo/cactu/archive/master.zip)
 * Clone the repo: `git clone git@github.com:mendozagioo/cactu.git`
-* Install with rubygems `gem install cactu`. Ruby instalation (pending).
+* Install with rubygems `gem install cactu`. Go to [cactu-ruby repo](https://github.com/mendozagioo/cactu-ruby).
 * Install with npm `npm install cactu`
 
 
