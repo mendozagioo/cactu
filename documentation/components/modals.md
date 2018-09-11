@@ -60,7 +60,7 @@ Please read the next considerations for our modal components:
   <div class="modal-content">
     <button class="close"><span>&times;</span></button>
     <header class="modal-header">
-      <h4>Modal  title</h4>
+      <h4>Modal title</h4>
     </header>
     <section class="modal-body">
       <p>
@@ -92,7 +92,7 @@ To get a modal vertically centered, you just add `-center` class to the `modal` 
   <div class="modal-content">
     <button class="close"><span>&times;</span></button>
     <header class="modal-header">
-      <h4>Modal  title</h4>
+      <h4>Modal title</h4>
     </header>
     <section class="modal-body">
       <p>
@@ -133,7 +133,7 @@ To get a modal vertically centered, you just add `-center` class to the `modal` 
   <div class="modal-content">
     <button class="close"><span>&times;</span></button>
     <header class="modal-header">
-      <h4>Modal  title</h4>
+      <h4>Modal title</h4>
     </header>
     <section class="modal-body">
       <p>
@@ -153,7 +153,7 @@ To get a modal vertically centered, you just add `-center` class to the `modal` 
   <div class="modal-content">
     <button class="close"><span>&times;</span></button>
     <header class="modal-header">
-      <h4>Modal  title</h4>
+      <h4>Modal title</h4>
     </header>
     <section class="modal-body">
       <p>
