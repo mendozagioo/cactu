@@ -21,4 +21,8 @@
       box-shadow: none;
     }
   }
+
+  @include breakpoint-max($tablet-size - 1) {
+    display: none;
+  }
 }

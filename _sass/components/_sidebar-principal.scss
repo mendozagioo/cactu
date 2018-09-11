@@ -73,7 +73,7 @@ $nav-link-hover-background:     darken($sidebar-background, 5%);
 }
 
 
-@include breakpoint-max($tablet-size) {
+@include breakpoint-max($tablet-size - 1) {
   .sidebar {
     height: 0;
     padding: 0;
