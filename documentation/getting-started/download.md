@@ -11,7 +11,7 @@ toc: true
 
 Download ready-to-use compiled code for **Cactu v{{ site.current_ruby_version }}** to easily drop into your project.
 
-<a class="button" href="https://github.com/mendozagioo/cactu/releases/download/{{ site.current_ruby_version }}/cactu-{{ site.current_ruby_version }}-css.zip">Download</a>
+<a class="button button-principal" href="https://github.com/mendozagioo/cactu/releases/download/{{ site.current_ruby_version }}/cactu-{{ site.current_ruby_version }}-css.zip">Download</a>
 
 
 ## Source files
@@ -22,7 +22,7 @@ Compile Cactu with your own asset pipeline by downloading our source Sass. This 
 * Autoprefixer for CSS vendor prefixing.
 
 
-<a class="button" href="https://github.com/mendozagioo/cactu/archive/master.zip">Download</a>
+<a class="button button-principal" href="https://github.com/mendozagioo/cactu/archive/master.zip">Download</a>
 
 
 ## Package managers
