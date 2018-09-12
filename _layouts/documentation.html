@@ -21,15 +21,13 @@
 
         {% if page.toc %}
           <aside class="column-of-2 sidebar-secondary">
-            
+            <nav class="section-nav"></nav>
           </aside>
         {% endif %}
       </div>
     </section>
 
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/clipboard.min.js"></script>
-    <script src="/assets/js/app.js"></script>
+    {% include scripts.html %}
 
   </body>
 

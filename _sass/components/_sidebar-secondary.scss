@@ -12,15 +12,14 @@
     padding-left: 1rem;
     border-left: $border-base;
 
-    li ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
     a {
+      display: block;
+
       @include hover-focus {
         text-decoration: none;
       }
+
+      &.sub-sub { padding-left: 1rem; }
     }
   }
 

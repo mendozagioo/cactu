@@ -29,6 +29,18 @@
     },
 
     rightNavigation: function () {
+      // Create the navigation of right
+      if ($('#documentation-contents').length > 0) {
+        $('#documentation-contents h2, #documentation-contents h3').each(function (i, val) {
+          var aditionalClass = val.localName === "h3" ? 'class="sub-sub"' : '';
+
+          $('.sidebar-secondary > nav').append(
+            '<a href="#' + val.id + '"' + aditionalClass + '>' + val.innerText + '</a>'
+          );
+        });
+      }
+
+      // Interaction with the navigation of right
       $('.section-nav a').on('click', function (e) {
         e.preventDefault();
         var scrollTo = $($(this).attr('href')).offset().top - 70;
@@ -150,7 +162,7 @@
 
         e.clearSelection();
         self._returnCopyText(e);
-      })
+      });
 
       clipboard.on('error', function (e) {
         var comandOrCtrl = /Mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl';
