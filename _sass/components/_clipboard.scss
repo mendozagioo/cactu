@@ -4,11 +4,11 @@
 
 
 .clipboard {
-  display: flex;
-  justify-content: end;
+  position: relative;
 
   .button-clipboard {
     position: absolute;
+    right: 0;
     font-size: 70%;
     padding: .25rem .3125rem;
     background-color: transparent;
