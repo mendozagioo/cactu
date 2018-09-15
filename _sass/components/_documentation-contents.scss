@@ -18,6 +18,8 @@ $column-example-border: 1px solid darken($column-example-background, 30%);
   display: flex;
   flex-direction: column;
 
+  [class*="tooltip"] { margin-bottom: .5rem; }
+
   .description {
     font-size: 1.5rem;
     margin-bottom: 2rem;

@@ -304,6 +304,11 @@ button,
   }
 }
 
+button:not(:last-child),
+.button:not(:last-child) {
+  margin-right: .5rem;
+}
+
 button:hover,
 .button:hover {
   color: #343a40;
@@ -352,13 +357,6 @@ button:not(:disabled):not(.disabled):active:focus, button:not(:disabled):not(.di
 .button:not(:disabled):not(.disabled):active:focus,
 .button:not(:disabled):not(.disabled).active:focus {
   box-shadow: 0 0 0 0.125rem #aeb9c4, inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-button ~ button,
-button ~ .button,
-.button ~ button,
-.button ~ .button {
-  margin-left: .5rem;
 }
 
 pre,
@@ -688,6 +686,13 @@ h6, .h6 {
   z-index: 2;
 }
 
+.button-group button:not(:last-child),
+.button-group .button:not(:last-child),
+.button-group-vertical button:not(:last-child),
+.button-group-vertical .button:not(:last-child) {
+  margin-right: 0;
+}
+
 .button-group button:focus, .button-group button:active, .button-group button.active,
 .button-group .button:focus,
 .button-group .button:active,
@@ -706,17 +711,6 @@ h6, .h6 {
 .button-group-vertical button.selected,
 .button-group-vertical .button.selected {
   background-color: #cbd3da;
-}
-
-.button-group button ~ button,
-.button-group button ~ .button,
-.button-group .button ~ button,
-.button-group .button ~ .button,
-.button-group-vertical button ~ button,
-.button-group-vertical button ~ .button,
-.button-group-vertical .button ~ button,
-.button-group-vertical .button ~ .button {
-  margin-left: 0;
 }
 
 .button-group {
