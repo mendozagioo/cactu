@@ -41,8 +41,12 @@ $alert-color:                theme-color-level($alert-color-base, $alert-color-l
     box-shadow: none !important;
     background-color: transparent;
 
-    @include hover-focus {
+    @include hover-focus-active {
       color: darken($alert-background, 80%);
+      // Used !important be cause the base style is set with:
+      // &:not(:disabled):not(.disabled):active,
+      // &:not(:disabled):not(.disabled).active
+      background-color: transparent !important;
     }
   }
 }

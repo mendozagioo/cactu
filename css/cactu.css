@@ -675,8 +675,9 @@ h6, .h6 {
   background-color: transparent;
 }
 
-.alert-dismissible .close:hover, .alert-dismissible .close:focus {
+.alert-dismissible .close:hover, .alert-dismissible .close:focus, .alert-dismissible .close:active {
   color: #404002;
+  background-color: transparent !important;
 }
 
 .button-group button,
