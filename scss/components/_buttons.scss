@@ -18,6 +18,8 @@ $button-background-selected:      darken($gray-200, 10%) !default;
   .button {
     z-index: 2;
 
+    &:not(:last-child) { margin-right: 0; }
+
     &:focus,
     &:active,
     &.active {
@@ -26,11 +28,6 @@ $button-background-selected:      darken($gray-200, 10%) !default;
     
     &.selected {
       background-color: $button-background-selected;
-    }
-    
-    & ~ button,
-    & ~ .button {
-      margin-left: 0;
     }
   }
 }

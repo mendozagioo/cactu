@@ -45,6 +45,8 @@ button,
   @include button-size($button-padding-y, $button-padding-x, $button-font-size, $button-line-height, $button-border-radius);
   @include transition($button-transition);
 
+  &:not(:last-child) { margin-right: .5rem; }
+
   // Share hover and focus styles
   &:hover {
     color: $button-color;
@@ -85,10 +87,5 @@ button,
     &:focus {
       box-shadow: $button-focus-box-shadow, $button-active-box-shadow;
     }
-  }
-
-  & ~ button,
-  & ~ .button {
-    margin-left: .5rem;
   }
 }
