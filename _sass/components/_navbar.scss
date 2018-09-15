@@ -4,6 +4,7 @@
 
 
 $navbar-background-color: $principal-color;
+$submenu-toggle-outline:  0 0 0 $outline-width darken($navbar-background-color, 15%);
 
 
 #principal-menu {
@@ -14,6 +15,8 @@ $navbar-background-color: $principal-color;
     margin-left: auto;
     font-size: 85%;
     background-color: transparent;
+
+    &:focus { box-shadow: $submenu-toggle-outline; }
 
     span {
       color: $black;
