@@ -1102,6 +1102,12 @@ textarea[readonly] {
   opacity: 1;
 }
 
+@media only screen and (max-device-width: 767px) {
+  select[multiple] {
+    background-color: red;
+  }
+}
+
 input[type="range"]:focus {
   outline: none;
 }
