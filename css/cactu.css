@@ -1664,6 +1664,16 @@ ul, ol {
   color: #000;
 }
 
+.navbar .navbar-toggler,
+.navbar-expanded .navbar-toggler {
+  background-color: transparent;
+}
+
+.navbar .navbar-toggler:focus,
+.navbar-expanded .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.125rem #cfcfcf;
+}
+
 .navbar .disabled,
 .navbar-expanded .disabled {
   color: rgba(0, 0, 0, 0.3);

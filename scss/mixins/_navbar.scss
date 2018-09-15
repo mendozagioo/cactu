@@ -4,10 +4,10 @@
 
 
 @mixin navbar-theme($base-color: null, $theme: 'light') {
-  $text: if($theme == 'light', rgba(0,0,0,.5), rgba(255,255,255,.5));
-  $text-hover: if($theme == 'light', rgba(0,0,0,.7), rgba(255,255,255,.7));
-  $text-active: if($theme == 'light', $black, $white);
-  $text-disabled: if($theme == 'light', rgba(0,0,0,.3), rgba(255,255,255,.3));
+  $text:            if($theme == 'light', rgba(0,0,0,.5), rgba(255,255,255,.5));
+  $text-hover:      if($theme == 'light', rgba(0,0,0,.7), rgba(255,255,255,.7));
+  $text-active:     if($theme == 'light', $black, $white);
+  $text-disabled:   if($theme == 'light', rgba(0,0,0,.3), rgba(255,255,255,.3));
 
   @if $base-color == null {
     // Set default colors
@@ -35,6 +35,8 @@
     
     // Set selected
   } @else {
+    $toggler-outline: 0 0 0 $outline-width darken($base-color, 15%);
+
     border-bottom: $border-width solid theme-color-level($base-color, 1);
     background: $base-color;
 
@@ -50,6 +52,12 @@
     }
 
     .navbar-brand { color: $text-active; }
+
+    .navbar-toggler {
+      background-color: transparent;
+
+      &:focus { box-shadow: $toggler-outline; }
+    }
 
     .disabled {
       color: $text-disabled;
