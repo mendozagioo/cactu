@@ -29,9 +29,9 @@ Lorem ipsum dolor sit amet, <a class="tooltip-top" href="#" data-tooltip="Lorem 
 
 {% capture example %}
 <button class="tooltip-top" data-tooltip="Top">Tooltip on top</button>
+<button class="tooltip-left" data-tooltip="Left">Tooltip on left</button>
 <button class="tooltip-right" data-tooltip="Right">Tooltip on right</button>
 <button class="tooltip-bottom" data-tooltip="Bottom">Tooltip on bottom</button>
-<button class="tooltip-left" data-tooltip="Left">Tooltip on left</button>
 {% endcapture %}
 {% include example.html content=example %}
 
