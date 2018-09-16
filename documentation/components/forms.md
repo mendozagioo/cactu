@@ -111,6 +111,8 @@ The `form-group` class expand the elements.
 
 ### Vertical checkbox and radios
 
+Just use `checkbox-expanded` or `radio-expanded` classes to expand each item.
+
 {% capture example %}
 <form>
   <div class="form-group">
