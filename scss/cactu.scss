@@ -13,6 +13,7 @@
 @import "functions/strings";
 
 @import "mixins/alerts";
+@import "mixins/badge";
 @import "mixins/breakpoints";
 @import "mixins/buttons";
 @import "mixins/forms";
@@ -23,6 +24,7 @@
 @import "mixins/positions";
 @import "mixins/transition";
 
+@import "elements/badge";
 @import "elements/button";
 @import "elements/code";
 @import "elements/icon";
