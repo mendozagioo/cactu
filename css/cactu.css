@@ -1921,18 +1921,6 @@ ul, ol {
 .pagination-end > a {
   display: -ms-flexbox;
   display: flex;
-  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .pagination > *,
-  .pagination > a,
-  .pagination-center > *,
-  .pagination-center > a,
-  .pagination-end > *,
-  .pagination-end > a {
-    transition: none;
-  }
 }
 
 .pagination > *:not(:first-child),
@@ -1975,6 +1963,15 @@ ul, ol {
 .pagination-end a {
   padding: 0.25rem 0.625rem;
   border: 1px solid #dee2e6;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .pagination a,
+  .pagination-center a,
+  .pagination-end a {
+    transition: none;
+  }
 }
 
 .pagination a:hover, .pagination a:focus,
