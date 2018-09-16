@@ -30,7 +30,6 @@ $pagination-item-active-background:     darken($pagination-item-background-hover
   > *,
   > a {
     display: flex;
-    @include transition($pagination-item-transition);
 
     &:not(:first-child) {
       margin-left: -$pagination-item-border-width;
@@ -56,6 +55,7 @@ $pagination-item-active-background:     darken($pagination-item-background-hover
   a {
     padding: $pagination-item-padding;
     border: $pagination-item-border;
+    @include transition($pagination-item-transition);
 
     @include hover-focus {
       text-decoration: none;

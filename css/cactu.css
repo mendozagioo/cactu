@@ -1,5 +1,5 @@
 /*!
- * Cactu v0.18.1 (http://cactu.site/)
+ * Cactu v0.19.0 (http://cactu.site/)
  * Copyright 2018 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/blob/master/LICENSE)
  */
@@ -268,6 +268,40 @@ template {
   width: 100%;
 }
 
+.badge,
+.badge-pill {
+  display: inline-block;
+  font-size: 80%;
+  text-align: center;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  line-height: 1.3;
+  color: #343a40;
+  background-color: #ced4da;
+}
+
+.badge[href]:hover, .badge[href]:focus,
+.badge-pill[href]:hover,
+.badge-pill[href]:focus {
+  color: #343a40;
+  background-color: #b1bbc4;
+}
+
+.badge[href]:hover, .badge[href]:focus,
+.badge-pill[href]:hover,
+.badge-pill[href]:focus {
+  text-decoration: none;
+}
+
+.badge:empty,
+.badge-pill:empty {
+  display: none;
+}
+
+.badge-pill {
+  border-radius: 300000px;
+}
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -302,6 +336,11 @@ button,
   .button {
     transition: none;
   }
+}
+
+button:not(:last-child),
+.button:not(:last-child) {
+  margin-right: .5rem;
 }
 
 button:hover,
@@ -352,13 +391,6 @@ button:not(:disabled):not(.disabled):active:focus, button:not(:disabled):not(.di
 .button:not(:disabled):not(.disabled):active:focus,
 .button:not(:disabled):not(.disabled).active:focus {
   box-shadow: 0 0 0 0.125rem #aeb9c4, inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-button ~ button,
-button ~ .button,
-.button ~ button,
-.button ~ .button {
-  margin-left: .5rem;
 }
 
 pre,
@@ -677,8 +709,9 @@ h6, .h6 {
   background-color: transparent;
 }
 
-.alert-dismissible .close:hover, .alert-dismissible .close:focus {
+.alert-dismissible .close:hover, .alert-dismissible .close:focus, .alert-dismissible .close:active {
   color: #404002;
+  background-color: transparent !important;
 }
 
 .button-group button,
@@ -686,6 +719,13 @@ h6, .h6 {
 .button-group-vertical button,
 .button-group-vertical .button {
   z-index: 2;
+}
+
+.button-group button:not(:last-child),
+.button-group .button:not(:last-child),
+.button-group-vertical button:not(:last-child),
+.button-group-vertical .button:not(:last-child) {
+  margin-right: 0;
 }
 
 .button-group button:focus, .button-group button:active, .button-group button.active,
@@ -706,17 +746,6 @@ h6, .h6 {
 .button-group-vertical button.selected,
 .button-group-vertical .button.selected {
   background-color: #cbd3da;
-}
-
-.button-group button ~ button,
-.button-group button ~ .button,
-.button-group .button ~ button,
-.button-group .button ~ .button,
-.button-group-vertical button ~ button,
-.button-group-vertical button ~ .button,
-.button-group-vertical .button ~ button,
-.button-group-vertical .button ~ .button {
-  margin-left: 0;
 }
 
 .button-group {
@@ -1052,6 +1081,9 @@ textarea {
   border: 1px solid #dee2e6;
   border-radius: 4px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: #fff;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -1112,21 +1144,26 @@ input[type="range"]::-moz-focus-outer {
 
 select:not([size]):not([multiple]) {
   height: calc(2.25rem + 2px);
-  padding: .375rem 1.75rem .375rem .75rem;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
   background-size: 8px 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
-select:not([size]):not([multiple]):disabled {
+select:not([size]):disabled {
   background-color: #e9ecef;
 }
 
-select:not([size]):not([multiple])::-ms-value {
+select:not([size])::-ms-value {
   color: #343a40;
   background-color: #fff;
+}
+
+@media only screen and (max-device-width: 1199px) {
+  select[multiple] {
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 10'%3E%3Cg fill='%23343a40' %3E%3Ccircle cx='4' cy='2.2' r='2' /%3E%3Ccircle cx='4' cy='7.8' r='2' /%3E%3C/g%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+  }
 }
 
 select:-moz-focusring {
@@ -1151,9 +1188,7 @@ select::-ms-expand {
 .form-group [type="checkbox"],
 .form-group [type="radio"] {
   display: inline;
-  width: .8125rem;
-  height: 1rem;
-  margin-right: .125rem;
+  width: auto;
 }
 
 .form-group .help,
@@ -1163,9 +1198,28 @@ select::-ms-expand {
   margin-top: 0.25rem;
 }
 
+.form-group .checkbox,
+.form-group .checkbox-expanded,
+.form-group .radio,
+.form-group .radio-expanded {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
 .form-group .checkbox:not(:last-child),
-.form-group .radio:not(:last-child) {
+.form-group .checkbox-expanded:not(:last-child),
+.form-group .radio:not(:last-child),
+.form-group .radio-expanded:not(:last-child) {
   margin-right: 1rem;
+}
+
+.form-group .checkbox input,
+.form-group .checkbox-expanded input,
+.form-group .radio input,
+.form-group .radio-expanded input {
+  position: absolute;
+  left: 0;
+  top: .25rem;
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]).valid,
@@ -1661,6 +1715,16 @@ ul, ol {
   color: #000;
 }
 
+.navbar .navbar-toggler,
+.navbar-expanded .navbar-toggler {
+  background-color: transparent;
+}
+
+.navbar .navbar-toggler:focus,
+.navbar-expanded .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.125rem #cfcfcf;
+}
+
 .navbar .disabled,
 .navbar-expanded .disabled {
   color: rgba(0, 0, 0, 0.3);
@@ -1891,18 +1955,6 @@ ul, ol {
 .pagination-end > a {
   display: -ms-flexbox;
   display: flex;
-  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .pagination > *,
-  .pagination > a,
-  .pagination-center > *,
-  .pagination-center > a,
-  .pagination-end > *,
-  .pagination-end > a {
-    transition: none;
-  }
 }
 
 .pagination > *:not(:first-child),
@@ -1945,6 +1997,15 @@ ul, ol {
 .pagination-end a {
   padding: 0.25rem 0.625rem;
   border: 1px solid #dee2e6;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .pagination a,
+  .pagination-center a,
+  .pagination-end a {
+    transition: none;
+  }
 }
 
 .pagination a:hover, .pagination a:focus,

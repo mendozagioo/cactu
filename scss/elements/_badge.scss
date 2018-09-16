@@ -1,0 +1,40 @@
+//
+// Badge element
+// --------------------------------------------------
+
+
+//  Variables
+//
+$badge-color:                 $text-color !default;
+$badge-font-size:             80% !default;
+$badge-padding:               .125rem .375rem;
+$badge-border-radius:         $radius !default;
+$badge-pill-border-radius:    $radius-rounded !default;
+$badge-background:            $gray-400 !default;
+$badge-link-color-hover:      $badge-color !default;
+
+
+.badge,
+.badge-pill {
+  display: inline-block;
+  font-size: $badge-font-size;
+  text-align: center;
+  padding: $badge-padding;
+  border-radius: $badge-border-radius;
+  line-height: 1.3;
+  @include badge-theme($badge-background);
+
+  &[href] {
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+.badge-pill {
+  border-radius: $badge-pill-border-radius;
+}

@@ -1,5 +1,5 @@
 /*!
- * Cactu v0.18.1 (http://cactu.site/)
+ * Cactu v0.19.0 (http://cactu.site/)
  * Copyright 2018 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/blob/master/LICENSE)
  */
@@ -9,9 +9,11 @@
 @import "base/blocks";
 
 @import "functions/colors";
+@import "functions/converters";
 @import "functions/strings";
 
 @import "mixins/alerts";
+@import "mixins/badge";
 @import "mixins/breakpoints";
 @import "mixins/buttons";
 @import "mixins/forms";
@@ -22,6 +24,7 @@
 @import "mixins/positions";
 @import "mixins/transition";
 
+@import "elements/badge";
 @import "elements/button";
 @import "elements/code";
 @import "elements/icon";

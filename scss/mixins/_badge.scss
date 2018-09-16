@@ -1,0 +1,16 @@
+//
+// Badge theme mixin
+// --------------------------------------------------
+
+
+@mixin badge-theme($background: $gray-400) {
+  color: color-yiq($background);
+  background-color: $background;
+
+  &[href] {
+    @include hover-focus {
+      color: color-yiq($background);
+      background-color: darken($background, 10%);
+    }
+  }
+}

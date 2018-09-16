@@ -18,12 +18,15 @@ $disabled-color:                    darken($gray-500, 15%) !default;
 $help-font-size:                    .75rem !default;
 $help-margin-top:                   .25rem !default;
 $select-height:                     calc(2.25rem + 2px) !default;
+$custom-select-padding:             .375rem 1.75rem .375rem .75rem !default;
 $custom-select-padding-x:           .75rem !default;
 $custom-select-indicator-padding:   1rem !default;
 $custom-select-indicator-color:     $gray-800 !default;
 $custom-select-indicator:           str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$custom-select-multiple:            str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 10'%3E%3Cg fill='#{$custom-select-indicator-color}' %3E%3Ccircle cx='4' cy='2.2' r='2' /%3E%3Ccircle cx='4' cy='7.8' r='2' /%3E%3C/g%3E%3C/svg%3E"), "#", "%23") !default;
 $custom-select-background-size:     8px 10px !default; // In pixels because image dimensions
 $select-background:                 $input-background $custom-select-indicator no-repeat right $custom-select-padding-x center !default;
+$select-multiple-background:        $input-background $custom-select-multiple no-repeat right $custom-select-padding-x center !default;
 $valid-color:                       $green !default;
 $invalid-color:                     $red !default;
 
@@ -36,6 +39,7 @@ textarea {
   border: $input-border;
   border-radius: $input-radius;
   box-shadow: $input-box-shadow;
+  appearance: none;
   background-color: $input-background;
 
   @include transition($input-transition);
@@ -75,17 +79,28 @@ input[type="range"] {
 
 select:not([size]):not([multiple]) {
   height: $select-height;
-  padding: .375rem 1.75rem .375rem .75rem;
+  padding: $custom-select-padding;
   background: $select-background;
   background-size: $custom-select-background-size;
-  appearance: none;
+}
 
+select:not([size]) {
   &:disabled { background-color: $input-disabled-background; }
 
   &::-ms-value {
     // For visual consistency with IE and (under certain conditions) Edge.
     color: $input-color;
     background-color: $input-background;
+  }
+}
+
+// Select multiple, only on mobiles
+// Including large mobile sizes
+@include breakpoint-mobile-max ($medium-desktop-size - 1) {
+  select[multiple] {
+    padding: $custom-select-padding;
+    background: $select-multiple-background;
+    background-size: $custom-select-background-size;
   }
 }
 
@@ -114,9 +129,7 @@ select {
   [type="checkbox"],
   [type="radio"] {
     display: inline;
-    width: .8125rem;
-    height: 1rem;
-    margin-right: .125rem;
+    width: auto;
   }
 
   .help,
@@ -126,9 +139,20 @@ select {
     margin-top: $help-margin-top;
   }
 
-  .checkbox:not(:last-child),
-  .radio:not(:last-child) {
-    margin-right: 1rem;
+  .checkbox,
+  .checkbox-expanded,
+  .radio,
+  .radio-expanded {
+    position: relative;
+    padding-left: 1.25rem;
+
+    &:not(:last-child) { margin-right: 1rem; }
+
+    input {
+      position: absolute;
+      left: 0;
+      top: .25rem;
+    }
   }
 }
 

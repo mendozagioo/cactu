@@ -1,6 +1,6 @@
 # Cactu
 
-[![Gem version](https://img.shields.io/npm/v/cactu.svg)](https://rubygems.org/gems/cactu)
+[![Gem version](https://img.shields.io/npm/v/cactu.svg)](https://www.npmjs.com/package/cactu)
 [![Gem version](https://img.shields.io/gem/v/cactu.svg)](https://rubygems.org/gems/cactu)
 
 A Sass framework to create webs easily, created to be simple, semantic, fast to learn, customizable, and scalable.

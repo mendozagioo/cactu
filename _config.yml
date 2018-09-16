@@ -21,8 +21,8 @@ markdown:    kramdown
 highlighter: rouge
 
 # Custom variables
-current_version:      0.18.1
-current_ruby_version: 0.18.1
+current_version:      0.19.0
+current_ruby_version: 0.19.0
 
 plugins:
   - jekyll-redirect-from

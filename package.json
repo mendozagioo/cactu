@@ -1,6 +1,6 @@
 {
   "name": "cactu",
-  "version": "0.18.1",
+  "version": "0.19.0",
   "description": "A Sass framework to create webs easily, created to be simple, semantic, fast to learn, customizable, and scalable",
   "scripts": {
     "start": "gulp sass:watch | bundle exec jekyll serve"
