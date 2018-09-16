@@ -129,9 +129,7 @@ select {
   [type="checkbox"],
   [type="radio"] {
     display: inline;
-    width: .8125rem;
-    height: 1rem;
-    margin-right: .125rem;
+    width: auto;
   }
 
   .help,
@@ -141,9 +139,20 @@ select {
     margin-top: $help-margin-top;
   }
 
-  .checkbox:not(:last-child),
-  .radio:not(:last-child) {
-    margin-right: 1rem;
+  .checkbox,
+  .checkbox-expanded,
+  .radio,
+  .radio-expanded {
+    position: relative;
+    padding-left: 1.25rem;
+
+    &:not(:last-child) { margin-right: 1rem; }
+
+    input {
+      position: absolute;
+      left: 0;
+      top: .25rem;
+    }
   }
 }
 

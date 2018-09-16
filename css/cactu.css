@@ -1154,9 +1154,7 @@ select::-ms-expand {
 .form-group [type="checkbox"],
 .form-group [type="radio"] {
   display: inline;
-  width: .8125rem;
-  height: 1rem;
-  margin-right: .125rem;
+  width: auto;
 }
 
 .form-group .help,
@@ -1166,9 +1164,28 @@ select::-ms-expand {
   margin-top: 0.25rem;
 }
 
+.form-group .checkbox,
+.form-group .checkbox-expanded,
+.form-group .radio,
+.form-group .radio-expanded {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
 .form-group .checkbox:not(:last-child),
-.form-group .radio:not(:last-child) {
+.form-group .checkbox-expanded:not(:last-child),
+.form-group .radio:not(:last-child),
+.form-group .radio-expanded:not(:last-child) {
   margin-right: 1rem;
+}
+
+.form-group .checkbox input,
+.form-group .checkbox-expanded input,
+.form-group .radio input,
+.form-group .radio-expanded input {
+  position: absolute;
+  left: 0;
+  top: .25rem;
 }
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]).valid,
