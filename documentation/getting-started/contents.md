@@ -61,7 +61,7 @@ cactu/
 |   |   ├── _navbar.scss
 |   |   ├── _positions.scss
 |   |   ├── _transition.scss
-│   ├── itilities/
+│   ├── utilities/
 |   |   ├── _classes.scss
 |   |   ├── _syntax.scss
 └── cactu.scss
@@ -90,7 +90,7 @@ cactu/
 │   ├── base/
 │   ├── functions/
 │   ├── mixins/
-│   ├── itilities/
+│   ├── utilities/
 └── cactu.scss
 {% endhighlight %}
 
