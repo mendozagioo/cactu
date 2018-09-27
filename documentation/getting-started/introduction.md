@@ -11,7 +11,7 @@ toc: true
 
 ## Quick start
 
-To begin quickly using Cactu, you need to download the compiled CSS file of our [git repository](https://github.com/mendozagioo/cactu/releases/download/{{ site.current_ruby_version }}/cactu-{{ site.current_ruby_version }}-css.zip), but with that, you doesn't have the opportunity to custom any element or component, unless you rewrite the styles that you need.
+To begin quickly using Cactu, you need to download the compiled CSS file of our [git repository](https://github.com/mendozagioo/cactu/releases/download/{{ site.current_ruby_version }}/cactu-{{ site.current_ruby_version }}-css.zip), but with that, you don't have the opportunity to customize any element or component, unless you rewrite the styles that you need.
 
 Using a package manager or need to download the source files? Head to the [downloads page]({{ site.baseurl }}/documentation/getting-started/download/).
 
