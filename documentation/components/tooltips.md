@@ -20,8 +20,6 @@ Please, read the next information to use correct tooltips:
 
 {% capture example %}
 <p>
-
-
 Lorem ipsum dolor sit amet, <a class="tooltip-top" href="#" data-tooltip="Lorem consectetur">consectetur</a> adipiscing elit. Aliquam lacinia, est ac viverra feugiat, neque mi faucibus magna, in sodales urna justo at dolor. Donec condimentum leo elit, vitae congue metus accumsan vel. Vestibulum lacus felis, luctus eget mi sed, egestas commodo orci. <a class="tooltip-top" href="#" data-tooltip="Lorem vel">Vestibulum vel</a> erat tellus. Pellentesque convallis commodo nisi scelerisque faucibus. Phasellus hendrerit nisl eget iaculis eleifend. Duis nisi ex, rutrum vel libero non, viverra lacinia dui. Nunc arcu mi, dignissim quis fermentum eget, posuere id ante. <a class="tooltip-top" href="#" data-tooltip="Lorem pellentesque">Pellentesque at</a> arcu odio. Integer efficitur lobortis urna ac molestie. Praesent mi ipsum, aliquam at sollicitudin nec, egestas quis sem. Curabitur sit amet faucibus ligula, porttitor pharetra velit. Donec sollicitudin justo id sem <a class="tooltip-top" href="#" data-tooltip="Lorem finibus">finibus</a> rutrum. Integer eu tortor massa.
 </p>
 {% endcapture %}

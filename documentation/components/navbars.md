@@ -79,7 +79,7 @@ The same navbar but now using JS.
       <span class="toggle">
         Dropdown
       </span>
-      <nav class="drop-menu">
+      <nav class="drop-menu show-menu">
         <a href="#">Lorem ipsum</a>
         <a href="#">Maecenas</a>
         <hr class="drop-separator">
