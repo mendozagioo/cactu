@@ -9,6 +9,7 @@ $input-color:                       $text-color !default;
 $input-background:                  $white !default;
 $input-padding:                     .375rem .75rem !default;
 $input-border:                      $border-base !default;
+$input-border-color-focus:          $blue !default;
 $input-radius:                      $radius !default;
 $input-box-shadow:                  inset 0 1px 2px rgba($black, .075) !default;
 $input-placeholder-color:           $gray-600 !default;
@@ -18,6 +19,7 @@ $disabled-color:                    darken($gray-500, 15%) !default;
 $help-font-size:                    .75rem !default;
 $help-margin-top:                   .25rem !default;
 $select-height:                     calc(2.25rem + 2px) !default;
+$form-group-margin-bottom:          1rem !default;
 $custom-select-padding:             .375rem 1.75rem .375rem .75rem !default;
 $custom-select-padding-x:           .75rem !default;
 $custom-select-indicator-padding:   1rem !default;
@@ -46,7 +48,7 @@ textarea {
 
   &:focus {
     outline: 0;
-    @include input-focus;
+    @include input-focus($input-border-color-focus);
   }
 
   &::placeholder {
@@ -118,7 +120,7 @@ select {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: $form-group-margin-bottom;
 
   input,
   select,
