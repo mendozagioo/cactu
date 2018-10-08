@@ -25,6 +25,7 @@
 - title: Components
   pages:
     - title: Alerts
+    - title: Breadcrumbs
     - title: Buttons
     - title: Collapse
     - title: Dropdowns
