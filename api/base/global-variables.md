@@ -25,14 +25,14 @@ Cactu has just one file used for global variables, those varibales are used for 
 | `$gray-900` | <small>color</small> | <span class="small-box" style="background:#212529"></span> `#212529` |
 | `$black`    | <small>color</small> | <span class="small-box" style="background:#000"></span> `#000` |
 | `$blue`     | <small>color</small> | <span class="small-box" style="background:#007bff"></span> `#007bff` |
-| `$yellow`   | <small>color</small> | <span class="small-box" style="background:#f0f083"></span> `#f0f083`|
+| `$yellow`   | <small>color</small> | <span class="small-box" style="background:#f0f083"></span> `#f8f852`|
 | `$red`      | <small>color</small> | <span class="small-box" style="background:#dc3545"></span> `#dc3545`|
 | `$green`    | <small>color</small> | <span class="small-box" style="background:#28a745"></span> `#28a745`|
 | `$text-color`   | <small>color</small> | <span class="small-box" style="background:#343a40"></span> `$gray-800` |
 | `$border-color` | <small>color</small> | <span class="small-box" style="background:#dee2e6"></span> `$gray-300` |
 | `$white-smoke`  | <small>color</small> | <span class="small-box" style="background:#f5f5f5"></span> `#f5f5f5` |
 | `$font-family-sans-serif`| <small>font-family</small> | `-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"` |
-| `$font-family-monospace` | <small>font-family</small> | `Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` |
+| `$font-family-monospace` | <small>font-family</small> | `Monaco, Menlo, Consolas, "Liberation Mono", "Courier New", monospace` |
 | `$font-family`           | <small>font-family</small> | `$font-family-sans-serif` |
 | `$font-size`             | <small>font-size</small> | `16px` |
 | `$font-weight-light`     | <small>font-weight</small> | `300` |
@@ -49,7 +49,7 @@ Cactu has just one file used for global variables, those varibales are used for 
 | `$border-width`     | <small>size</small> | `1px` |
 | `$border-base`      | <small>unitless</small> | `$border-width solid $border-color` |
 | `$speed`            | <small>speed</small> | `.15s` |
-| `$line-height`      | <small>unitless</small> | `1.3` |
+| `$line-height`      | <small>unitless</small> | `1.5` |
 | `$transition-all`   | <small>transition</small> | `all $speed ease-in-out` |
 | `$outline-width`    | <small>unitless</small> | `.125rem` |
 | `$zindex-top`       | <small>z-index</small> | `1000` |
