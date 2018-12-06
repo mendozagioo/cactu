@@ -11,3 +11,12 @@
     @return $px;
   }
 }
+
+// Converter pixels to ems
+@function px-em($px: 1px, $em: $font-size) {
+  @if unit($px) == "px" {
+    @return ($px / $em) + em;
+  } @else {
+    @return $px;
+  }
+}
