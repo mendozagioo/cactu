@@ -9,8 +9,8 @@ $pagination-margin:                     .5rem 0 !default;
 $pagination-item-padding:               .25rem .625rem !default;
 $pagination-item-border-width:          $border-width !default;
 $pagination-item-border:                $pagination-item-border-width solid $border-color !default;
-$pagination-tem-background:             $white !default;
-$pagination-item-background-hover:      darken($pagination-tem-background, 5%) !default;
+$pagination-item-background:            $white !default;
+$pagination-item-background-hover:      darken($pagination-item-background, 5%) !default;
 $pagination-item-transition:            background-color $speed ease-in-out, color $speed ease-in-out !default;
 $pagination-item-radius-first:          $radius 0 0 $radius !default;
 $pagination-item-radius-last:           0 $radius $radius 0 !default;
@@ -69,7 +69,7 @@ $pagination-item-active-background:     darken($pagination-item-background-hover
 
     &.disabled {
       @include hover-focus {
-        background-color: $pagination-tem-background;
+        background-color: $pagination-item-background;
       }
     }
   }
