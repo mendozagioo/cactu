@@ -7,6 +7,24 @@ toc: true
 ---
 
 
+## Variables
+
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+| `$navbar-padding-y` | <small>padding</small> | `0` |
+| `$navbar-padding-x` | <small>padding</small> | `15px` |
+| `$navbar-base-color` | <small>color</small> | <span class="small-box" style="background:#f5f5f5"></span> `$white-smoke` |
+| `$navbar-last-padding` | <small>padding</small> | `.5rem` |
+| `$toggler-color` | <small>color</small> | <span class="small-box" style="background:#343a40"></span> `$text-color` |
+| `$link-padding-y` | <small>padding</small> | `.9375rem` |
+| `$brand-padding-y` | <small>padding</small> | `.75rem` |
+| `$brand-padding-x` | <small>padding</small> | `0` |
+| `$brand-gap` | <small>size</small> | `.625rem` |
+| `$brand-font-size` | <small>font-size</small> | `1.25rem` |
+| `$search-gap` | <small>size</small> | `.5rem` |
+| `$breakpoint-mobile` | <small>size</small> | `$tablet-size` |
+
+
 ## How it works
 
 A navbar can be used inside a grid or outside it and just with CSS or changing classes with JS. By default has not paddings (the class `navbar`) and with width expanded (100%), this means is adaptable always to any container, for this reason, navbar component could be outside or inside the grid. However, if you nedd a expanded navbar, please use the `navbar-expanded` class, this class set needed padding to adapt the component to any screen size.

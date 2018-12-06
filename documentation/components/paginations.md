@@ -7,6 +7,23 @@ toc: true
 ---
 
 
+## Variables
+
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+| `$pagination-margin` | <small>margin</small> | `.5rem 0` |
+| `$pagination-item-padding` | <small>padding</small> | `.25rem .625rem` |
+| `$pagination-item-border-width` | <small>size</small> | `$border-width` |
+| `$pagination-item-border` | <small>unitless</small> | `$pagination-item-border-width solid $border-color` |
+| `$pagination-item-background` | <small>color</small> | <span class="small-box" style="background:#fff"></span> `$white` |
+| `$pagination-item-background-hover` | <small>color</small> | <span class="small-box" style="background:#f2f2f2"></span> `darken($pagination-item-background, 5%)` |
+| `$pagination-item-transition` | <small>unitless</small> | `background-color $speed ease-in-out, color $speed ease-in-out` |
+| `$pagination-item-radius-first` | <small>radius</small> | `$radius 0 0 $radius` |
+| `$pagination-item-radius-last` | <small>radius</small> | `0 $radius $radius 0` |
+| `$pagination-item-active-color` | <small>color</small> | <span class="small-box" style="background:#626d78"></span> `lighten($text-color, 20%)` |
+| `$pagination-item-active-background` | <small>color</small> | <span class="small-box" style="background:#e6e6e6"></span> `darken($pagination-item-background-hover, 5%)` |
+
+
 ## Overview
 
 Cactu's paginations components are a block of connected links, making links hard to miss and easily scalable. Paginations are simple to use and you can choose a simple navigation structure `<nav>` or a list structure `<ul><li>`.

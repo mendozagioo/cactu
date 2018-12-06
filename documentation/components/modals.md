@@ -6,6 +6,26 @@ group: components
 toc: true
 ---
 
+
+## Variables
+
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+| `$modal-background` | <small>color</small> | <span class="small-box" style="background:rgba(0, 0, 0, .7)"></span> `rgba(0, 0, 0, .7)` |
+| `$modal-content-width` | <small>width</small> | `500px` |
+| `$modal-content-margin` | <small>margin</small> | `2rem auto auto` |
+| `$modal-content-radius` | <small>radius</small> | `$radius` |
+| `$modal-content-background` | <small>color</small> | <span class="small-box" style="background:#fff"></span> `$white` |
+| `$modal-content-transition` | <small>unitless</small> | `all .35s ease-in-out` |
+| `$modal-close-size` | <small>size</small> | `30px` |
+| `$modal-close-gap` | <small>size</small> | `-25px` |
+| `$modal-close-color` | <small>color</small> | <span class="small-box" style="background:#fff"></span> `$white` |
+| `$modal-close-radio` | <small>radius</small> | `50%` |
+| `$modal-close-background` | <small>color</small> | <span class="small-box" style="background:rgba(30, 30, 30, .8)"></span> `rgba(30, 30, 30, .8)` |
+| `$modal-close-background-hover` | <small>color</small> | <span class="small-box" style="background:rgba(0, 0, 0, 1)"></span> `rgba(0, 0, 0, 1)` |
+| `$modal-close-icon-size` | <small>size</small> | `1.25rem` |
+
+
 ## How it works
 
 Please read the next considerations for our modal components:

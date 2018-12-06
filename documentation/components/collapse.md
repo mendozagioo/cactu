@@ -7,6 +7,21 @@ toc: true
 ---
 
 
+## Variables
+
+## Variables
+
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+| `$content-collaspse-padding` |  <span>padding</span> | `1rem` |
+| `$accordion-collapse-border` | <span>unitless</span> | `$border-base` |
+| `$accordion-collapse-first-radius` | <span>radius</span> | `$radius $radius 0 0` |
+| `$accordion-collapse-last-radius` |  <span>radius</span> | `0 0 $radius $radius` |
+| `$accordion-header-padding` | <span>padding</span> | `1rem` |
+| `$accordion-header-background` | <span>color</span> | <span class="small-box" style="background:#f8f9fa"></span> `lighten($gray-200, 5%)` |
+| `$accordion-header-hover-background` | <span>color</span> | <span class="small-box" style="background:#eff1f3"></span> `darken($accordion-header-background, 3%)` |
+
+
 ## Basic collapse
 
 {% capture example %}

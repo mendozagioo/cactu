@@ -7,6 +7,19 @@ toc: true
 ---
 
 
+## Variables
+
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+| `$badge-color`              | <small>color</small> | <span class="small-box" style="background:#343a40"></span> `$text-color` |
+| `$badge-font-size`          | <small>size</small>  | `80%` |
+| `$badge-padding`            | <small>padding</small>  | `.125rem .375rem` |
+| `$badge-border-radius`      | <small>radius</small>   | `$radius` |
+| `$badge-pill-border-radius` | <small>radius</small>   | `$radius-rounded` |
+| `$badge-background`         | <small>color</small>  | <span class="small-box" style="background:#ced4da"></span> `$gray-400` |
+| `$badge-link-color-hover`   | <small>color</small>   | <span class="small-box" style="background:#343a40"></span> `$badge-color` |
+
+
 ## Simple badge
 
 {% capture example %}

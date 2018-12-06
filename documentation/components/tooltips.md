@@ -7,6 +7,19 @@ toc: true
 ---
 
 
+## Variables
+
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+| `$tooltip-color` | <small>color</small> | <span class="small-box" style="background:#f5f5f5"></span> `$white` |
+| `$tooltip-background` | <small>color</small> | <span class="small-box" style="background:#000"></span> `$black` |
+| `$tooltip-triangle-size` | <small>size</small> | `6px` |
+| `$tooltip-padding-y` | <small>padding</small> | `.5rem` |
+| `$tooltip-padding-x` | <small>padding</small> | `.625rem` |
+| `$tooltip-radius` | <small>radius</small> | `$radius` |
+| `$tooltip-transition` | <small>unitless</small> | `opacity .2s ease-in-out` |
+
+
 ## Overview
 
 Please, read the next information to use correct tooltips:

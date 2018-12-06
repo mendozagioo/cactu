@@ -7,6 +7,13 @@ toc: true
 ---
 
 
+## Variables
+
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+| `$nav-link-padding` | <small>padding</small> | `.5rem .75rem` |
+
+
 ## Nav horizontal
 
 The navs components are built with flexbox and provide a strong foundation for building all types of navigation components.

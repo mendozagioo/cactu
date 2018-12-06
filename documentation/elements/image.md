@@ -7,6 +7,16 @@ toc: true
 ---
 
 
+## Variables
+
+| Name  | Type  | Value |
+| ----- | ----- | ----- |
+| `$image-padding`    | <small>padding</small> | `.25rem` |
+| `$image-radius`     | <small>radius</small>  | `$radius` |
+| `$image-border`     | <small>unitless</small>  | `$border-base` |
+| `$image-background` | <small>color</small>   | <span class="small-box" style="background:#fff"></span> `$white` |
+
+
 ## Basic image
 
 <div class="highlight-example">
