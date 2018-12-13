@@ -13,6 +13,7 @@
 - title: Base
   pages:
     - title: Reboot
+    - title: Global variables
 
 - title: Elements
   pages:
@@ -37,6 +38,11 @@
     - title: Paginations
     - title: Tables
     - title: Tooltips
+
+- title: API
+  pages:
+    - title: Functions
+    - title: Mixins
 
 # - title: Utilities
 #   pages:
