@@ -7,7 +7,7 @@
 //
 $badge-color:                 $text-color !default;
 $badge-font-size:             80% !default;
-$badge-padding:               .125rem .375rem;
+$badge-padding:               .125rem .375rem !default;
 $badge-border-radius:         $radius !default;
 $badge-pill-border-radius:    $radius-rounded !default;
 $badge-background:            $gray-400 !default;

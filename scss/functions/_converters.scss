@@ -5,8 +5,17 @@
 
 // Converter pixels to rems
 @function px-rem($px: 1px, $rem: $font-size) {
-  @if $px > 0 {
+  @if unit($px) == "px" {
     @return ($px / $rem) + rem;
+  } @else {
+    @return $px;
+  }
+}
+
+// Converter pixels to ems
+@function px-em($px: 1px, $em: $font-size) {
+  @if unit($px) == "px" {
+    @return ($px / $em) + em;
   } @else {
     @return $px;
   }

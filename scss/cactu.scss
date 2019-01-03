@@ -1,6 +1,6 @@
 /*!
- * Cactu v0.19.0 (http://cactu.site/)
- * Copyright 2018 Giovanni Mendoza
+ * Cactu v0.20.0 (http://cactu.site/)
+ * Copyright 2018-2019 Giovanni Mendoza
  * Licensed under MIT (https://github.com/mendozagioo/cactu/blob/master/LICENSE)
  */
 
@@ -17,10 +17,10 @@
 @import "mixins/breakpoints";
 @import "mixins/buttons";
 @import "mixins/forms";
-@import "mixins/grid";
-@import "mixins/hover";
+@import "mixins/grids";
+@import "mixins/hovers";
 @import "mixins/icons";
-@import "mixins/navbar";
+@import "mixins/navbars";
 @import "mixins/positions";
 @import "mixins/transition";
 
@@ -32,6 +32,7 @@
 @import "elements/typography";
 
 @import "components/alerts";
+@import "components/breadcrumbs";
 @import "components/buttons";
 @import "components/collapse";
 @import "components/dropdowns";

@@ -1,0 +1,47 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+// Variables
+//
+$breadcrumb-padding:          1rem 0 !default;
+$breadcrumb-margin:           0 !default;
+$breadcrumb-decoration:       none !default;
+$breadcrumb-active-color:     $text-color !default;
+$breadcrumb-gap:              .5rem !default;
+$breadcrumn-divider:          "/" !default;
+$breadcrumn-divider-color:    $text-color !default;
+
+
+.breadcrumb {
+  list-style: none;
+  padding: $breadcrumb-padding;
+  margin: $breadcrumb-margin;
+
+  li {
+    display: inline-block;
+
+    + li {
+      padding-left: $breadcrumb-gap;
+
+      &:before {
+        display: inline-block;
+        content: $breadcrumn-divider;
+        color: $breadcrumn-divider-color;
+        padding-right: $breadcrumb-gap;
+      }
+    }
+
+    a {
+      @include hover-focus {
+        text-decoration: $breadcrumb-decoration;
+      }
+    }
+  }
+
+  .active {
+    color: $breadcrumb-active-color;
+    pointer-events: none;
+  }
+}

@@ -27,7 +27,7 @@
 }
 
 @mixin validation-states($state, $color) {
-  @include input-validation-state($state, $color); 
+  @include input-validation-state($state, $color);
 
   .form-group {
     .#{$state}-feedback {
