@@ -4,6 +4,7 @@
 .bundle
 .config
 .yardoc
+.jekyll-metadata
 Gemfile.lock
 InstalledFiles
 _yardoc
