@@ -57,7 +57,7 @@ gulp.task('sass-doc', docStyles);
 
 gulp.task('sass-compressed', compressedStyles);
 
-gulp.task('cactu-build', gulp.parallel('sass', 'sass-compressed'));
+gulp.task('cactu-build', gulp.parallel(styles, compressedStyles));
 
 gulp.task('watch', () => {
   gulp.watch([cactuUrl, docUrl], gulp.series(styles, compressedStyles, docStyles));
