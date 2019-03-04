@@ -13,43 +13,52 @@ const sassOpts = {
   errLogToConsole: true
 };
 
-gulp.task('sass', () => gulp.src(cactuUrl)
-  .pipe(sass({
-    outputStyle: 'expanded'
-  }).on('error', sass.logError))
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
-  .pipe(gulp.dest('./css'))
-);
+function styles() {
+  return gulp.src(cactuUrl)
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('./css'))
+};
 
-gulp.task('sass-compressed', () => gulp.src(cactuUrl)
-  .pipe(sass(sassOpts).on('error', sass.logError))
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
-  .pipe(rename({
-    suffix: ".min"
-  }))
-  .pipe(gulp.dest('./css'))
-);
+function docStyles() {
+  return gulp.src(docUrl)
+    .pipe(sass(sassOpts).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest('./assets/css'))
+}
 
-gulp.task('sass-doc', () => gulp.src(docUrl)
-  .pipe(sass(sassOpts).on('error', sass.logError))
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
-  .pipe(rename({
-    suffix: ".min"
-  }))
-  .pipe(gulp.dest('./assets/css'))
-);
+function compressedStyles() {
+  return gulp.src(cactuUrl)
+    .pipe(sass(sassOpts).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest('./css'))
+}
 
-gulp.task('cactu-build', ['sass', 'sass-compressed']);
+gulp.task('sass', styles);
 
-gulp.task('sass:watch', ['cactu-build', 'sass-doc'], () => {
-  gulp.watch([cactuUrl, docUrl], ['sass-doc']);
+gulp.task('sass-doc', docStyles);
+
+gulp.task('sass-compressed', compressedStyles);
+
+gulp.task('cactu-build', gulp.parallel('sass', 'sass-compressed'));
+
+gulp.task('watch', () => {
+  gulp.watch([cactuUrl, docUrl], gulp.series(styles, compressedStyles, docStyles));
 });
