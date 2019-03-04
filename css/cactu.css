@@ -604,7 +604,7 @@ blockquote {
 cite {
   display: block;
   font-size: 80%;
-  color: #666c72;
+  color: #7a8793;
 }
 
 cite:before {
@@ -1184,6 +1184,13 @@ textarea:focus {
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"])::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
