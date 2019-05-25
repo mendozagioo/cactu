@@ -147,6 +147,8 @@ $breakpoint-mobile:     $tablet-size !default; // Set you breakpoint to get the 
       }
 
       .navbar-search {
+        padding: $search-gap 0;
+        
         input {
           margin-bottom: $search-gap;
         }
