@@ -43,7 +43,7 @@ Please read the code, follow the same conventions, keep it simple, keep it minim
 
 
 ## Author
-[Giovanni Mendoza](http://mendozagioo.me)
+[Giovanni Mendoza](http://mendozagioo.github.io)
 
 
 ## Copyright and license
