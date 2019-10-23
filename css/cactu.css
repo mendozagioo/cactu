@@ -1975,6 +1975,10 @@ ul, ol {
   .navbar-expanded nav:not([class*="show-menu"]) {
     overflow: hidden;
   }
+  .navbar nav .navbar-search,
+  .navbar-expanded nav .navbar-search {
+    padding: 0.5rem 0;
+  }
   .navbar nav .navbar-search input,
   .navbar-expanded nav .navbar-search input {
     margin-bottom: 0.5rem;
